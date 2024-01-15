@@ -4,27 +4,37 @@
         <meta charset="utf-8" />
         <title>여러개 마커 표시하기</title>
         <link rel="stylesheet" href="mark.css" />
+        <link rel="stylesheet" href="head.css" />
     </head>
     <body>
-        <div id="map" style="width: 30%; height: 300px; position: relative; top: 200px; left: 750px"></div>
+        <!-- <div class="head">
+            <div class="menu menu1">메뉴1</div>
+            <div class="menu menu2">메뉴2</div>
+            <div class="menu menu3">메뉴3</div>
+        </div> -->
+
+        <div id="map" style="width: 60%; height: 430px; position: relative; top: 60px; left: 500px"></div>
         <script
             type="text/javascript"
             src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ec794db2c9a4e5f04f8802330b1070b8"
         ></script>
         <script src="resturant.js"></script>
-        <script>
+        <script src="mark.js"></script>
+    </body>
+</html>
+
+<!-- <script>
             //  화면에 지도 생성
             var mapContainer = document.getElementById('map'), // 지도를 표시할 div
                 mapOption = {
                     center: new kakao.maps.LatLng(37.514575, 127.0495556), // 지도의 중심좌표
-                    level: 5, // 지도의 확대 레벨
+                    level: 7, // 지도의 확대 레벨
                 };
             var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
             // 마커를 표시할 위치와 title(일단 제외했음) 객체 배열입니다
             // MY : 위도 경도 입력을 위한 for문
-            // MY : positions = [[음식점1, 위도1],[음식점2, 위도2],[음식점3, 위도3]]
-            // MY : var positions = [['', 0]]; // 위도 담을 positions 배열 2차원 배열 느낌으로 구상해봤음
+            // MY : positions = [[음식점1, ...,위도1],[음식점2,..., 위도2],[음식점3,..., 위도3]]
             var positions = []; // MY : po
             for (let i = 0; i < resturant.length; i++) {
                 positions.push({
@@ -46,7 +56,7 @@
                 var imageSize = new kakao.maps.Size(24, 35);
 
                 // 마커 이미지를 생성합니다
-                // MY : if문넣고 양식, 중식, 한식, 디저트 중 맞는 각 일치하는 데이터에 해당값 넣기
+                // MY : if문넣고 양식, 중식, 한식, 디저트 중 각 일치하는 데이터에 해당하는 이미지 넣기
                 if (positions[i].category === '한식') {
                     var markerImage = new kakao.maps.MarkerImage(imageSrc[0], imageSize);
                 } else if (positions[i].category === '양식') {
@@ -65,80 +75,41 @@
                     // title: positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
                     image: markerImage, // 마커 이미지
                 });
-            }
-
-            // MY : 마커에 click 이벤트를 등록합니다
-            kakao.maps.event.addListener(marker, 'click', function () {
-                // 클릭된 마커가 없고, click 마커가 클릭된 마커가 아니면
-                // 마커의 이미지를 클릭 이미지로 변경합니다
-                // if (!selectedMarker || selectedMarker !== marker) {
-                //     marker.setImage(clickImage);
-                // }
-
-                // 클릭된 마커를 현재 클릭된 마커 객체로 설정합니다
-                selectedMarker = marker;
-                // MY : 커스텀 오버레이 시작
-                // for(let a = 0 ; a < position.length; a++){
-
-                // }
-                // 이 부분 무조건 2차원 배열 써야함
-                var content = '<div class="overlay_info">';
-                content +=
-                    '    <a href="https://place.map.kakao.com/17600274" target="_blank"><strong>서울 강남</strong></a>';
-                // '    <a href="해당 식당 이미지 받아오면됨 쉬움" target="_blank"><strong>${positions[a].name}</strong></a>';
-                content += '    <div class="desc">';
-                content +=
-                    '        <img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/place_thumb.png" alt="">';
-                content += '        <span class="address">서울특별시 강남구 ... 예시 33-4</span>';
-                // <span class="address">${positions[a].address}</span>';
-                content += '    </div>';
-                content += '</div>';
-
-                // 커스텀 오버레이가 표시될 위치입니다
-
-                // MY :  아래 코드는 한 마커에 밖에 넣을 수 없음 + position 지역 변수
-                var position = new kakao.maps.LatLng(resturant[0].coordinate[0], resturant[0].coordinate[1]);
-
-                // 각 마커에 커스텀 오버레이를 생성합니다
-                // for (let j = 0; j < resturant.length; j++) {
-                //     var mapCustomOverlay = new kakao.maps.CustomOverlay({
-                //         position: positions[i].lating,
-                //         content: content,
-                //         xAnchor: 0, // 커스텀 오버레이의 x축 위치입니다. 1에 가까울수록 왼쪽에 위치합니다. 기본값은 0.5 입니다
-                //         yAnchor: 0, // 커스텀 오버레이의 y축 위치입니다. 1에 가까울수록 위쪽에 위치합니다. 기본값은 0.5 입니다
-                //     });
-                // }
-                var mapCustomOverlay = new kakao.maps.CustomOverlay({
-                    position: position,
+                var content = `<div class="wrap">
+                        <div class="info">
+                            <div class="title">
+                                ${positions[i].name}
+                                <div class="close" onclick="closeOverlay()" title="닫기"></div>
+                            </div>
+                            <div class="body">
+                                <div class="img">
+                                    <img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/thumnail.png" width="73" height="70">
+                               </div>
+                                <div class="desc">
+                                    <div class="ellipsis">${positions[i].address}</div>
+                                    <div class="jibun ellipsis">${positions[i].district}</div>
+                                    <div><a href="https://www.kakaocorp.com/main" target="_blank" class="link">홈페이지</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+                // 3. 커스텀 오버레이를 생성합니다 -> 마커 생성할 때 같이 생성
+                // 커스텀 오버레이는 아래와 같이 사용자가 자유롭게 컨텐츠를 구성하고 이벤트를 제어할 수 있기 때문에
+                // 별도의 이벤트 메소드를 제공하지 않습니다
+                var overlay = new kakao.maps.CustomOverlay({
                     content: content,
-                    xAnchor: 0, // 커스텀 오버레이의 x축 위치입니다. 1에 가까울수록 왼쪽에 위치합니다. 기본값은 0.5 입니다
-                    yAnchor: 0, // 커스텀 오버레이의 y축 위치입니다. 1에 가까울수록 위쪽에 위치합니다. 기본값은 0.5 입니다
+                    map: map,
+                    position: marker.getPosition(),
                 });
-
-                // 커스텀 오버레이를 지도에 표시합니다
-                mapCustomOverlay.setMap(map);
-                // 커스텀 오버레이 끝
-            });
-        </script>
-    </body>
-</html>
-
-<!-- // 마커를 표시할 위치와 title 객체 배열입니다
-           //  var positions = [
-            //     {
-            //         title: '카카오',
-            //         latlng: new kakao.maps.LatLng(resturant[0].Hardness, resturant[0].Latitude),
-            //     },
-            //     {
-            //         title: '생태연못',
-            //         latlng: new kakao.maps.LatLng(37.50430785532529, 127.04022828864596),
-            //     },
-            //     {
-            //         title: '텃밭',
-            //         latlng: new kakao.maps.LatLng(37.499832458371436, 127.05596792625235),
-            //     },
-            //     {
-            //         title: '근린공원',
-            //         latlng: new kakao.maps.LatLng(37.48469502376602, 127.05704207103453),
-            //     },
-            // ]; -->
+                console.log(overlay.position);
+                // 아직 미완성
+                // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
+                kakao.maps.event.addListener(marker, 'click', function () {
+                    overlay.setMap(map);
+                });
+                // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다
+                function closeOverlay() {
+                    overlay.setMap(null);
+                }
+            }
+        </script> -->
