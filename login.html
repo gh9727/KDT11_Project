@@ -3,46 +3,48 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>로그인</title>
+        <title>푸딘코 로그인</title>
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-        <style>
-            div {
-                padding: 15px;
-            }
-            .box {
-                width: 50vw;
-                height: 30vh;
-                border: 1px solid black;
-                /* display: flex; */
-            }
-        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Gothic+A1&family=Gowun+Dodum&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="login.css" />
     </head>
     <body>
-        <a href="">
+        <a href="index.html">
             <img
                 src="logo.png"
                 alt="logo"
                 style="width: 100px; height: 100px"
             />
         </a>
-        <div>로그인</div>
-        <div class="box">
-            <form action="">
-                <div>
-                    <label>아이디</label>
-                    <input type="text" id="id" />
-                </div>
-                <div>
-                    <label>비밀번호</label>
-                    <input type="text" id="password" />
-                </div>
-                <div>
-                    <a href="join.html">회원가입</a>
-                </div>
+        <div class="login_wrapper">
+            <div class="login_logo">FOODINKO</div>
+            <form class="login_form">
+                <label>아이디</label>
+                <input
+                    type="text"
+                    id="id"
+                    class="login_text"
+                    placeholder="이름"
+                />
+                <label>비밀번호</label>
+                <input
+                    type="password"
+                    id="password"
+                    class="login_text"
+                    placeholder="숫자 4자리"
+                />
+                <button type="button" class="login_btn" onclick="logIn()">
+                    로그인
+                </button>
             </form>
-            <div>
-                <button type="button" onclick="logIn()">로그인</button>
-            </div>
+            <a class="login_bottom" href="join.html">회원가입</a>
         </div>
+
+        <script src="login.js"></script>
     </body>
 </html>
