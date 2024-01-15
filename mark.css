@@ -86,6 +86,7 @@
     bottom: 0;
     width: 22px;
     height: 12px;
+    /* 이미지 뷰 설정화면 */
     background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png');
 }
 .info .link {

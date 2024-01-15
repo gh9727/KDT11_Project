@@ -7,19 +7,42 @@
         <link rel="stylesheet" href="head.css" />
     </head>
     <body>
-        <!-- <div class="head">
-            <div class="menu menu1">메뉴1</div>
+        <div class="head">
+            <!-- <div class="menu menu1">메뉴1</div>
             <div class="menu menu2">메뉴2</div>
-            <div class="menu menu3">메뉴3</div>
-        </div> -->
-
-        <div id="map" style="width: 60%; height: 430px; position: relative; top: 60px; left: 500px"></div>
+            <div class="menu menu3">메뉴3</div> -->
+        </div>
+        <div id="map" style="width: 60%; height: 430px; position: relative; top: 50px; left: 500px"></div>
+        <div class="nav">
+            <div class="district">
+                <!-- 강남구 서초구 button 요소 클릭 시 구에 맞게 지도 중심좌표 이동 : 이 부분 onclick 이벤트 설정이 전부 안되서 질문 드림(0115 12:25) -->
+                <!-- click()이 문제였음 clk()로 변경해서 해결함 -->
+                <div class="district_name" onclick="clk()">강남구</div>
+                <div class="district_name">서초구</div>
+                <div class="district_name">성동구</div>
+            </div>
+        </div>
         <script
             type="text/javascript"
             src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ec794db2c9a4e5f04f8802330b1070b8"
         ></script>
         <script src="resturant.js"></script>
-        <script src="mark.js"></script>
+        <script src="map.js"></script>
+        <script>
+            // 리더님 도움으로 에러(onclick 속성값을 click()으로 해서 생긴 오류였음)잡음(0115/12:49) + 이건 예시고 search.js 에 본 파일 옮겨야함(0115/ 13:27)
+            function clk() {
+                let level = map.getLevel();
+                map.setLevel(4);
+            }
+        </script>
+        <!-- <script src="search.js"></script> -->
+        <!-- <script>
+            mapOption.level = 3;
+            // var distrct_name = document.querySelector('.district_name');
+            // distrct_name.addEventListener('click', function () {
+            //     mapOption.level = 4;
+            // });
+        </script> -->
     </body>
 </html>
 
