@@ -31,6 +31,8 @@ for (let i = 0; i < resturant.length; i++) {
 // var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png';
 
 var imageSrc = ['한식.png', '양식.png', '중식.png', '디저트.png', '일식.png', '분식.png'];
+let markers = []; // marker 전역변수로 변경 0116 11:20 수정 **************** search_koreanFood() 메서드 생성을 위해 수정 **********
+// marker
 // 마커 생성 + 마커 한식,중식,양식.. 별 맞는 이미지 넣기
 // 커스텀 오버레이 생성 + 오버레이에 들어갈 내용 createElement로 요소 생성
 positions.forEach(function (pos) {
@@ -57,13 +59,12 @@ positions.forEach(function (pos) {
     // var markerImage = new kakao.maps.MarkerImage(imageSrc[i], imageSize);
     // } // 이쪽 제거하면됨
     // 마커를 생성합니다.
-    var marker = new kakao.maps.Marker({
+    let marker = new kakao.maps.Marker({
         map: map, // 마커를 표시할 지도
         position: pos.latlng, // 마커를 표시할 위치
-        // title: positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
         image: markerImage, // 마커 이미지
     });
-
+    markers.push(marker); // *********** search_koreanFood() 메서드 생성을 위해 수정 *********
     // 오버레이에 들어갈 정보를 생성합니다.
     var content = document.createElement('div');
     content.className = 'wrap';
@@ -144,3 +145,11 @@ positions.forEach(function (pos) {
         overlay.setMap(map);
     });
 });
+// forEach문 종료
+
+// 모든 마커를 생성해주는 함수 -> 필터링 기능을 위해 제작함 0116
+function view_Marker() {
+    for (let index = 0; index < positions.length; index++) {
+        markers[index].setMap(map);
+    }
+}
