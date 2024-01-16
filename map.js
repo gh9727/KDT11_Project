@@ -14,14 +14,15 @@ var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니
 var positions = []; // MY : po
 for (let i = 0; i < resturant.length; i++) {
     positions.push({
-        name: resturant[i].name,
-        address: resturant[i].address,
-        category: resturant[i].category,
-        district: resturant[i].district,
-        latlng: new kakao.maps.LatLng(resturant[i].coordinate[0], resturant[i].coordinate[1]),
-        src: resturant[i].src,
-        opening_hours: resturant[i].opening_hours,
-        href: resturant[i].href,
+        name: resturant[i].name, // 음식점 이름
+        address: resturant[i].address, // 음식점 주소명
+        category: resturant[i].category, // 한식 중식 일식 양식 분식 디저트
+        district: resturant[i].district, // 강남구 서초구 성동구
+        latlng: new kakao.maps.LatLng(resturant[i].coordinate[0], resturant[i].coordinate[1]), // 음식점 위치(위도,경도)
+        src: resturant[i].src, // 식당 이미지 소스
+        opening_hours: resturant[i].opening_hours, // 영업시간
+        closed_day: resturant[i].closed_day,
+        href: resturant[i].href, // 이 부분은 아직 넣지 않았음.
     });
 }
 // console.log(positions[1].name); -> 카카오 api로 인해 콘솔안찍힘
@@ -55,13 +56,15 @@ positions.forEach(function (pos) {
     }
     // var markerImage = new kakao.maps.MarkerImage(imageSrc[i], imageSize);
     // } // 이쪽 제거하면됨
-    // 마커를 생성합니다
+    // 마커를 생성합니다.
     var marker = new kakao.maps.Marker({
         map: map, // 마커를 표시할 지도
         position: pos.latlng, // 마커를 표시할 위치
         // title: positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
         image: markerImage, // 마커 이미지
     });
+
+    // 오버레이에 들어갈 정보를 생성합니다.
     var content = document.createElement('div');
     content.className = 'wrap';
     var info = document.createElement('div');
@@ -101,16 +104,23 @@ positions.forEach(function (pos) {
     desc.className = 'desc';
     body.appendChild(desc);
 
-    var ellipsis = document.createElement('div');
-    ellipsis.className = 'ellipsis';
-    ellipsis.appendChild(document.createTextNode(pos.address));
-    desc.appendChild(ellipsis);
+    // address . ellipsis -> 나중에 클래스명 address로 수정하기
+    var address = document.createElement('div');
+    address.className = 'ellipsis';
+    address.appendChild(document.createTextNode(pos.address));
+    desc.appendChild(address);
 
-    var jibun = document.createElement('div');
-    jibun.className = 'ellipsis jibun';
+    var opening_hours = document.createElement('div');
+    opening_hours.className = 'ellipsis jibun'; // 클래스명 address opening_hours 로 변경하기
     // 이 부분 영업일이랑 영업 시간으로 채울거임
-    jibun.appendChild(document.createTextNode(pos.opening_hours));
-    desc.appendChild(jibun);
+    opening_hours.appendChild(document.createTextNode(pos.opening_hours));
+    desc.appendChild(opening_hours);
+    // 0115 1858 아직 작성중임 해야할 것 : opening_hours 요소 총 2개가 필요함 그거 레스토랑에 25개 데이터추가.. -> position에 레스토랑.오프닝아워 넣기 -> 여기 createElement 하기
+    // 0115 2033 종료
+    var closed_day = document.createElement('div');
+    closed_day.className = 'ellipsis jibun';
+    closed_day.appendChild(document.createTextNode(pos.closed_day));
+    desc.appendChild(closed_day);
 
     var href_div = document.createElement('div');
     desc.appendChild(href_div);
@@ -122,7 +132,7 @@ positions.forEach(function (pos) {
     href.target = '_blank';
     href.className = 'link';
     href.appendChild(document.createTextNode('블로그'));
-    desc.appendChild(href);
+    href_div.appendChild(href);
     var overlay = new kakao.maps.CustomOverlay({
         content: content,
         // map: map,

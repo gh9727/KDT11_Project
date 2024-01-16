@@ -1,4 +1,117 @@
-/* 커스텀 오버레이 2차 시도 css */
+/* 홈페이지 header부분 css 디자인 */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow: scroll;
+    height: 100px;
+}
+.header1 {
+    width: auto;
+    background-color: bisque;
+    z-index: 998;
+    padding: 0 40px;
+}
+.header {
+    display: flex;
+    height: 120px;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-midle {
+    display: flex;
+    padding: 35px 0;
+    text-align: center;
+}
+.foodinco {
+    width: 100px;
+    height: 80px;
+    padding: 0 5px;
+}
+/* .header1 {
+    padding: 0 40px;
+} */
+.header-last {
+    text-align: center;
+    padding: 35px 0;
+}
+
+.li1 {
+    margin: 10px 0 5px 0;
+    text-decoration: none;
+}
+.li2 {
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+.footer {
+    background-color: rgb(245, 243, 243);
+    height: 200px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.footer-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.li {
+    width: 100px;
+    padding: 10px;
+}
+.body-line {
+    width: auto;
+    height: 100px;
+}
+.body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.body-c {
+    width: 300px;
+}
+.aside {
+    position: relative;
+    top: 50px;
+    width: 300px;
+    height: 500px;
+    border: 2px solid;
+    border-radius: 10px;
+    margin-left: 50px;
+    text-align: center;
+}
+.aside-header1 {
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+.aside-cont {
+    display: flex;
+}
+/* li 태그 강남구 서초구 성동구 .search 클래스 --> cursor: pointer 속성 추가 0116 09:45 */
+.search {
+    cursor: pointer;
+}
+.li1 {
+    cursor: pointer;
+    margin: 10px 0 5px 0;
+    text-decoration: none;
+}
+.li2 {
+    cursor: pointer;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+.body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* 지도에 생성되는 마커 및 커스텀 오버레이 css 디자인 */
 .wrap {
     position: absolute;
     left: 0;

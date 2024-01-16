@@ -2,137 +2,101 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>여러개 마커 표시하기</title>
+        <title>지도</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- 이 부분 mark.css 으로 다시 바꿔야함 0116 : 0938 -> 1019 완료  -->
         <link rel="stylesheet" href="mark.css" />
-        <link rel="stylesheet" href="head.css" />
     </head>
     <body>
-        <div class="head">
-            <!-- <div class="menu menu1">메뉴1</div>
-            <div class="menu menu2">메뉴2</div>
-            <div class="menu menu3">메뉴3</div> -->
+        <!-- 페이지 상단 헤더 부분 -->
+        <header>
+            <div class="header1">
+                <nav class="header">
+                    <div class="header-first">
+                        <a href="main-mobile.html"><img src="logo.png" alt="푸딘코" class="foodinco"></a></div>
+                        
+                        <div class="header-midle">
+                            <div class="haeder-map"><a class="header1" href="map.html">지도</a></div>
+                            <div class="header-blg"><a class="header1" href="blogex.html" class="header-blg">블로그</a></div>
+                            <div class="header-page"><a class="header1" href="mypage.html" class="header-page">내 페이지</a></div>
+                        </div>
+                            <form class="header-last">
+                                <a href="" class="membership"><button type="button">회원가입</button></a>
+                                <a href="" class="log"><button type="button">로그인</button></a>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <span class="body">
+            <div class="body-a">
+                <aside class="aside">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              지역
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <ul class="ul">
+                                <!-- a 태그 빼고 각 리스트에 search 공통 클래스 추가 및 onclick 이벤트 추가 0116 09:44 -->
+                                <li class = "search"onclick="search_Gangnam()">강서구</li>
+                                <li class = "search"onclick ="search_Seocho()">강남구</li>
+                                <li class = "search"onclick="search_Seongdong()">서초구</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              종류
+                            </button>
+                          </h2>
+                          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul class="ul">
+                                    <li class="li1" onclick="search_koreanFood()">한식</li>
+                                    <li class="li2" onclick="search_chineseFood()">양식</li>
+                                    <li class="li2" onclick="search_westernFood()">중식</li>
+                                    <li class="li2" onclick="search_japaneseFood()">일식</li>
+                                    <li class="li2" onclick="search_snackBar()">분식</li>
+                                    <li class="li2" onclick="search_cafe()">카페</li>
+                                  </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div> 
+                </aside>
         </div>
-        <div id="map" style="width: 60%; height: 430px; position: relative; top: 50px; left: 500px"></div>
-        <div class="nav">
-            <div class="district">
-                <!-- 강남구 서초구 button 요소 클릭 시 구에 맞게 지도 중심좌표 이동 : 이 부분 onclick 이벤트 설정이 전부 안되서 질문 드림(0115 12:25) -->
-                <!-- click()이 문제였음 clk()로 변경해서 해결함 -->
-                <div class="district_name" onclick="clk()">강남구</div>
-                <div class="district_name">서초구</div>
-                <div class="district_name">성동구</div>
+        <div class="body-b">
+            <div class="content">
             </div>
         </div>
+        <div class="body-c"></div>
+        </span>
+        <!-- 페이지 지도 부분 -->
+        <div id="map" style="width: 60%; height: 430px; position: relative; top: -400px; left: 500px"></div>
+   
         <script
             type="text/javascript"
             src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ec794db2c9a4e5f04f8802330b1070b8"
         ></script>
         <script src="resturant.js"></script>
         <script src="map.js"></script>
-        <script>
-            // 리더님 도움으로 에러(onclick 속성값을 click()으로 해서 생긴 오류였음)잡음(0115/12:49) + 이건 예시고 search.js 에 본 파일 옮겨야함(0115/ 13:27)
-            function clk() {
-                let level = map.getLevel();
-                map.setLevel(4);
-            }
-        </script>
-        <!-- <script src="search.js"></script> -->
-        <!-- <script>
-            mapOption.level = 3;
-            // var distrct_name = document.querySelector('.district_name');
-            // distrct_name.addEventListener('click', function () {
-            //     mapOption.level = 4;
-            // });
-        </script> -->
+        <script src="search.js"></script>
     </body>
+    <footer class="footer">
+        <ul class="footer-cont">
+            <li class="li"><a href="main-mobile.html" style="color: black;">main</a></li>
+            <li class="li"><a href="map.html" style="color: black;">map</a></li>
+            <li class="li"><a href="blogex.html" style="color: black;">blog</a></li>
+            <li class="li"><a href="mypage.html" style="color: black;">my page</a></li>
+        </ul>
+    </footer>
 </html>
-
-<!-- <script>
-            //  화면에 지도 생성
-            var mapContainer = document.getElementById('map'), // 지도를 표시할 div
-                mapOption = {
-                    center: new kakao.maps.LatLng(37.514575, 127.0495556), // 지도의 중심좌표
-                    level: 7, // 지도의 확대 레벨
-                };
-            var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-            // 마커를 표시할 위치와 title(일단 제외했음) 객체 배열입니다
-            // MY : 위도 경도 입력을 위한 for문
-            // MY : positions = [[음식점1, ...,위도1],[음식점2,..., 위도2],[음식점3,..., 위도3]]
-            var positions = []; // MY : po
-            for (let i = 0; i < resturant.length; i++) {
-                positions.push({
-                    name: resturant[i].name,
-                    address: resturant[i].address,
-                    category: resturant[i].category,
-                    district: resturant[i].district,
-                    latlng: new kakao.maps.LatLng(resturant[i].coordinate[0], resturant[i].coordinate[1]),
-                });
-            }
-            // console.log(positions[1].name); -> 카카오 api로 인해 콘솔안찍힘
-
-            // 마커 이미지의 이미지 주소입니다
-            // var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png';
-            var imageSrc = ['한식.png', '양식.png', '중식.png', '디저트.png'];
-
-            for (var i = 0; i < positions.length; i++) {
-                // 마커 이미지의 이미지 크기 입니다(원본 사이즈 24, 35)
-                var imageSize = new kakao.maps.Size(24, 35);
-
-                // 마커 이미지를 생성합니다
-                // MY : if문넣고 양식, 중식, 한식, 디저트 중 각 일치하는 데이터에 해당하는 이미지 넣기
-                if (positions[i].category === '한식') {
-                    var markerImage = new kakao.maps.MarkerImage(imageSrc[0], imageSize);
-                } else if (positions[i].category === '양식') {
-                    var markerImage = new kakao.maps.MarkerImage(imageSrc[1], imageSize);
-                } else if (positions[i].category === '중식') {
-                    var markerImage = new kakao.maps.MarkerImage(imageSrc[2], imageSize);
-                } else if (positions[i].category === '디저트') {
-                    var markerImage = new kakao.maps.MarkerImage(imageSrc[3], imageSize);
-                }
-                // var markerImage = new kakao.maps.MarkerImage(imageSrc[i], imageSize);
-
-                // 마커를 생성합니다
-                var marker = new kakao.maps.Marker({
-                    map: map, // 마커를 표시할 지도
-                    position: positions[i].latlng, // 마커를 표시할 위치
-                    // title: positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-                    image: markerImage, // 마커 이미지
-                });
-                var content = `<div class="wrap">
-                        <div class="info">
-                            <div class="title">
-                                ${positions[i].name}
-                                <div class="close" onclick="closeOverlay()" title="닫기"></div>
-                            </div>
-                            <div class="body">
-                                <div class="img">
-                                    <img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/thumnail.png" width="73" height="70">
-                               </div>
-                                <div class="desc">
-                                    <div class="ellipsis">${positions[i].address}</div>
-                                    <div class="jibun ellipsis">${positions[i].district}</div>
-                                    <div><a href="https://www.kakaocorp.com/main" target="_blank" class="link">홈페이지</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>`;
-                // 3. 커스텀 오버레이를 생성합니다 -> 마커 생성할 때 같이 생성
-                // 커스텀 오버레이는 아래와 같이 사용자가 자유롭게 컨텐츠를 구성하고 이벤트를 제어할 수 있기 때문에
-                // 별도의 이벤트 메소드를 제공하지 않습니다
-                var overlay = new kakao.maps.CustomOverlay({
-                    content: content,
-                    map: map,
-                    position: marker.getPosition(),
-                });
-                console.log(overlay.position);
-                // 아직 미완성
-                // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
-                kakao.maps.event.addListener(marker, 'click', function () {
-                    overlay.setMap(map);
-                });
-                // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다
-                function closeOverlay() {
-                    overlay.setMap(null);
-                }
-            }
-        </script> -->
