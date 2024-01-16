@@ -34,6 +34,14 @@ body {
     text-align: center;
     padding: 35px 0;
 }
+.li1 {
+    margin: 10px 0 5px 0;
+    text-decoration: none;
+}
+.li2 {
+    margin-bottom: 5px;
+    text-decoration: none;
+}
 .footer {
     background-color: rgb(245, 243, 243);
     height: 200px;
@@ -50,4 +58,43 @@ body {
 .li {
     width: 100px;
     padding: 10px;
+}
+.body-line {
+    width: auto;
+    height: 100px;
+}
+.body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.body-c {
+    width: 300px;
+}
+.aside {
+    width: 300px;
+    height: 500px;
+    border: 2px solid;
+    border-radius: 10px;
+    margin-left: 50px;
+    text-align: center;
+}
+.aside-header1 {
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+.aside-cont {
+    display: flex;
+}
+.content {
+    margin-left: 100px;
+    width: 600px;
+    height: 500px;
+    border: 2px solid;
+}
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 100px 0;
 }

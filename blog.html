@@ -3,7 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>blog</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+        <title>Bootstrap Example</title>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="blog.css" />
     </head>
     <body>
@@ -11,13 +15,14 @@
             <div class="header1">
                 <nav class="header">
                     <div class="header-first">
-                        <a href="main.html"><img src="logo.png" alt="푸딘코" class="foodinco"></a></div>
+                        <a href="main-mobile.html"><img src="logo.png" alt="푸딘코" class="foodinco"></a></div>
+                        
                         <div class="header-midle">
-                            <a class="header1" href="map.html">지도</a>
-                            <a class="header1" href="blog.html">블로그</a>
-                            <a class="header1" href="mypage.html">내 페이지</a>
+                            <div class="haeder-map"><a class="header1" href="map.html">지도</a></div>
+                            <div class="header-blg"><a class="header1" href="blog.html" class="header-blg">블로그</a></div>
+                            <div class="header-page"><a class="header1" href="mypage.html" class="header-page">내 페이지</a></div>
                         </div>
-                            <form class="header-last" role="search">
+                            <form class="header-last">
                                 <a href="" class="membership"><button type="button">회원가입</button></a>
                                 <a href="" class="log"><button type="button">로그인</button></a>
                             </form>
@@ -27,4 +32,13 @@
             </div>
         </header>
     </body>
+    <footer class="footer">
+        <ul class="footer-cont">
+            <li class="li"><a href="main-mobile.html" style="color: black;">main</a></li>
+            <li class="li"><a href="map.html" style="color: black;">map</a></li>
+            <li class="li"><a href="blog.html" style="color: black;">blog</a></li>
+            <li class="li"><a href="mypage.html" style="color: black;">my page</a></li>
+        </ul>
+    </footer>
+
 </html>
