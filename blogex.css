@@ -2,9 +2,65 @@
     margin: 0;
     padding: 0;
 }
+.header_box {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 998;
+}
+.header {
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    margin: 30px;
+}
+.header-midle {
+    display: flex;
+    padding: 35px 0;
+    text-align: center;
+}
+.foodinco {
+    width: 70px;
+    height: 70px;
+}
+.header1 {
+    padding: 0 40px;
+    font-size: 18px;
+    color: black;
+    text-decoration-line: none;
+}
+.header1:hover {
+    color: #01376a;
+    font-weight: 700;
+}
+.header-last {
+    text-align: center;
+    padding: 35px 30px 35px 0;
+    font-size: 13px;
+}
+.membership {
+    padding-right: 10px;
+    color: black;
+    text-decoration-line: none;
+}
+.membership:hover {
+    color: #01376a;
+    font-weight: bold;
+}
+.log {
+    color: black;
+    text-decoration-line: none;
+}
+.log:hover {
+    color: #01376a;
+    font-weight: bold;
+}
 body {
     overflow: scroll;
-    height: 1000px;
+    height: auto;
 }
 .header1 {
     width: auto;
@@ -63,20 +119,24 @@ body {
     width: auto;
     height: 100px;
 }
-.body {
+.body1 {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+}
+.body-a {
+    position: fixed;
+    left: 50px;
+    background-color: white;
 }
 .body-c {
-    width: 300px;
+    width: 600px;
 }
 .aside {
     width: 300px;
     height: 500px;
     border: 2px solid;
     border-radius: 10px;
-    margin-left: 50px;
     text-align: center;
 }
 .aside-header1 {
@@ -87,14 +147,31 @@ body {
     display: flex;
 }
 .content {
-    margin-left: 100px;
     width: 600px;
-    height: 500px;
-    border: 2px solid;
 }
 .nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 100px 0;
+}
+.pic-cont {
+    width: 350px;
+    height: 450px;
+}
+.pic {
+    width: 350px;
+    height: 300px;
+}
+.title {
+    font-weight: bold;
+    font-size: 20px;
+}
+.text {
+    font-size: 12px;
+}
+.body2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }

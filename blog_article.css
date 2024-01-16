@@ -1,0 +1,58 @@
+body {
+    box-sizing: border-box;
+    padding-top: 160px;
+}
+.image {
+    display: flex;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin: 30px auto;
+}
+.article_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    padding: 57px;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    box-shadow: 5px 5px 5px rgb(199, 196, 196);
+    /* overflow: auto; */
+}
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.entry-title {
+    font-family: 'Noto Sans Korean';
+    font-weight: 500;
+}
+.restaurant-name {
+    font-family: 'Noto Sans Korean';
+    font-weight: 500;
+    font-size: 20px;
+}
+.ast-terms-link {
+    color: black;
+    text-decoration-line: none;
+}
+.ast-terms-link:hover {
+    color: #01376a;
+}
+.posted-by-vcard {
+    color: black;
+    text-decoration-line: none;
+}
+.posted-by-vcard {
+    color: #01376a;
+}
+.restaurant-address-link {
+    color: black;
+    text-decoration-line: none;
+}
+.restaurant-address-link:hover {
+    color: #01376a;
+}
