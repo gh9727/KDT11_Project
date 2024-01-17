@@ -1,4 +1,6 @@
-/* 홈페이지 header부분 css 디자인 */
+/* ======================================================================= */
+/* ==========================header CSS 디자인============================== */
+/* ======================================================================= */
 * {
     margin: 0;
     padding: 0;
@@ -24,27 +26,101 @@ body {
     padding: 35px 0;
     text-align: center;
 }
+/* 푸드인코 이미지 */
 .foodinco {
     width: 100px;
     height: 80px;
     padding: 0 5px;
 }
-/* .header1 {
-    padding: 0 40px;
-} */
+
 .header-last {
     text-align: center;
     padding: 35px 0;
 }
+/* ======================================================================= */
+/* ==========================body CSS 디자인============================== */
+/* ======================================================================= */
 
+/* body부 css 디자인 */
+.body {
+    display: flex;
+    /* flex-direction: row; */
+    /* justify-content: space-between;*/
+}
+/* ======================================================================= */
+/* ==========================body 내부 body-a(aside) CSS 디자인============================== */
+/* ======================================================================= */
+/* body aside(선택 리스트) */
+.aside {
+    position: relative;
+    top: 50px;
+    width: 300px;
+    height: 500px;
+    border: 2px solid;
+    border-radius: 10px;
+    margin-left: 20px;
+    text-align: center;
+}
+.aside-header1 {
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+.aside-cont {
+    display: flex;
+}
+/* 강남구, 서초구, 성동구 클릭 커서 포인터  */
+.search {
+    cursor: pointer;
+}
+/* [li1 ,li2] : 한식, 중식, 양식, 일식, 분식, 카페 클릭 커서 포인터  */
 .li1 {
+    cursor: pointer;
     margin: 10px 0 5px 0;
     text-decoration: none;
 }
 .li2 {
+    cursor: pointer;
     margin-bottom: 5px;
     text-decoration: none;
 }
+/* ======================================================================= */
+/* ==========================body 내부 body-b CSS 디자인============================== */
+/* ======================================================================= */
+/* search_distrct === 사용자 입력폼에 버튼 요소 집어넣기 css 0116 20:34 */
+
+/* 입력양식폼 부모 div의 col 속성 삭제함 : 0117 12:33 */
+.row-a {
+    position: relative;
+    top: 30px;
+    right: -100px;
+}
+.row-b {
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+/* district_button 과 food_button은 js 함수용 클래스 */
+.search_button {
+    position: absolute;
+    background-color: purple;
+    width: 50px;
+    height: 35px;
+    top: 0px;
+    bottom: 0;
+    right: 75px;
+    margin: auto 0;
+    border-radius: 3px;
+}
+.service {
+    width: 300px;
+}
+
+/* li 태그 강남구 서초구 성동구 .search 클래스 --> cursor: pointer 속성 추가 0116 09:45 */
+/* ======================================================================= */
+/* ============================footer CSS 디자인=========================== */
+/* ======================================================================= */
+
+/* footer부 css 디자인 */
 .footer {
     background-color: rgb(245, 243, 243);
     /* footer 부분 position 속성 추가해서 top : 100 */
@@ -61,73 +137,123 @@ body {
     align-items: center;
     padding: 50px;
 }
+/* main, map, blog, mypage 요소 너비 및 패딩  */
 .li {
     width: 100px;
     padding: 10px;
 }
-.body-line {
-    width: auto;
-    height: 100px;
-}
-.body {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.body-c {
-    width: 300px;
-}
-.aside {
+
+/* ======================================================================= */
+/* ================================지도 CSS 디자인============================= */
+/* ======================================================================= */
+/* 지도에 생성되는 마커 및 커스텀 오버레이 css 디자인 */
+#map {
+    width: 750px;
+    height: 430px;
     position: relative;
     top: 50px;
-    width: 300px;
-    height: 500px;
-    border: 2px solid;
-    border-radius: 10px;
-    margin-left: 50px;
-    text-align: center;
-}
-.aside-header1 {
-    margin-bottom: 50px;
-    margin-top: 10px;
-}
-.aside-cont {
-    display: flex;
-}
-/* li 태그 강남구 서초구 성동구 .search 클래스 --> cursor: pointer 속성 추가 0116 09:45 */
-.search {
-    cursor: pointer;
-}
-.li1 {
-    cursor: pointer;
-    margin: 10px 0 5px 0;
-    text-decoration: none;
-}
-.li2 {
-    cursor: pointer;
-    margin-bottom: 5px;
-    text-decoration: none;
-}
-.body {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    left: 100px;
 }
 
-/* search_distrct === 사용자 입력폼에 버튼 요소 집어넣기 css 0116 20:34 */
-.search_button {
-    position: absolute;
-    background-color: purple;
-    width: 300px;
-    height: 35px;
-    top: 0px;
-    bottom: 0;
-    right: 75px;
-    margin: auto 0;
-    border-radius: 3px;
+/* ======================================================================= */
+/* ===============================반응형 CSS 디자인========================= */
+/* ======================================================================= */
+@media (max-width: 700px) {
+    /* 반응형 사용 시 : body-a(aside) 부분 요소 아예 삭제 */
+    /* aside 부분을 지우고 body 몸체를 검색폼 및 지도로 채우기 */
+    .body-a {
+        display: none;
+    }
+    .body-b {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    .row-a {
+        position: relative;
+        top: 30px;
+        left: 30px;
+    }
+    .row-b {
+        position: relative;
+        top: 30px;
+        left: 0px;
+    }
+    .service {
+        width: 250px;
+    }
+    .search_button {
+        position: absolute;
+        background-color: purple;
+        width: 50px;
+        height: 35px;
+        top: 0px;
+        bottom: 0;
+        right: 27px;
+        margin: auto 0;
+        border-radius: 3px;
+    }
+    .body-b #map {
+        width: 88%;
+        height: 250px;
+        position: absolute;
+        top: 100px;
+        left: 35px;
+    }
+    .footer {
+        top: 330px;
+    }
 }
 
-/* 지도에 생성되는 마커 및 커스텀 오버레이 css 디자인 */
+@media (max-width: 580px) {
+    .body-a {
+        display: none;
+    }
+    .body-b {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    .body-b .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .body-b .col {
+        left: 50px;
+    }
+    .service {
+        width: 380px;
+    }
+    .search_button {
+        position: absolute;
+        background-color: purple;
+        width: 100px;
+        height: 35px;
+        top: 0px;
+        bottom: 0;
+        right: 103px;
+        margin: auto 0;
+        border-radius: 3px;
+    }
+    .body-b #map {
+        width: 88%;
+        height: 250px;
+        position: absolute;
+        top: 150px;
+        left: 45px;
+    }
+    .footer {
+        top: 330px;
+    }
+}
+
+/* ======================================================================= */
+/* ===============================카카오맵 API CSS 디자인========================= */
+/* ======================================================================= */
 .wrap {
     position: absolute;
     left: 0;
