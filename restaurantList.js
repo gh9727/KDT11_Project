@@ -175,3 +175,6 @@ let resturant = [
         coordinate: '37.54667, 127.0466',
     },
 ];
+
+let selectRestuarant = resturant.filter((value) => value.district == '성동구');
+console.log(selectRestuarant);
