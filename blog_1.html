@@ -19,7 +19,6 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
         <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-        <link rel="stylesheet" href="main-mobile.css" />
         <link rel="stylesheet" href="blog_article.css" />
     </head>
     <body>
@@ -48,6 +47,9 @@
             </div>
         </header>
         <div class="article_wrapper" style="margin-bottom: 80px">
+            <div class="save_wrapper">
+                <img class="save" src="save.png" alt="save" onclick="saveMyPage()" />
+            </div>
             <div class="title">
                 <!-- 제목 -->
                 <h1 class="entry-title" itemprop="headline">빵지순례 리스트의 절대지존</h1>
@@ -73,7 +75,7 @@
                     height="600px"
                     src="https://www.foodinko.com/wp-content/uploads/2023/12/빵지순례-1024x1024.jpeg"
                     alt=""
-                    class="image wp-image-3583"
+                    class="image"
                     srcset="
                         https://www.foodinko.com/wp-content/uploads/2023/12/빵지순례-1024x1024.jpeg 1024w,
                         https://www.foodinko.com/wp-content/uploads/2023/12/빵지순례-300x300.jpeg    300w,
@@ -125,5 +127,18 @@
                 <p style="padding: 0 20px 20px 20px">※ 메뉴/가격은 변경될 수 있습니다.</p>
             </div>
         </div>
+        <div class="blog-slider-wrapper">
+            <a href="" class="box left-box">
+                <div class="left-arrow">
+                    <img id="left" src="" alt="" />
+                </div>
+            </a>
+            <a href="blog_2.html" class="box right-box">
+                <div class="right-arrow">
+                    <img id="right" src="right-arrow.png" alt="rigth arrow" />
+                </div>
+            </a>
+        </div>
+        <footer style="height: 70px"></footer>
     </body>
 </html>

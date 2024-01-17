@@ -5,180 +5,274 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>blog2</title>
         <link rel="icon" href="logo.png" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
         <title>Bootstrap Example</title>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="blogex.css" />
     </head>
     <body>
         <header>
-            <div class="header1">
-                <nav class="header">
+            <div class="header_box">
+                <nav class="header" style="margin-bottom: 0; margin-top: 10px">
                     <div class="header-first">
-                        <a href="main-mobile.html"><img src="logo.png" alt="푸딘코" class="foodinco"></a></div>
-                        <div class="header-midle">
-                            <div class="haeder-map"><a class="header1" href="map.html">지도</a></div>
-                            <div class="header-blg"><a class="header1" href="blogex.html" class="header-blg">블로그</a></div>
-                            <div class="header-page"><a class="header1" href="mypage.html" class="header-page">내 페이지</a></div>
+                        <a href="main-mobile.html"><img src="logo.png" alt="푸딘코" class="foodinco" /></a>
+                    </div>
+                    <div class="header-midle">
+                        <div class="haeder-map">
+                            <a class="header1" href="map.html">지도</a>
                         </div>
-                            <form class="header-last">
-                                <a href="" class="membership"><button type="button">회원가입</button></a>
-                                <a href="" class="log"><button type="button">로그인</button></a>
-                            </form>
+                        <div class="header-blg">
+                            <a class="header1" href="blogex.html" class="header-blg">블로그</a>
+                        </div>
+                        <div class="header-page">
+                            <a class="header1" href="mypage.html" class="header-page">내 페이지</a>
                         </div>
                     </div>
+                    <form class="header-last">
+                        <a href="join.html" class="membership">회원가입</a>
+                        <a href="login.html" class="log">로그인</a>
+                    </form>
                 </nav>
+                <div class="body-a">
+                    <aside class="aside">
+                        <!--배너 안의 아코디언-->
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <!--지역-->
+                                    <button
+                                        class="accordion-button"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne"
+                                        aria-expanded="true"
+                                        aria-controls="collapseOne"
+                                    >
+                                        지역
+                                    </button>
+                                </h2>
+                                <!--지역 안 리스트-->
+                                <div
+                                    id="collapseOne"
+                                    class="accordion-collapse collapse show"
+                                    data-bs-parent="#accordionExample"
+                                >
+                                    <div class="accordion-body">
+                                        <ul class="ul">
+                                            <li>
+                                                <a href="gangnam.html" style="text-decoration: none; color: black"
+                                                    >강남구</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="seocho.html" style="text-decoration: none; color: black"
+                                                    >서초구</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="seongdong.html" style="text-decoration: none; color: black"
+                                                    >성동구</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--종류-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo"
+                                        aria-expanded="false"
+                                        aria-controls="collapseTwo"
+                                    >
+                                        종류
+                                    </button>
+                                </h2>
+                                <!--종류 안 리스트-->
+                                <div
+                                    id="collapseTwo"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample"
+                                >
+                                    <div class="accordion-body">
+                                        <ul class="ul">
+                                            <li class="li1">
+                                                <a href="korea.html" style="text-decoration: none; color: black"
+                                                    >한식</a
+                                                >
+                                            </li>
+                                            <li class="li2">
+                                                <a href="western.html" style="text-decoration: none; color: black"
+                                                    >양식</a
+                                                >
+                                            </li>
+                                            <li class="li2">
+                                                <a href="china.html" style="text-decoration: none; color: black"
+                                                    >중식</a
+                                                >
+                                            </li>
+                                            <li class="li2">
+                                                <a href="japan.html" style="text-decoration: none; color: black"
+                                                    >일식</a
+                                                >
+                                            </li>
+                                            <li class="li2">
+                                                <a href="boonsick.html" style="text-decoration: none; color: black"
+                                                    >분식</a
+                                                >
+                                            </li>
+                                            <li class="li2">
+                                                <a href="cafe.html" style="text-decoration: none; color: black">카페</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
             </div>
         </header>
-        
         <div class="body-line"></div>
         <!--전체 body-->
         <span class="body1">
-          <!--왼쪽에 따라다니는 배너-->
-            <div class="body-a">
-              <aside class="aside">
-                <!--배너 안의 아코디언-->
-                <div class="accordion">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <!--지역-->
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          지역
-                        </button>
-                      </h2>
-                      <!--지역 안 리스트-->
-                      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <ul class="ul">
-                            <li><a href="gangnam.html" style="text-decoration: none; color: black;">강남구</a></li>
-                            <li><a href="seocho.html" style="text-decoration: none; color: black;">서초구</a></li>
-                            <li><a href="seongdong.html" style="text-decoration: none; color: black;">성동구</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <!--종류-->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          종류
-                        </button>
-                      </h2>
-                      <!--종류 안 리스트-->
-                      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <ul class="ul">
-                                <li class="li1"><a href="korea.html" style="text-decoration: none; color: black;">한식</a></li>
-                                <li class="li2"><a href="western.html" style="text-decoration: none; color: black;">양식</a></li>
-                                <li class="li2"><a href="china.html" style="text-decoration: none; color: black;">중식</a></li>
-                                <li class="li2"><a href="japan.html" style="text-decoration: none; color: black;">일식</a></li>
-                                <li class="li2"><a href="boonsick.html" style="text-decoration: none; color: black;">분식</a></li>
-                                <li class="li2"><a href="cafe.html" style="text-decoration: none; color: black;">카페</a></li>
-                              </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div> 
-            </aside>
-        </div>
+            <!--왼쪽에 따라다니는 배너-->
+
+            <div></div>
+            <!--리스트 전체 틀-->
+            <article class="pic-cont">
+                <div></div>
+                <div class="pic">
+                    <a href=""
+                        ><img
+                            src="https://www.foodinko.com/wp-content/uploads/2023/11/%EC%86%8C%EA%B3%A0%EA%B8%B0%EC%A0%84%EA%B3%A8-1.jpeg"
+                            alt="진미평양냉면"
+                            class="pic"
+                    /></a>
+                </div>
+                <div class="div-header">
+                    <p></p>
+                    <p class="title">
+                        <a href="" style="text-decoration: none; color: black">고기 맛 진한 평양식 소고기 전골</a>
+                    </p>
+                </div>
+                <div class="div-cont">
+                    <div class="text">진미평양냉면</div>
+                    <p class="address">
+                        <a href="" style="text-decoration: none; color: black">📍서울 강남구 학동로 305-3</a>
+                    </p>
+                </div>
+                <div class="tag">
+                    <p><a href="gangnam.html">#강남구</a> <a href="korea.html">#한식</a></p>
+                </div>
+            </article>
+
+            <!--리스트 전체 틀-->
+            <article class="pic-cont">
+                <div></div>
+                <div class="pic">
+                    <a href=""
+                        ><img
+                            src="https://www.foodinko.com/wp-content/uploads/2023/11/%EA%B0%93%EA%B9%80%EC%B9%98.jpeg"
+                            alt="신숙"
+                            class="pic"
+                    /></a>
+                </div>
+                <div class="div-header">
+                    <p></p>
+                    <p class="title">
+                        <a href="" style="text-decoration: none; color: black">갓김치가 정말 신의 경지에 있어요</a>
+                    </p>
+                </div>
+                <div class="div-cont">
+                    <div class="text">신숙</div>
+                    <p class="address">
+                        <a href="" style="text-decoration: none; color: black">📍&nbsp;서울 서초구 법원로3길 21</a>
+                    </p>
+                </div>
+                <div class="tag">
+                    <p><a href="seocho.html">#서초구</a> <a href="korea.html">#한식</a></p>
+                </div>
+            </article>
+        </span>
+    </body>
+    <div class="line" style="height: 50px"></div>
+    <div class="body2">
         <div></div>
+        <!--간격을 위해서 div 삽입-->
         <!--리스트 전체 틀-->
         <article class="pic-cont">
             <div></div>
-            <div class="pic"><a href=""><img src="https://www.foodinko.com/wp-content/uploads/2023/11/%EC%86%8C%EA%B3%A0%EA%B8%B0%EC%A0%84%EA%B3%A8-1.jpeg" alt="진미평양냉면" class="pic"></a></div>
+            <div class="pic">
+                <a href=""
+                    ><img
+                        src="https://www.foodinko.com/wp-content/uploads/2023/11/%EC%A0%9C%EB%AA%A9%EC%9D%84-%EC%9E%85%EB%A0%A5%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94__%EB%B3%B5%EC%82%AC%EB%B3%B8-001.jpg"
+                        alt="해남원조김밥"
+                        class="pic"
+                /></a>
+            </div>
             <div class="div-header">
-              <p></p>
-              <p class="title"><a href="" style="text-decoration: none; color: black;">고기 맛 진한 평양식 소고기 전골</a></p>
+                <p></p>
+                <p class="title">
+                    <a href="" style="text-decoration: none; color: black">방배동 사람들이 열광하는 김밥집</a>
+                </p>
             </div>
             <div class="div-cont">
-            <div class="text">진미평양냉면</div>
-            <p class="address"><a href="" style="text-decoration: none; color: black;">📍서울 강남구 학동로 305-3</a></p>
-          </div>
-          <div class="tag">
-            <p><a href="gangnam.html">#강남구</a> <a href="korea.html">#한식</a></p>  
-          </div>
+                <div class="text">해남 원조 김밥</div>
+                <p class="address">
+                    <a href="" style="text-decoration: none; color: black">📍&nbsp;서울 서초구 방배중앙로25길 15</a>
+                </p>
+            </div>
+            <div class="tag">
+                <p><a href="seocho.html">#서초구</a> <a href="korea.html">#한식</a></p>
+            </div>
         </article>
-        
-        <!--리스트 전체 틀-->
-        <article class="pic-cont">
-            <div></div>
-            <div class="pic"><a href=""><img src="https://www.foodinko.com/wp-content/uploads/2023/11/%EA%B0%93%EA%B9%80%EC%B9%98.jpeg" alt="신숙" class="pic"></a></div>
-            <div class="div-header">
-              <p></p>
-              <p class="title"><a href="" style="text-decoration: none; color: black;">갓김치가 정말 신의 경지에 있어요</a></p>
-            </div>
-            <div class="div-cont">
-            <div class="text">신숙</div>
-            <p class="address"><a href="" style="text-decoration: none; color: black;">📍&nbsp;서울 서초구 법원로3길 21</a></p>
-          </div>
-          <div class="tag">
-            <p><a href="seocho.html">#서초구</a> <a href="korea.html">#한식</a></p>
-          </div>
-      </article>
-    </span> 
-  </body>
-  <div class="line" style="height: 50px;"></div>
-        <div class="body2">
-        <div></div> <!--간격을 위해서 div 삽입-->
-      <!--리스트 전체 틀-->
-      <article class="pic-cont">
-        <div></div>
-        <div class="pic"><a href=""><img src="https://www.foodinko.com/wp-content/uploads/2023/11/%EC%A0%9C%EB%AA%A9%EC%9D%84-%EC%9E%85%EB%A0%A5%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94__%EB%B3%B5%EC%82%AC%EB%B3%B8-001.jpg" alt="해남원조김밥" class="pic"></a></div>
-        <div class="div-header">
-          <p></p>
-          <p class="title"><a href="" style="text-decoration: none; color: black;">방배동 사람들이 열광하는 김밥집</a></p>
-        </div>
-        <div class="div-cont">
-        <div class="text">해남 원조 김밥</div>
-        <p class="address"><a href="" style="text-decoration: none; color: black;">📍&nbsp;서울 서초구 방배중앙로25길 15</a></p>
-      </div>
-      <div class="tag">
-        <p><a href="seocho.html">#서초구</a> <a href="korea.html">#한식</a></p>  
-      </div>
-      </article>
 
         <!--리스트 전체 틀-->
         <article class="pic-cont">
-          <div></div>
-          <div class="pic"></div>
-          <div class="div-header">
-            <p></p>
-            <p class="title"></p>
-          </div>
-          <div class="div-cont">
-          <div class="text"></div>
-          <p class="address"></p>
-        </div>
-        <div class="tag">
-          <p></p>
-        </div>
+            <div></div>
+            <div class="pic"></div>
+            <div class="div-header">
+                <p></p>
+                <p class="title"></p>
+            </div>
+            <div class="div-cont">
+                <div class="text"></div>
+                <p class="address"></p>
+            </div>
+            <div class="tag">
+                <p></p>
+            </div>
         </article>
-        </div>
+    </div>
     <!--footer 가기 전 목록 순서-->
     <nav aria-label="Page navigation example" class="nav">
         <ul class="pagination">
-          <li class="page-item">
-            <a class="page-link" href="blog.html" aria-label="Previous">
-              <span aria-hidden="true">«</span>
-            </a>
-          </li>
-          <li class="page-item"><a class="page-link" href="blogex.html" >1</a></li>
-          <li class="page-item">
-            <a class="page-link" href="blogex2.html" aria-label="Next">
-              <span aria-hidden="true">»</span> 
-            </a>
-          </li>      
+            <li class="page-item">
+                <a class="page-link" href="blog.html" aria-label="Previous">
+                    <span aria-hidden="true">«</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="blogex.html">1</a></li>
+            <li class="page-item">
+                <a class="page-link" href="blogex2.html" aria-label="Next">
+                    <span aria-hidden="true">»</span>
+                </a>
+            </li>
         </ul>
-      </nav>
-      <!--footer-->
+    </nav>
+    <!--footer-->
     <footer class="footer">
         <ul class="footer-cont">
-            <li class="li"><a href="main-mobile.html" style="color: black;">main</a></li>
-            <li class="li"><a href="map.html" style="color: black;">map</a></li>
-            <li class="li"><a href="blogex.html" style="color: black;">blog</a></li>
-            <li class="li"><a href="mypage.html" style="color: black;">my page</a></li>
+            <li class="li"><a href="main-mobile.html" style="color: black">main</a></li>
+            <li class="li"><a href="map.html" style="color: black">map</a></li>
+            <li class="li"><a href="blogex.html" style="color: black">blog</a></li>
+            <li class="li"><a href="mypage.html" style="color: black">my page</a></li>
         </ul>
     </footer>
-
 </html>
