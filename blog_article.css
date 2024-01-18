@@ -1,0 +1,247 @@
+body {
+    /* box-sizing: border-box; */
+    padding-top: 160px;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.header_box {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 998;
+}
+.header {
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    margin: 30px;
+    align-items: center;
+}
+.header-midle {
+    display: flex;
+    padding: 35px 0;
+    text-align: center;
+}
+.foodinco {
+    width: 70px;
+    height: 70px;
+}
+.header1 {
+    padding: 0 40px;
+    font-size: 18px;
+    color: black;
+    text-decoration-line: none;
+}
+.header1:hover {
+    color: #01376a;
+    font-weight: 700;
+}
+.header-last {
+    text-align: center;
+    padding: 35px 30px 35px 0;
+    font-size: 13px;
+}
+.membership {
+    padding-right: 10px;
+    color: black;
+    text-decoration-line: none;
+}
+.membership:hover {
+    color: #01376a;
+    font-weight: bold;
+}
+.log {
+    color: black;
+    text-decoration-line: none;
+}
+.log:hover {
+    color: #01376a;
+    font-weight: bold;
+}
+body {
+    overflow: scroll;
+    height: auto;
+}
+.header1 {
+    width: auto;
+    z-index: 998;
+}
+.header {
+    display: flex;
+    height: 120px;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-midle {
+    display: flex;
+    padding: 35px 0;
+    text-align: center;
+}
+.foodinco {
+    width: 100px;
+    height: 80px;
+    padding: 0 5px;
+}
+.header1 {
+    padding: 0 40px;
+}
+.header-last {
+    text-align: center;
+    padding: 35px 0;
+}
+.image {
+    display: flex;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin: 30px auto;
+}
+.article_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    padding: 57px 57px 57px 57px;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    box-shadow: 5px 5px 5px rgb(199, 196, 196);
+    /* overflow: auto; */
+}
+.save_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.save {
+    width: 20px;
+}
+.save:hover {
+    box-shadow: 5px 5px 5px rgb(199, 196, 196);
+}
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.entry-title {
+    font-family: 'Noto Sans Korean';
+    font-weight: 500;
+}
+.restaurant-name {
+    font-family: 'Noto Sans Korean';
+    font-weight: 500;
+    font-size: 20px;
+}
+.ast-terms-link {
+    color: black;
+    text-decoration-line: none;
+}
+.ast-terms-link:hover {
+    color: #01376a;
+}
+.posted-by-vcard {
+    color: black;
+    text-decoration-line: none;
+}
+.posted-by-vcard {
+    color: #01376a;
+}
+.restaurant-address-link {
+    color: black;
+    text-decoration-line: none;
+}
+.restaurant-address-link:hover {
+    color: #01376a;
+}
+.blog-slider-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.box {
+    margin: 0;
+    cursor: pointer;
+    background: var(--bg-element2);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 4px 0px;
+    width: 50%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 4rem;
+    display: flex;
+    /* flex-direction: column; */
+    -webkit-box-align: center;
+    align-items: center;
+    text-decoration: none;
+}
+.left-box {
+    justify-content: flex-start;
+}
+.right-box {
+    justify-content: flex-end;
+}
+#left {
+    width: 20px;
+    /* padding-right: 10px; */
+}
+#right {
+    width: 20px;
+    /* padding-left: 10px; */
+}
+#left:hover {
+    transform: translateX(-10px);
+}
+#right:hover {
+    transform: translateX(10px);
+}
+@media (max-width: 1200px) {
+    .header {
+        float: fixed;
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+    .header-midle {
+        padding: 10px 0 0 0;
+    }
+    .header-last {
+        padding: 10px 0 0 0;
+        font-size: 15px;
+    }
+    .article_wrapper {
+        width: 900px;
+    }
+}
+@media (max-width: 950px) {
+    .article_wrapper {
+        width: 500px;
+    }
+    .image {
+        max-width: 100%;
+        height: auto;
+    }
+    .save {
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 550px) {
+    .haeder_box {
+        width: 100vw;
+    }
+    .article_wrapper {
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 500px) {
+    .header_box {
+        width: auto;
+    }
+}
