@@ -9,17 +9,24 @@ body {
     overflow: scroll;
     height: 100px;
 }
-.header1 {
-    width: auto;
-    background-color: bisque;
+
+.header_box {
+    width: 100vw;
+    background-color: white;
     z-index: 998;
-    padding: 0 40px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
+/* nav */
 .header {
     display: flex;
-    height: 120px;
+    height: 80px;
     justify-content: space-between;
-    align-items: center;
+
+    margin: 30px;
 }
 .header-midle {
     display: flex;
@@ -28,14 +35,43 @@ body {
 }
 /* 푸드인코 이미지 */
 .foodinco {
-    width: 100px;
-    height: 80px;
-    padding: 0 5px;
+    margin-top: 10px;
+    width: 70px;
+    height: 70px;
 }
 
+.header1 {
+    padding: 0 40px;
+    font-size: 18px;
+    color: black;
+    text-decoration-line: none;
+}
+.header1:hover {
+    color: #01376a;
+    font-weight: 700;
+}
 .header-last {
     text-align: center;
-    padding: 35px 0;
+    padding: 35px 30px 35px 0;
+    font-size: 13px;
+}
+
+.membership {
+    padding-right: 10px;
+    color: black;
+    text-decoration-line: none;
+}
+.membership:hover {
+    color: #01376a;
+    font-weight: bold;
+}
+.log {
+    color: black;
+    text-decoration-line: none;
+}
+.log:hover {
+    color: #01376a;
+    font-weight: bold;
 }
 /* ======================================================================= */
 /* ==========================body CSS 디자인============================== */
@@ -47,18 +83,29 @@ body {
     /* flex-direction: row; */
     /* justify-content: space-between;*/
 }
+/* 0118 css body-a, li2,li3(추가)수정*/
+/*.body-a {
+    padding-top: 80px;
+    position: fixed;
+    left: 50px;
+} */
 /* ======================================================================= */
 /* ==========================body 내부 body-a(aside) CSS 디자인============================== */
 /* ======================================================================= */
 /* body aside(선택 리스트) */
 .aside {
     position: relative;
-    top: 50px;
+    top: 150px;
     width: 300px;
     height: 500px;
-    border: 2px solid;
+
     border-radius: 10px;
     margin-left: 20px;
+    text-align: center;
+
+    width: 300px;
+    height: 500px;
+    border-radius: 10px;
     text-align: center;
 }
 .aside-header1 {
@@ -82,6 +129,12 @@ body {
     cursor: pointer;
     margin-bottom: 5px;
     text-decoration: none;
+    margin-bottom: 5px;
+    text-decoration: none;
+    list-style-type: none;
+}
+.li3 {
+    list-style-type: none;
 }
 /* ======================================================================= */
 /* ==========================body 내부 body-b CSS 디자인============================== */
@@ -91,13 +144,13 @@ body {
 /* 입력양식폼 부모 div의 col 속성 삭제함 : 0117 12:33 */
 .row-a {
     position: relative;
-    top: 30px;
+    top: 180px;
     right: -100px;
 }
 .row-b {
     position: relative;
-    top: 30px;
-    left: 30px;
+    top: 180px;
+    left: 170px;
 }
 /* district_button 과 food_button은 js 함수용 클래스 */
 .search_button {
@@ -125,8 +178,8 @@ body {
     background-color: rgb(245, 243, 243);
     /* footer 부분 position 속성 추가해서 top : 100 */
     position: relative;
-    top: 100px;
-    height: 200px;
+    top: 200px;
+    height: 100px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -135,14 +188,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
-}
-/* main, map, blog, mypage 요소 너비 및 패딩  */
-.li {
-    width: 100px;
     padding: 10px;
 }
+/* main, map, blog, mypage 요소 너비 및 패딩  */
 
+.foot {
+    text-decoration-line: none;
+    color: black;
+    margin-right: 150px;
+    font-size: 18px;
+    margin-top: 30px;
+}
+.foot:hover {
+    color: #01376a;
+    font-weight: bold;
+}
 /* ======================================================================= */
 /* ================================지도 CSS 디자인============================= */
 /* ======================================================================= */
@@ -151,16 +211,23 @@ body {
     width: 750px;
     height: 430px;
     position: relative;
-    top: 50px;
+    top: 200px;
     left: 100px;
 }
 
 /* ======================================================================= */
 /* ===============================반응형 CSS 디자인========================= */
 /* ======================================================================= */
-@media (max-width: 700px) {
+@media (min-width: 581px) and (max-width: 700px) {
+    .header1 {
+        padding: 0 21px;
+    }
+
     /* 반응형 사용 시 : body-a(aside) 부분 요소 아예 삭제 */
     /* aside 부분을 지우고 body 몸체를 검색폼 및 지도로 채우기 */
+    body {
+        overflow: hidden;
+    }
     .body-a {
         display: none;
     }
@@ -172,12 +239,12 @@ body {
     }
     .row-a {
         position: relative;
-        top: 30px;
+        top: 170px;
         left: 30px;
     }
     .row-b {
         position: relative;
-        top: 30px;
+        top: 170px;
         left: 0px;
     }
     .service {
@@ -198,15 +265,52 @@ body {
         width: 88%;
         height: 250px;
         position: absolute;
-        top: 100px;
+        top: 250px;
         left: 35px;
     }
+    .footer-cont {
+        padding: 17px;
+    }
     .footer {
-        top: 330px;
+        top: 530px;
+    }
+    .foot {
+        margin-right: 98px;
+    }
+    .footer-cont .foot:nth-child(1) {
+        position: relative;
+        top: -10 px;
+        left: 45px;
+    }
+    .footer-cont .foot:nth-child(2) {
+        position: relative;
+        top: -10 px;
+        left: 40px;
+    }
+    .footer-cont .foot:nth-child(3) {
+        position: relative;
+        top: -10 px;
+        left: 45px;
+    }
+    .footer-cont .foot:nth-child(4) {
+        position: relative;
+        top: -10 px;
+        right: -25px;
+        text-wrap: nowrap;
     }
 }
 
 @media (max-width: 580px) {
+    body {
+        overflow: hidden;
+    }
+    .header {
+        height: 40px;
+    }
+    .header1 {
+        padding: 0 0;
+        margin-right: 23px;
+    }
     .body-a {
         display: none;
     }
@@ -239,15 +343,46 @@ body {
         margin: auto 0;
         border-radius: 3px;
     }
+    .row-a {
+        top: 140px;
+    }
+    .row-b {
+        top: 140px;
+    }
     .body-b #map {
         width: 88%;
-        height: 250px;
+        height: 300px;
         position: absolute;
-        top: 150px;
+        top: 245px;
         left: 45px;
     }
     .footer {
-        top: 330px;
+        top: 480px;
+    }
+    .footer-cont {
+        padding: 9px;
+        margin-left: 152px;
+    }
+    .footer-cont a:nth-child(1) {
+        position: relative;
+        top: -5px;
+        left: 90px;
+    }
+    .footer-cont a:nth-child(2) {
+        position: relative;
+        top: -5px;
+        left: 30px;
+    }
+    .footer-cont a:nth-child(3) {
+        position: relative;
+        top: -5px;
+        right: 30px;
+    }
+    .footer-cont a:nth-child(4) {
+        position: relative;
+        top: -5px;
+        right: 80px;
+        text-wrap: nowrap;
     }
 }
 
