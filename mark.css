@@ -155,7 +155,7 @@ body {
 /* district_button 과 food_button은 js 함수용 클래스 */
 .search_button {
     position: absolute;
-    background-color: purple;
+    /* background-color: purple; */
     width: 50px;
     height: 35px;
     top: 0px;
@@ -272,7 +272,7 @@ body {
         padding: 17px;
     }
     .footer {
-        top: 530px;
+        top: 730px;
     }
     .foot {
         margin-right: 98px;
@@ -300,17 +300,33 @@ body {
     }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 480px) {
+    .header {
+        float: fixed;
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+    .header-midle {
+        padding: 10px 0 0 0;
+    }
+    .header-last {
+        padding: 10px 0 0 0;
+        font-size: 15px;
+    }
+    .article_wrapper {
+        width: 900px;
+    }
     body {
         overflow: hidden;
     }
-    .header {
+    /* .header {
         height: 40px;
     }
     .header1 {
         padding: 0 0;
         margin-right: 23px;
-    }
+    } */
     .body-a {
         display: none;
     }
@@ -334,7 +350,7 @@ body {
     }
     .search_button {
         position: absolute;
-        background-color: purple;
+        background-color: gray;
         width: 100px;
         height: 35px;
         top: 0px;
