@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>마리오네</title>
+        <link rel="icon" href="logo.png" />
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Gothic+A1&family=Gowun+Dodum&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="blog_article.css" />
+    </head>
+    <body>
+        <header>
+            <div class="header_box">
+                <nav class="header" style="margin-bottom: 0; margin-top: 10px">
+                    <div class="header-first">
+                        <a href="main-mobile.html"
+                            ><img src="logo.png" alt="푸딘코" class="foodinco"
+                        /></a>
+                    </div>
+                    <div class="header-midle">
+                        <div class="haeder-map">
+                            <a class="header1" href="map.html">지도</a>
+                        </div>
+                        <div class="header-blg">
+                            <a
+                                class="header1"
+                                href="blogex.html"
+                                class="header-blg"
+                                >블로그</a
+                            >
+                        </div>
+                        <div class="header-page">
+                            <a
+                                class="header1"
+                                href="mypage.html"
+                                class="header-page"
+                                >내 페이지</a
+                            >
+                        </div>
+                    </div>
+                    <form class="header-last">
+                        <a href="join.html" class="membership">회원가입</a>
+                        <a href="login.html" class="log">로그인</a>
+                    </form>
+                </nav>
+            </div>
+        </header>
+        <div class="article_wrapper" style="margin-bottom: 80px">
+            <div class="save_wrapper">
+                <img
+                    class="save"
+                    src="save.png"
+                    alt="save"
+                    onclick="saveMyPage()"
+                />
+            </div>
+            <div class="title">
+                <!-- 제목 -->
+                <h1 class="entry-title" itemprop="headline">
+                    나폴리 피자 챔피언의 정통 피자
+                </h1>
+                <!--글의 주제, 글쓴이-->
+                <div class="entry-meta">
+                    <span>
+                        <a href="" class="ast-terms-link">FOODINKO in Seoul</a>
+                        <!-- 블로그 글 목록으로 연결 -->
+                    </span>
+                    / 글쓴이
+                    <span>
+                        <a href="index.html" class="posted-by-vcard author"
+                            >FOODINKO</a
+                        >
+                        <!-- 메인페이지로 연결 -->
+                    </span>
+                </div>
+            </div>
+            <div class="article">
+                <!-- 가게 사진 -->
+                <img
+                    loading="lazy"
+                    decoding="async"
+                    width="600px"
+                    height="600px"
+                    src="https://foodinko.cafe24.com/wp-content/uploads/2023/11/나폴리피자-1024x1024.jpeg"
+                    alt=""
+                    class="image wp-image-2592"
+                    srcset="
+                        https://www.foodinko.com/wp-content/uploads/2023/11/나폴리피자-1024x1024.jpeg 1024w,
+                        https://www.foodinko.com/wp-content/uploads/2023/11/나폴리피자-300x300.jpeg    300w,
+                        https://www.foodinko.com/wp-content/uploads/2023/11/나폴리피자-150x150.jpeg    150w,
+                        https://www.foodinko.com/wp-content/uploads/2023/11/나폴리피자-768x768.jpeg    768w,
+                        https://www.foodinko.com/wp-content/uploads/2023/11/나폴리피자.jpeg           1440w
+                    "
+                    sizes="(max-width: 1024px) 100vw, 1024px"
+                />
+
+                <!-- 가게 이름 -->
+                <p
+                    class="restaurant-name"
+                    style="padding: 10px 20px; margin: 5px"
+                >
+                    마리오네
+                </p>
+                <!-- 가게 주소 -->
+                <p style="padding: 0 20px; margin: 5px">
+                    📍&nbsp;<a
+                        href="https://goo.gl/maps/NMYXMVyRLyXfLH6K9"
+                        rel="noreferrer noopener"
+                        target="_blank"
+                        class="restaurant-address-link"
+                    >
+                        서울 성동구 성수이로 12길 15
+                    </a>
+                </p>
+                <!-- 메뉴설명 -->
+                <p style="padding: 0 20px; margin: 5px">
+                    📕 가리발디 25,500원 &nbsp;
+                </p>
+                <p style="padding: 0 20px; margin: 5px">
+                    📕 프로슈토 부팔라 26,000원&nbsp;
+                </p>
+                <p style="padding: 0 20px; margin: 5px">
+                    📕 라구 콘 리코타 22,000원&nbsp;
+                </p>
+
+                <!-- 영업일자 -->
+                <p style="padding: 0 20px 20px 20px; margin: 5px">
+                    ⏰ 수-일 11:30-21:30 (주말 12시~) 브레이크타임 15:00-17:00
+                    (주말 15:30~)&nbsp;
+                </p>
+                <!-- 블로그 글 내용 단략별 나눠짐 -->
+                <p style="padding: 0 20px 20px 20px">
+                    척이 아니라 진짜다. 이탈리아 분위기만 낸 가게가 아니라 진짜
+                    이탈리아를 다녀온 듯하다. 모든 식재료가 이탈리아 제품일
+                    정도로 정통성에 진심이시다. 괜히 나폴리 피자 챔피언이
+                    아니다. 간만에 맛있는 화덕피자집을 발굴해서 기분이 좋다.
+                    여기는 오픈런 하거나 아예 점심시간 지나고 가는 게 좋다.
+                    아니면 무조건 웨이팅이다. 시그니처 피자 가리발디가 나왔다.
+                    치즈 베이스에 햄과 옐로 토마토, 페페로치노 고추가 올라간
+                    피자다. 뭔가 예상과는 다르게 꽤 심심한 비주얼이다. 그치만
+                    맛이 반전 있다. 처음엔 담백하고 밀키한 치즈의 풍미가 가득
+                    찬다. 그리고 이어서 혀가 알알하게 맵싹한 맛이 살짝 느껴진다.
+                    부드러운 치즈와 자극적인 소스 없이 알싸한 고추의 궁합이
+                    매력적이다. 빵 피도 말랑말랑하고 쫀득해 씹는 감도 좋다.
+                    중간중간 있는 옐로 토마토는 달큰한 산미가 느껴진다.
+                </p>
+                <p style="padding: 0 20px 20px 20px">
+                    다음은 인기 메뉴인 프로슈토 부팔라다. 얇게 널려진 프로슈토의
+                    비주얼부터 메인감이다. 피자 위에 얹어진 치즈와 루꼴라,
+                    프로슈토까지 빠짐없이 같이 먹어야 한다. 썰지 말고 접어서
+                    먹자. 루꼴라와 부팔라 치즈의 담백하고 신선한 맛이 베이스로
+                    깔린다. 삼삼~하다가 얇은 프로슈토의 짠맛이 감초 역할을
+                    해준다. 맛이 자극적이지 않아 토마토 파스타랑 잘 어울린다.
+                    토마토 파스타는 보기만 해도 묵직하다. 진득한 라구 소스가
+                    코를 찌른다. 밀도 있고 쫀득한 리가토니 면이 아주 궁합이
+                    좋다. 매우 진하게 입안 가득 차는 맛이 만족스럽다. 피자
+                    먹다가 끝에 빵만 먹기 심심할 때 라구 소스를 듬뿍 묻혀 먹으면
+                    된다. 다음엔 실험적인 피자를 도전해봐야겠다.
+                </p>
+
+                <p style="padding: 0 20px 20px 20px">
+                    ※ 메뉴/가격은 변경될 수 있습니다.
+                </p>
+            </div>
+        </div>
+        <div class="blog-slider-wrapper">
+            <a href="blog_18.html" class="box left-box">
+                <div class="left-arrow">
+                    <img id="left" src="left-arrow.png" alt="left arrow" />
+                </div>
+            </a>
+            <a href="blog_20.html" class="box right-box">
+                <div class="right-arrow">
+                    <img id="right" src="right-arrow.png" alt="rigth arrow" />
+                </div>
+            </a>
+        </div>
+        <footer style="height: 70px"></footer>
+    </body>
+    <script src="blog_article.js"></script>
+</html>
