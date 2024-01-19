@@ -170,7 +170,7 @@ body {
     padding: 10px;
 }
 
-@media (max-width: 1299px) {
+@media (min-width: 651px) and (max-width: 1299px) {
     .header {
         flex-direction: column;
         height: auto;
@@ -213,7 +213,7 @@ body {
     }
 }
 
-@media (max-width: 650px) {
+@media (min-width: 472px) and (max-width: 650px) {
     .header {
         flex-direction: column;
         height: auto;
