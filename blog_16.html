@@ -17,24 +17,35 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="blog_article.css" />
-        <link rel="stylesheet" href="header.css" />
     </head>
     <body>
         <header>
             <div class="header_box">
                 <nav class="header" style="margin-bottom: 0; margin-top: 10px">
                     <div class="header-first">
-                        <a href="main-mobile.html"><img src="logo.png" alt="푸딘코" class="foodinco" /></a>
+                        <a href="main-mobile.html"
+                            ><img src="logo.png" alt="푸딘코" class="foodinco"
+                        /></a>
                     </div>
                     <div class="header-midle">
                         <div class="haeder-map">
                             <a class="header1" href="map.html">지도</a>
                         </div>
                         <div class="header-blg">
-                            <a class="header1" href="blogex.html" class="header-blg">블로그</a>
+                            <a
+                                class="header1"
+                                href="blogex.html"
+                                class="header-blg"
+                                >블로그</a
+                            >
                         </div>
                         <div class="header-page">
-                            <a class="header1" href="mypage.html" class="header-page">내 페이지</a>
+                            <a
+                                class="header1"
+                                href="mypage.html"
+                                class="header-page"
+                                >내 페이지</a
+                            >
                         </div>
                     </div>
                     <form class="header-last">
@@ -46,11 +57,18 @@
         </header>
         <div class="article_wrapper" style="margin-bottom: 80px">
             <div class="save_wrapper">
-                <img class="save" src="save.png" alt="save" />
+                <img
+                    class="save"
+                    src="save.png"
+                    alt="save"
+                    onclick="saveMyPage()"
+                />
             </div>
             <div class="title">
                 <!-- 제목 -->
-                <h1 class="entry-title" itemprop="headline">갓김치가 정말 신의 경지에 있어요</h1>
+                <h1 class="entry-title" itemprop="headline">
+                    갓김치가 정말 신의 경지에 있어요
+                </h1>
                 <!--글의 주제, 글쓴이-->
                 <div class="entry-meta">
                     <span>
@@ -59,7 +77,9 @@
                     </span>
                     / 글쓴이
                     <span>
-                        <a href="index.html" class="posted-by-vcard author">FOODINKO</a>
+                        <a href="index.html" class="posted-by-vcard author"
+                            >FOODINKO</a
+                        >
                         <!-- 메인페이지로 연결 -->
                     </span>
                 </div>
@@ -85,7 +105,12 @@
                 />
 
                 <!-- 가게 이름 -->
-                <p class="restaurant-name" style="padding: 10px 20px; margin: 5px">신숙</p>
+                <p
+                    class="restaurant-name"
+                    style="padding: 10px 20px; margin: 5px"
+                >
+                    신숙
+                </p>
                 <!-- 가게 주소 -->
                 <p style="padding: 0 20px; margin: 5px">
                     📍&nbsp;<a
@@ -98,8 +123,12 @@
                     </a>
                 </p>
                 <!-- 메뉴설명 -->
-                <p style="padding: 0 20px; margin: 5px">📕 해초칼국수 9,000원 &nbsp;</p>
-                <p style="padding: 0 20px; margin: 5px">📕 빈대떡 9,000원&nbsp;</p>
+                <p style="padding: 0 20px; margin: 5px">
+                    📕 해초칼국수 9,000원 &nbsp;
+                </p>
+                <p style="padding: 0 20px; margin: 5px">
+                    📕 빈대떡 9,000원&nbsp;
+                </p>
 
                 <!-- 영업일자 -->
                 <p style="padding: 0 20px 20px 20px; margin: 5px">
@@ -107,30 +136,42 @@
                 </p>
                 <!-- 블로그 글 내용 단략별 나눠짐 -->
                 <p style="padding: 0 20px 20px 20px">
-                    글 쓸 맛 난다. 초집중해서 쓰게 된다. 쓰면서 먹느라 완칼이 늦었는데 면이 처음 받은 상태 그대로다.
-                    신비한 칼국수다. 여긴 따뜻한 물수건도 준다. 비즈니스 클래스 비행기를 탄 듯하다. 손님이 계속
-                    들어온다. 주변 직장인들이 많이 온다. 대법원 종사하는 손님들은 모를 수 없는 듯하다. 사장님 말대로
-                    신주쿠에 전라도를 더한 그 중간이다. 곳곳에 디테일이 있다. 체계가 잘 갖춰져 있다. 김치가 정갈하게
-                    나옴. 신기하게 유니폼을 입으신다. 분명한 철학이 있다. 주방 안에는 물수건으로 쓸 수건이 가지런히
-                    정리되어 있다. 그냥 물도 아니고 결명자 차다. 디테일에 끌린다. 오픈한지 10년인줄 알았는데 여쭤보니
-                    30년 됐다고 하신다.
+                    글 쓸 맛 난다. 초집중해서 쓰게 된다. 쓰면서 먹느라 완칼이
+                    늦었는데 면이 처음 받은 상태 그대로다. 신비한 칼국수다. 여긴
+                    따뜻한 물수건도 준다. 비즈니스 클래스 비행기를 탄 듯하다.
+                    손님이 계속 들어온다. 주변 직장인들이 많이 온다. 대법원
+                    종사하는 손님들은 모를 수 없는 듯하다. 사장님 말대로
+                    신주쿠에 전라도를 더한 그 중간이다. 곳곳에 디테일이 있다.
+                    체계가 잘 갖춰져 있다. 김치가 정갈하게 나옴. 신기하게
+                    유니폼을 입으신다. 분명한 철학이 있다. 주방 안에는
+                    물수건으로 쓸 수건이 가지런히 정리되어 있다. 그냥 물도
+                    아니고 결명자 차다. 디테일에 끌린다. 오픈한지 10년인줄
+                    알았는데 여쭤보니 30년 됐다고 하신다.
                 </p>
                 <p style="padding: 0 20px 20px 20px">
-                    해초 칼국수가 메인이다. 우선 풍미가 아름답다. 국물이 시원하면서 멸치의 국물이 아주 입 속으로 쏙
-                    들어온다. 면발은 쫄깃과 쫀득 중간이다. 한 입 먹고 김치 먹으면 최고의 조합이다. 배부른데 다 먹게 되는
-                    신비한 칼국수다. 국물도 간간히 마셔주면 해장되는 기분까지 든다. 밥도 말아 먹으면 또 다른 메뉴가
-                    탄생할 정도다. 여긴 정말 아는 사람 전부 데려오고 싶을 정도로 매력도 넘치는 곳이다. 나만 알고 싶은
-                    류에 속한다.
+                    해초 칼국수가 메인이다. 우선 풍미가 아름답다. 국물이
+                    시원하면서 멸치의 국물이 아주 입 속으로 쏙 들어온다. 면발은
+                    쫄깃과 쫀득 중간이다. 한 입 먹고 김치 먹으면 최고의
+                    조합이다. 배부른데 다 먹게 되는 신비한 칼국수다. 국물도
+                    간간히 마셔주면 해장되는 기분까지 든다. 밥도 말아 먹으면 또
+                    다른 메뉴가 탄생할 정도다. 여긴 정말 아는 사람 전부 데려오고
+                    싶을 정도로 매력도 넘치는 곳이다. 나만 알고 싶은 류에
+                    속한다.
                 </p>
                 <p style="padding: 0 20px 20px 20px">
-                    특히 갓김치가 정말 최고다. 솔직히 미안하지만 우리 엄마 김치랑 신숙 김치 블라인드 테스트 하면 신숙을
-                    선택할듯 하다. 밥 먹을 때 김치 없인 못 사는 성격이다보니 이 김치는 매일 먹고 싶은 맛이다. 김치
-                    장사만 따로 하셔도 될 정도다. 먹기좋게 잘 익었고 먹음직스러운 사이즈다. 약간 묵은지처럼 신 맛도
-                    있다. 빈대떡도 굉장히 담백하다. 같이 내어주시는 김치랑 같이 먹으면 속으로 와우 요놈봐라 하게 된다.
-                    와우포인트가 있다. 여쭤보니 김치가 전라도식으로 만드셨다고 한다.
+                    특히 갓김치가 정말 최고다. 솔직히 미안하지만 우리 엄마
+                    김치랑 신숙 김치 블라인드 테스트 하면 신숙을 선택할듯 하다.
+                    밥 먹을 때 김치 없인 못 사는 성격이다보니 이 김치는 매일
+                    먹고 싶은 맛이다. 김치 장사만 따로 하셔도 될 정도다.
+                    먹기좋게 잘 익었고 먹음직스러운 사이즈다. 약간 묵은지처럼 신
+                    맛도 있다. 빈대떡도 굉장히 담백하다. 같이 내어주시는 김치랑
+                    같이 먹으면 속으로 와우 요놈봐라 하게 된다. 와우포인트가
+                    있다. 여쭤보니 김치가 전라도식으로 만드셨다고 한다.
                 </p>
 
-                <p style="padding: 0 20px 20px 20px">※ 메뉴/가격은 변경될 수 있습니다.</p>
+                <p style="padding: 0 20px 20px 20px">
+                    ※ 메뉴/가격은 변경될 수 있습니다.
+                </p>
             </div>
         </div>
         <div class="blog-slider-wrapper">
