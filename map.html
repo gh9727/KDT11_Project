@@ -1,47 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>main</title>
+        <meta charset="utf-8" />
+        <title>지도</title>
+        <link rel="icon" href="logo.png" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
         <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
-        <title>Bootstrap Example</title>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-        <link rel="stylesheet" href="main-mobile.css" />
+        <link rel="stylesheet" href="mark.css" />
     </head>
     <body>
+        <!------------------------------------------------------------페이지 상단 헤더 부분-------------------------------------------------------------------->
+        <!------------------------------------------------------------페이지 상단 헤더 부분-------------------------------------------------------------------->
+        <!------------------------------------------------------------페이지 상단 헤더 부분-------------------------------------------------------------------->
         <header>
             <div class="header_box">
-                <nav class="header" style="margin-bottom: 0; margin-top: 10px">
+                <nav class="header">
                     <div class="header-first">
                         <a href="main-mobile.html"><img src="logo.png" alt="푸딘코" class="foodinco" /></a>
                     </div>
+
                     <div class="header-midle">
-                        <div class="haeder-map">
-                            <a class="header1" href="map.html">지도</a>
-                        </div>
+                        <div class="haeder-map"><a class="header1" href="map.html">지도</a></div>
+                        <!-- 1 -->
                         <div class="header-blg">
                             <a class="header1" href="blogex.html" class="header-blg">블로그</a>
                         </div>
+                        <!-- 2 -->
                         <div class="header-page">
                             <a class="header1" href="mypage.html" class="header-page">내 페이지</a>
                         </div>
+                        <!-- 3 -->
                     </div>
                     <form class="header-last">
                         <a href="join.html" class="membership">회원가입</a>
                         <a href="login.html" class="log">로그인</a>
                     </form>
+                    <!-- div 태그 제거함 -->
                 </nav>
             </div>
         </header>
-        <footer class="footer">
-            <ul class="footer-cont">
-                <li class="li"><a href="main-mobile.html" style="color: black">main</a></li>
-                <li class="li"><a href="map.html" style="color: black">map</a></li>
-                <li class="li"><a href="blogex.html" style="color: black">blog</a></li>
-                <li class="li"><a href="mypage.html" style="color: black">my page</a></li>
-            </ul>
-        </footer>
+        <!------------------------------------------------------------페이지 몸체 body 부분-------------------------------------------------------------------->
+        <!------------------------------------------------------------페이지 몸체 body 부분-------------------------------------------------------------------->
+        <!------------------------------------------------------------페이지 몸체 body 부분-------------------------------------------------------------------->
+        <span class="body">
+            <!------------------------------------------------------------페이지 몸체 body-a 파트-------------------------------------------------------------------->
+            <!------------------------------------------------------------페이지 몸체 body-a 내부 aside 파트---------------------------------------------------------->
+            <div class="body-a">
+                <aside class="aside">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne"
+                                    aria-expanded="true"
+                                    aria-controls="collapseOne"
+                                    style="background-color: rgb(231, 228, 228)"
+                                >
+                                    지역
+                                </button>
+                            </h2>
+                            <div
+                                id="collapseOne"
+                                class="accordion-collapse collapse show"
+                                data-bs-parent="#accordionExample"
+                            >
+                                <div class="accordion-body">
+                                    <ul class="ul">
+                                        <!-- li3 a 태그 빼고 각 리스트에 search 공통 클래스 추가 및 onclick 이벤트 추가 0116 09:44 -->
+                                        <li class="search li3" onclick="search_Gangnam()">강남구</li>
+                                        <li class="search li3" onclick="search_Seocho()">서초구</li>
+                                        <li class="search li3" onclick="search_Seongdong()">성동구</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo"
+                                    aria-expanded="false"
+                                    aria-controls="collapseTwo"
+                                    style="background-color: rgb(231, 228, 228)"
+                                >
+                                    종류
+                                </button>
+                            </h2>
+                            <div
+                                id="collapseTwo"
+                                class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample"
+                            >
+                                <div class="accordion-body">
+                                    <ul class="ul">
+                                        <!-- 여기도 a 태그 제외하고 onclick 이벤트로 수정 -->
+                                        <li class="li2" onclick="search_koreanFood()">한식</li>
+                                        <li class="li2" onclick="search_chineseFood()">중식</li>
+                                        <li class="li2" onclick="search_westernFood()">양식</li>
+                                        <li class="li2" onclick="search_japaneseFood()">일식</li>
+                                        <li class="li2" onclick="search_snackBar()">분식</li>
+                                        <li class="li2" onclick="search_cafe()">카페</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <!-- aside 종료-->
+            </div>
+            <!------------------------------------------------------------페이지 몸체 body-b 파트-------------------------------------------------------------------->
+            <!------------------------------------------------------------페이지 몸체 body-b 내부 input 파트---------------------------------------------------------->
+            <!------------------------------------------------------------페이지 몸체 body-b 내부 Map 파트---------------------------------------------------------->
+            <!-- 입력 창 지역명 클래스 district 종류 입력명 클래스 -->
+            <!-- row g-3 , col, map 클래스는 내가 만든 클래스X -->
+            <!-- 2개의 input 태그 id 속성값: district, food -> js 함수 호출을 위해 선언 -->
+            <div class="body-b">
+                <div class="row g-3">
+                    <div class="col row-a">
+                        <input
+                            id="district"
+                            type="text"
+                            class="service form-control"
+                            placeholder="구를 입력해주세요"
+                            aria-label="First name"
+                        />
+                        <button class="search_button district_button">검색</button>
+                    </div>
+
+                    <div class="col row-b">
+                        <input
+                            id="food"
+                            type="text"
+                            class="service form-control"
+                            placeholder="종류를 입력해주세요"
+                            aria-label="Last name"
+                        />
+                        <button class="search_button food_button">검색</button>
+                    </div>
+                </div>
+                <div id="map"></div>
+            </div>
+        </span>
+        <!------------------------------------------------------------카카오 API.JS 연결-------------------------------------------------------------------->
+        <!------------------------------------------------------------각 .JS 파일 연결---------------------------------------------------------->
+        <script
+            type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ec794db2c9a4e5f04f8802330b1070b8"
+        ></script>
+        <!-- 0116 11:22 카카오맵 api 서비스 라이브러리 추가 -->
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services"></script>
+        <script src="resturant.js"></script>
+        <script src="map.js"></script>
+        <script src="search.js"></script>
     </body>
+    <!------------------------------------------------------------페이지 하단 footer 부분-------------------------------------------------------------------->
+    <!------------------------------------------------------------페이지 하단 footer 부분-------------------------------------------------------------------->
+    <!------------------------------------------------------------페이지 하단 footer 부분-------------------------------------------------------------------->
+    <footer class="footer">
+        <!--<ul class="footer-cont"> -->
+        <form class="footer-cont">
+            <a class="foot" href="main-mobile.html">main</a>
+            <a class="foot" href="map.html">map</a>
+            <a class="foot" href="blogex.html">blog</a>
+            <a class="foot" href="mypage.html">my page</a>
+        </form>
+        <!--      <li class="li"><a class="foot" href="main-mobile.html">main</a></li>
+            <li class="li"><a class="foot" href="map.html">map</a></li>
+            <li class="li"><a class="foot" href="blogex.html">blog</a></li>
+            <li class="li"><a class="foot" href="mypage.html">my page</a></li>-->
+        <!-- </ul> -->
+    </footer>
 </html>

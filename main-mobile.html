@@ -10,6 +10,8 @@
         <title>Bootstrap Example</title>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="main-mobile.css" />
+        <!-- jquery cdn 추가 0118 20:58 -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     </head>
       <body>
         <header>
@@ -63,28 +65,32 @@
             <div class="bottom">
                 <div class="bottom-box">
                     <div id="choice" class="choice1">
-                        <a href="">
-                        <img src="coffee-.png" alt="" class="choice-pic">
-                        </a>
+                        <a href=""></a>
+                          <!-- 2024 0118 작업 시작: 버튼 추가완료-->
+                        <button type="button" class="back_button"><img src="image/back.png" alt="" class="back_button"></button>
+                        <img src="coffee-.png" alt="" class="choice-pic btn1">
+                        
                     </div>
-                        <div class="box"><a href="" style="text-decoration: none; color: black;"><img src="coffee.png" alt="" width="30px" height="30px">가 땡겨요</a></div>
+                        <div class="box box_btn1"><a href="" style="text-decoration: none; color: black;"><img src="coffee.png" alt="" width="30px" height="30px">가 땡겨요</a></div>
                 </div>
                 <div class="bottom-box">
                     <div id="choice" class="choice2">
-                        <a href="">
-                        <img src="https://www.foodinko.com/wp-content/uploads/2023/11/%EC%9E%A5%EC%96%B4-1024x1024.jpeg" alt="" class="choice-pic">
-                        </a>
+                        <a href=""></a> 
+                        <img src="https://www.foodinko.com/wp-content/uploads/2023/11/%EC%9E%A5%EC%96%B4-1024x1024.jpeg" alt="" class="choice-pic btn2">
+                        
                     </div>
-                        <div class="box"><추천2></div>
+                        <div class="box box_btn2"><추천2></div>
                     </div>
                 <div class="bottom-box">    
                     <div id="choice" class="choice3">
                         <a href=""></a>
-                        <img src="https://www.foodinko.com/wp-content/uploads/2023/11/%EB%83%89%EB%A9%B4-1024x1024.jpeg" alt="" class="choice-pic">
+                        <img src="https://www.foodinko.com/wp-content/uploads/2023/11/%EB%83%89%EB%A9%B4-1024x1024.jpeg" alt="" class="choice-pic btn3">
                         </a>
+                        <!-- 2024 0118 작업 시작: 버튼 추가완료 -->
                     </div>
-                        <div class="box"><추천3></div>
-                    </div>
+                    <div class="box box_btn3"><추천3></div>
+                    <button class="next_button"><img src="image/next.png" alt="" class="next_button"></button>
+                </div>
             </div>
             <div class="line2"></div>
     </body>
@@ -163,5 +169,7 @@
             <li class="li"><a href="mypage.html" style="color: black;">my page</a></li>
         </ul>
     </footer>
-
+    <!-- 0118 20:52 main-mobile.js 파일 생성 = back,next 버튼 클릭 이벤트 추가 -->
+    <script src="resturant.js"></script>
+    <script src="main-mobile.js"></script>
 </html>
