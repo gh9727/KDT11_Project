@@ -8,10 +8,11 @@
 body {
     overflow: scroll;
     height: 100px;
+    position: relative;
 }
 
 .header_box {
-    width: 100vw;
+    width: 100%;
     background-color: white;
     z-index: 998;
 
@@ -154,8 +155,7 @@ body {
 }
 /* district_button 과 food_button은 js 함수용 클래스 */
 .search_button {
-    position: absolute;
-    background-color: purple;
+    background-color: rgb(231, 228, 228);
     width: 50px;
     height: 35px;
     top: 0px;
@@ -163,9 +163,11 @@ body {
     right: 75px;
     margin: auto 0;
     border-radius: 3px;
+    border: none;
 }
 .service {
-    width: 300px;
+    width: 250px;
+    display: inline;
 }
 
 /* li 태그 강남구 서초구 성동구 .search 클래스 --> cursor: pointer 속성 추가 0116 09:45 */
@@ -176,7 +178,25 @@ body {
 /* footer부 css 디자인 */
 .footer {
     background-color: rgb(245, 243, 243);
-    /* footer 부분 position 속성 추가해서 top : 100 */
+    height: 200px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+}
+.footer-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.li {
+    width: 100px;
+    padding: 10px;
+}
+/* .footer {
+    background-color: rgb(245, 243, 243);
+    footer 부분 position 속성 추가해서 top : 100
     position: relative;
     top: 200px;
     height: 100px;
@@ -189,10 +209,10 @@ body {
     justify-content: center;
     align-items: center;
     padding: 10px;
-}
+} */
 /* main, map, blog, mypage 요소 너비 및 패딩  */
 
-.foot {
+/* .foot {
     text-decoration-line: none;
     color: black;
     margin-right: 150px;
@@ -202,14 +222,14 @@ body {
 .foot:hover {
     color: #01376a;
     font-weight: bold;
-}
+} */
 /* ======================================================================= */
 /* ================================지도 CSS 디자인============================= */
 /* ======================================================================= */
 /* 지도에 생성되는 마커 및 커스텀 오버레이 css 디자인 */
 #map {
     width: 750px;
-    height: 430px;
+    height: 400px;
     position: relative;
     top: 200px;
     left: 100px;
@@ -218,14 +238,132 @@ body {
 /* ======================================================================= */
 /* ===============================반응형 CSS 디자인========================= */
 /* ======================================================================= */
-@media (min-width: 581px) and (max-width: 700px) {
+@media (min-width: 1051px) and (max-width: 1299px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+    .header-midle {
+        padding: 10px 0 0 0;
+    }
     .header1 {
-        padding: 0 21px;
+        padding: 0 30px;
+    }
+    .header-last {
+        padding: 10px 0 0 0;
+    }
+    .body-a {
+        padding-top: 100px;
+    }
+    .search_button {
+        margin-right: 160px;
+    }
+    .row-b {
+        left: 0px;
+    }
+    .body-b {
+        margin-bottom: 250px;
+        padding-top: 5%;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer {
+        margin-top: 100px;
+    }
+    #map {
+        left: 15%;
+    }
+    .col {
+        left: 13%;
+    }
+    .footer {
+        width: 115vw;
+    }
+}
+@media (min-width: 551px) and (max-width: 1050px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+    .header-midle {
+        padding: 10px 0 0 0;
+    }
+    .header1 {
+        padding: 0 30px;
+    }
+    .header-last {
+        padding: 10px 0 0 0;
+    }
+    .body {
+        height: 100vh;
+    }
+    .body-b {
+        margin-bottom: 250px;
+        padding-top: 5%;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer {
+        margin-top: 10%;
     }
 
-    /* 반응형 사용 시 : body-a(aside) 부분 요소 아예 삭제 */
-    /* aside 부분을 지우고 body 몸체를 검색폼 및 지도로 채우기 */
-    body {
+    .search_button {
+        margin-right: 160px;
+    }
+    .row-b {
+        left: 0px;
+    }
+    .body-a {
+        display: none;
+        overflow: hidden;
+    }
+    .body {
+        height: 100vh;
+    }
+}
+@media (max-width: 550px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+    .header-midle {
+        padding: 10px 0 0 0;
+    }
+    .header1 {
+        padding: 0 30px;
+    }
+    .header-last {
+        padding: 10px 0 0 0;
+    }
+    .body {
+        height: 100vh;
+    }
+    .body-b {
+        padding-top: 5%;
+        margin-bottom: 0;
+    }
+    .footer {
+        height: 5%;
+    }
+    #map {
+        height: 50%;
+        width: 50%;
+    }
+}
+/*@media (min-width: 581px) and (max-width: 700px) {
+    .header1 {
+    }*/
+
+/* 반응형 사용 시 : body-a(aside) 부분 요소 아예 삭제 */
+/* aside 부분을 지우고 body 몸체를 검색폼 및 지도로 채우기 */
+/*body {
         overflow: hidden;
     }
     .body-a {
@@ -252,7 +390,6 @@ body {
     }
     .search_button {
         position: absolute;
-        background-color: purple;
         width: 50px;
         height: 35px;
         top: 0px;
@@ -298,8 +435,8 @@ body {
         right: -25px;
         text-wrap: nowrap;
     }
-}
-
+}*/
+/*
 @media (max-width: 580px) {
     body {
         overflow: hidden;
@@ -385,6 +522,7 @@ body {
         text-wrap: nowrap;
     }
 }
+*/
 
 /* ======================================================================= */
 /* ===============================카카오맵 API CSS 디자인========================= */
