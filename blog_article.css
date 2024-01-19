@@ -99,6 +99,7 @@ body {
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin: 30px auto;
+    box-shadow: 5px 5px 5px rgb(199, 196, 196);
 }
 .article_wrapper {
     display: flex;
