@@ -1,9 +1,11 @@
+/*header css*/
+
 * {
     margin: 0;
     padding: 0;
 }
 .header_box {
-    width: 100vw;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -58,11 +60,14 @@
     color: #01376a;
     font-weight: bold;
 }
+
+/*body 시작*/
 body {
     box-sizing: border-box;
     padding-top: 160px;
 }
 .body-pic {
+    width: 100%;
     display: flex;
     justify-content: center;
     background-color: rgb(167, 139, 119);
@@ -102,6 +107,8 @@ body {
     height: 300px;
     border-radius: 20px;
 }
+
+/*body 끝*/
 .line {
     height: 3rem;
     background-color: rgba(0, 0, 0, 0.1);
@@ -109,11 +116,18 @@ body {
     border-width: 1px 0;
     box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
 }
+/*bottom 시작*/
+.menu-choice {
+    padding-left: 10px;
+    font-size: 40px;
+    font-weight: 100;
+}
 .bottom {
     padding: 60px 0 10px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
 }
 #choice {
     border-radius: 20px;
@@ -137,7 +151,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 50%;
+    width: 50%;
 }
+/* .bottom-box1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
 /* back 버튼 CSS 디자인 작업 0118 20:21 */
 .back_button {
     position: relative;
@@ -155,6 +176,8 @@ body {
     border: none;
     background-color: white;
 }
+
+/*buttom 끝*/
 .line2 {
     height: 1rem;
     background-color: rgba(0, 0, 0, 0.1);
@@ -165,9 +188,11 @@ body {
 }
 .li1 {
     padding: 5px 0;
+    list-style-type: none;
 }
 .li2 {
     padding-bottom: 5px;
+    list-style-type: none;
 }
 .footer {
     background-color: rgb(245, 243, 243);
@@ -185,9 +210,20 @@ body {
 .li {
     width: 100px;
     padding: 10px;
+    list-style-type: none;
 }
 
-@media (min-width: 651px) and (max-width: 1299px) {
+@media (min-width: 651px) and (max-width: 1205px) {
+    .body-pic {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(167, 139, 119);
+        height: 54vw;
+        align-items: center;
+    }
+    .main-pic {
+        height: 40vw;
+    }
     .header {
         flex-direction: column;
         height: auto;
@@ -219,91 +255,211 @@ body {
 
     .choice-pic {
         display: block;
-        width: 300px;
-        height: 200px;
+        width: 100%;
+        height: 70vh;
         justify-content: center;
     }
-    .box {
-        height: 100px;
+    /*bottom*/
+    .bottom-box {
         display: flex;
+        flex-direction: column;
         align-items: center;
+        height: 50vw;
+        width: 100vw;
     }
+    .choice-pic {
+        width: 43vw;
+        height: 39vw;
+    }
+    #choice {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        height: 80vw;
+    }
+    /*button*/
     .back_button {
-        position: relative;
-        right: 10px;
-        width: 70px;
-        height: 70px;
+        background: none;
         border: none;
-        background-color: white;
+        padding: 0;
+    }
+    .back_button img {
+        content: url('image/upper.png');
     }
     .next_button {
-        position: relative;
-        left: 10px;
-        width: 70px;
-        height: 70px;
+        background: none;
         border: none;
-        background-color: white;
+        padding: 0;
+    }
+    .next_button img {
+        content: url('image/down.png');
     }
 }
 
 @media (min-width: 472px) and (max-width: 650px) {
+    .header-midle {
+        padding: 0;
+        font-size: 5px;
+    }
     .header {
         flex-direction: column;
         height: auto;
+    }
+    .header1 {
+        padding: 10px;
     }
     .body-pic {
         display: flex;
         justify-content: center;
         background-color: rgb(167, 139, 119);
-        height: 300px;
+        height: 60vh;
+        align-items: center;
     }
+
     .main-pic {
-        height: 200px;
+        height: 50vh;
     }
     .header {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
+    /*body 설정*/
     .body-box {
-        height: 300px;
-        width: 300px;
+        width: 100%;
     }
     .body-circle,
     .img-blog,
     .img-map,
     .img-mypage {
-        height: 200px;
-        width: 300px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
+
+    /*bottom 설정*/
+    #choice {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 80%;
+    }
+    .body1,
+    .bottom {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 0;
+        align-items: center;
+    }
+    .bottom-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+    }
+    /*button*/
     .back_button {
-        position: relative;
-        right: 10px;
-        width: 70px;
-        height: 70px;
+        background: none;
         border: none;
-        background-color: white;
+        padding: 0;
+    }
+    .back_button img {
+        content: url('image/upper.png');
     }
     .next_button {
-        position: relative;
-        left: 10px;
-        width: 70px;
-        height: 70px;
+        background: none;
         border: none;
-        background-color: white;
+        padding: 0;
+    }
+    .next_button img {
+        content: url('image/down.png');
     }
 }
 
-@media (max-width: 471px) {
-    .header-blg {
-        padding: 0 40px;
+@media (max-width: 472px) {
+    .header {
+        background-color: white;
+    }
+    .header1 {
+        padding: 10px;
+    }
+
+    .header-midle {
+        padding: 0;
+        font-size: 5px;
+    }
+    .header {
+        flex-direction: column;
+        height: auto;
+    }
+    .body1,
+    .bottom {
+        flex-direction: column;
+        padding: 50px 0;
+        align-items: center;
+    }
+    .body-pic {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(167, 139, 119);
+        height: 60vh;
+        align-content: center;
+    }
+    .main-pic {
+        height: 50vw;
+    }
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .body-box {
+        height: 60%;
+        width: 70%;
+    }
+    .body-circle,
+    .img-blog,
+    .img-map,
+    .img-mypage {
+        height: 80%;
+        width: 100%;
     }
     .body-pic {
         height: 250px;
     }
-    .header1 {
-        padding: 0;
+    /*bottom 설정*/
+
+    #choice {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 80%;
     }
+    .btn1 {
+        margin-left: 15%;
+    }
+
+    .choice-pic {
+        width: 70%;
+        height: 100%;
+    }
+    .bottom-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+    }
+
+    /*footer 설정*/
+
     .footer {
         height: 300px;
     }
@@ -312,20 +468,21 @@ body {
         flex-direction: column;
         align-items: center;
     }
-    /* .back_button {
-        position: relative;
-        right: 10px;
-        width: 70px;
-        height: 70px;
+    /*button*/
+    .back_button {
+        background: none;
         border: none;
-        background-color: white;
+        padding: 0;
+    }
+    .back_button img {
+        content: url('image/upper.png');
     }
     .next_button {
-        position: relative;
-        left: 10px;
-        width: 70px;
-        height: 70px;
+        background: none;
         border: none;
-        background-color: white;
-    } */
+        padding: 0;
+    }
+    .next_button img {
+        content: url('image/down.png');
+    }
 }

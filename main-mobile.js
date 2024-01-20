@@ -6,7 +6,7 @@ let next = 3;
 let back = -3;
 back_button.onclick = function () {
     if (index === 0) {
-        index = 24;
+        index = 18;
         $('.choice1 .btn1').attr('src', `${resturant[index - 3].src}`);
         $('.choice2 .btn2').attr('src', `${resturant[index - 2].src}`);
         $('.choice3 .btn3').attr('src', `${resturant[index - 1].src}`);
@@ -20,7 +20,7 @@ back_button.onclick = function () {
     } else {
         index += back;
         if (index === 0) {
-            index = 24;
+            index = 18;
             $('.choice1 .btn1').attr('src', `${resturant[index - 3].src}`);
             $('.choice2 .btn2').attr('src', `${resturant[index - 2].src}`);
             $('.choice3 .btn3').attr('src', `${resturant[index - 1].src}`);
@@ -42,7 +42,7 @@ back_button.onclick = function () {
 };
 
 next_button.onclick = function () {
-    if (index >= 23) {
+    if (index >= 17) {
         index = 0;
         $('.choice1 .btn1').attr('src', `${resturant[index].src}`);
         $('.choice2 .btn2').attr('src', `${resturant[index + 1].src}`);
