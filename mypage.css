@@ -1,5 +1,9 @@
+/* header */
 body {
-    padding-top: 160px;
+    padding-top: 120px;
+    height: auto;
+    overflow: scroll;
+    height: auto;
 }
 * {
     margin: 0;
@@ -62,11 +66,6 @@ body {
     color: #01376a;
     font-weight: bold;
 }
-
-body {
-    overflow: scroll;
-    height: auto;
-}
 .header1 {
     width: auto;
     z-index: 998;
@@ -94,20 +93,7 @@ body {
     text-align: center;
     padding: 35px 0;
 }
-.li1 {
-    margin: 10px 0 5px 0;
-    text-decoration: none;
-    list-style-type: none;
-}
-.li2 {
-    margin-bottom: 5px;
-    text-decoration: none;
-    list-style-type: none;
-}
-.li3 {
-    list-style-type: none;
-    margin: 10px 0;
-}
+/* footer */
 .footer {
     background-color: rgb(245, 243, 243);
     height: 200px;
@@ -124,65 +110,102 @@ body {
 .li {
     width: 100px;
 }
-.body-line {
-    width: auto;
-    height: 100px;
-}
-.body1 {
-    padding-top: 50px;
+/* 내페이지 목록  */
+.list-wrapper {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 1000px;
+    height: auto;
+    margin: 50px auto;
+    padding: 57px 57px 57px 57px;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    /* box-shadow: 5px 5px 5px rgb(199, 196, 196); */
 }
-.body-a {
-    padding-top: 80px;
-    position: fixed;
-    left: 50px;
+.list {
+    margin-bottom: 43px;
 }
-.body-c {
-    width: 600px;
+.num {
+    font-size: 22px;
+    color: #211e1e;
+    font-family: 'Gowun Dodum', cursive;
+    font-weight: 400;
 }
-.aside {
-    width: 300px;
-    height: 500px;
-    border-radius: 10px;
-    text-align: center;
-}
-.aside-header1 {
-    margin-bottom: 50px;
-    margin-top: 10px;
-}
-.aside-cont {
+.list-box {
+    width: 800px;
+    height: auto;
     display: flex;
+    justify-content: space-around;
+    border: 1px solid #dbdbdb;
+    background-color: #f9f3f3d1;
+    box-shadow: 5px 5px 5px rgb(199, 196, 196);
 }
-.content {
-    width: 600px;
+.img-box {
+    margin: 10px;
 }
-.nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 100px 0;
+.text-box {
+    color: gray;
+    font-size: 14px;
+    font-family: 'Noto Sans Korean';
+    font-weight: 300;
+    margin: auto;
 }
-.pic-cont {
-    width: 350px;
-    height: 450px;
+.list-title {
+    color: #211e1e;
+    font-family: 'Gowun Dodum', cursive;
+    font-weight: 400;
+    font-size: 37px;
 }
-.pic {
-    width: 350px;
-    height: 300px;
+.blog-url {
+    text-decoration-line: none;
 }
-.title {
-    font-weight: bold;
-    font-size: 20px;
+.blog-url:hover {
+    color: #01376a;
 }
-.text {
-    font-size: 12px;
+
+.blog-image {
+    width: 160px;
+    height: 160px;
 }
-.body2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+.blog-title {
+    font-family: 'Noto Sans Korean';
+    font-weight: 300;
+    font-size: 27px;
+    color: rgb(70, 70, 70);
+}
+.blog-restaurant-name {
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(70, 70, 70);
+}
+.blog-restaurant-address {
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(70, 70, 70);
+}
+.reset-button {
+    width: 100%;
+    text-align: right;
+    margin-right: 84px;
+}
+#reset-button {
+    border: none;
+    padding: 15px 30px;
+    /* border-radius: 15px; */
+    /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); */
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+    background-color: #f9f3f3d1;
+    color: grey;
+}
+#reset-button-outline {
+    border: 3px solid aliceblue;
+    color: grey;
+}
+#reset-button:hover {
+    box-shadow: 2px 2px 2px 2px rgb(236, 232, 232);
 }
 
 @media (max-width: 1450px) {
@@ -198,40 +221,11 @@ body {
     .header-midle {
         padding: 1px;
     }
-    .body1 .body2 {
+    .list-wrapper {
         padding-top: 50px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-    }
-    .body-a {
-        padding-top: 0;
-        left: 0;
-        position: relative;
-    }
-    .aside {
-        height: 0;
-        width: 100vw;
-        border: 0;
-        text-align: start;
-        border-radius: 0;
-    }
-    .body1 {
-        padding-top: 200px;
-    }
-}
-@media (max-width: 1100px) {
-    .body1,
-    .body2 {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
-}
-@media (max-width: 480px) {
-    .header1 {
-        padding: 0 20px;
     }
 }
