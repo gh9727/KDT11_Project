@@ -38,8 +38,8 @@ function join() {
         alert(
             '이미 존재하는 아이디 / 비밀번호 입니다.\n다른 아이디 / 비밀번호를 입력해주세요.'
         );
-        $('#floatingInput').val('');
-        $('#floatingPassword').val('');
+        $('#id').val('');
+        $('#password').val('');
         $('#passwordCheck').val('');
     }
     //회원가입
