@@ -12,13 +12,12 @@ body {
 
 .header_box {
     width: 100vw;
-    background-color: white;
-    z-index: 998;
-
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    background-color: white;
+    z-index: 998;
 }
 /* nav */
 .header {
@@ -190,6 +189,29 @@ body {
     align-items: center;
     padding: 10px;
 }
+.footer {
+    background-color: rgb(245, 243, 243);
+    height: 200px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.footer-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.li {
+    width: 100px;
+    padding: 10px;
+    list-style-type: none;
+}
+.li > a {
+    text-decoration-line: none;
+    font-size: 20px;
+    text-wrap: nowrap;
+}
 /* main, map, blog, mypage 요소 너비 및 패딩  */
 
 .foot {
@@ -320,13 +342,6 @@ body {
     body {
         overflow: hidden;
     }
-    /* .header {
-        height: 40px;
-    }
-    .header1 {
-        padding: 0 0;
-        margin-right: 23px;
-    } */
     .body-a {
         display: none;
     }
@@ -360,46 +375,53 @@ body {
         border-radius: 3px;
     }
     .row-a {
-        top: 140px;
+        top: 240px;
     }
     .row-b {
-        top: 140px;
+        top: 240px;
     }
     .body-b #map {
         width: 88%;
         height: 300px;
         position: absolute;
-        top: 245px;
-        left: 45px;
+        top: 345px;
+        left: 25px;
     }
     .footer {
-        top: 480px;
+        top: 580px;
     }
     .footer-cont {
         padding: 9px;
         margin-left: 152px;
     }
-    .footer-cont a:nth-child(1) {
+    .li {
         position: relative;
         top: -5px;
-        left: 90px;
+        right: 90px;
+        font-size: 18px;
+        margin-left: 10%;
+    }
+    /* .footer-cont a:nth-child(1) {
+        position: relative;
+        top: -5px;
+        left: 50px;
     }
     .footer-cont a:nth-child(2) {
         position: relative;
         top: -5px;
-        left: 30px;
+        left: 50px;
     }
     .footer-cont a:nth-child(3) {
         position: relative;
         top: -5px;
-        right: 30px;
+        right: 50px;
     }
     .footer-cont a:nth-child(4) {
         position: relative;
         top: -5px;
-        right: 80px;
+        right: 50px;
         text-wrap: nowrap;
-    }
+    } */
 }
 
 /* ======================================================================= */
