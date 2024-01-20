@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.header_box {
+    width: 100vw;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 998;
+}
+.header {
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    margin: 30px;
+    align-items: center;
+}
+.header-midle {
+    display: flex;
+    padding: 35px 0;
+    text-align: center;
+}
+.foodinco {
+    width: 70px;
+    height: 70px;
+}
+.header1 {
+    padding: 0 40px;
+    font-size: 18px;
+    color: black;
+    text-decoration-line: none;
+}
+.header1:hover {
+    color: #01376a;
+    font-weight: 700;
+}
+.header-last {
+    text-align: center;
+    font-size: 13px;
+}
+.membership {
+    padding-right: 10px;
+    color: black;
+    text-decoration-line: none;
+}
+.membership:hover {
+    color: #01376a;
+    font-weight: bold;
+}
+.log {
+    color: black;
+    text-decoration-line: none;
+}
+.log:hover {
+    color: #01376a;
+    font-weight: bold;
+}
+/* ======================================================================= */
+/* ==========================body CSS 디자인============================== */
+/* ======================================================================= */
+
+/* body부 css 디자인 */
+.body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* 0118 css body-a, li2,li3(추가)수정*/
+.body-a {
+    padding-top: 80px;
+    position: fixed;
+    left: 50px;
+}
+/* ======================================================================= */
+/* ==========================body 내부 body-a(aside) CSS 디자인============================== */
+/* ======================================================================= */
+/* body aside(선택 리스트) */
+.aside {
+    position: relative;
+    top: 250px;
+    width: 300px;
+    height: 500px;
+
+    border-radius: 10px;
+    margin-left: 20px;
+    text-align: center;
+}
+.aside-header1 {
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+.aside-cont {
+    display: flex;
+}
+/* 강남구, 서초구, 성동구 클릭 커서 포인터  */
+.search {
+    cursor: pointer;
+}
+/* [li1 ,li2] : 한식, 중식, 양식, 일식, 분식, 카페 클릭 커서 포인터  */
+.li1 {
+    cursor: pointer;
+    margin: 10px 0 5px 0;
+    text-decoration: none;
+}
+.li2 {
+    cursor: pointer;
+    margin-bottom: 5px;
+    text-decoration: none;
+    margin-bottom: 5px;
+    text-decoration: none;
+    list-style-type: none;
+}
+.li3 {
+    list-style-type: none;
+}
+/* ======================================================================= */
+/* ==========================body 내부 body-b CSS 디자인============================== */
+/* ======================================================================= */
+/* search_distrct === 사용자 입력폼에 버튼 요소 집어넣기 css 0116 20:34 */
+
+/* 입력양식폼 부모 div의 col 속성 삭제함 : 0117 12:33 */
+.col {
+    position: relative;
+    top: -300px;
+    left: 380px;
+}
+.row-a {
+}
+.row-b {
+    margin-right: 500px;
+}
+/* district_button 과 food_button은 js 함수용 클래스 */
+.search_button {
+    position: absolute;
+    /* background-color: purple; */
+    width: 50px;
+    height: 35px;
+    top: 0px;
+    bottom: 0;
+    left: 260px;
+    margin: auto 0;
+    border-radius: 3px;
+}
+.service {
+    width: 300px;
+}
+
+/* li 태그 강남구 서초구 성동구 .search 클래스 --> cursor: pointer 속성 추가 0116 09:45 */
+/* ======================================================================= */
+/* ============================footer CSS 디자인=========================== */
+/* ======================================================================= */
+
+/* footer부 css 디자인 */
+
+/* main, map, blog, mypage 요소 너비 및 패딩  */
+
+/* ======================================================================= */
+/* ================================지도 CSS 디자인============================= */
+/* ======================================================================= */
+/* 지도에 생성되는 마커 및 커스텀 오버레이 css 디자인 */
+#map {
+    width: 850px;
+    height: 500px;
+    position: relative;
+    top: -240px;
+    left: 380px;
+}
+/* footer */
+.footer {
+    background-color: rgb(245, 243, 243);
+    height: 300px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.footer-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+.li {
+    width: 100px;
+    padding: 10px;
+}
+
+/* ======================================================================= */
+/* ===============================반응형 CSS 디자인========================= */

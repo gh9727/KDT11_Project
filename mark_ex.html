@@ -8,45 +8,39 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
         <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-        <link rel="stylesheet" href="mark.css" />
+        <link rel="stylesheet" href="mark_ex.css" />
+        <link rel="stylesheet" href="mark_ex_kakao.css" />
     </head>
     <body>
-        <!------------------------------------------------------------페이지 상단 헤더 부분-------------------------------------------------------------------->
-        <!------------------------------------------------------------페이지 상단 헤더 부분-------------------------------------------------------------------->
-        <!------------------------------------------------------------페이지 상단 헤더 부분-------------------------------------------------------------------->
-        <header>
-            <div class="header_box">
-                <nav class="header">
-                    <div class="header-first">
-                        <a href="main-mobile.html"><img src="logo.png" alt="푸딘코" class="foodinco" /></a>
-                    </div>
+        <!-- <header> -->
+        <div class="header_box">
+            <nav class="header">
+                <div class="header-first">
+                    <a href="main-mobile.html"><img src="logo.png" alt="푸딘코" class="foodinco" /></a>
+                </div>
 
-                    <div class="header-midle">
-                        <div class="haeder-map"><a class="header1" href="map.html">지도</a></div>
-                        <!-- 1 -->
-                        <div class="header-blg">
-                            <a class="header1" href="blogex.html" class="header-blg">블로그</a>
-                        </div>
-                        <!-- 2 -->
-                        <div class="header-page">
-                            <a class="header1" href="mypage.html" class="header-page">내 페이지</a>
-                        </div>
-                        <!-- 3 -->
+                <div class="header-midle">
+                    <div class="haeder-map"><a class="header1" href="map.html">지도</a></div>
+                    <!-- 1 -->
+                    <div class="header-blg">
+                        <a class="header1" href="blogex.html" class="header-blg">블로그</a>
                     </div>
-                    <form class="header-last">
-                        <a href="join.html" class="membership">회원가입</a>
-                        <a href="login.html" class="log">로그인</a>
-                    </form>
-                    <!-- div 태그 제거함 -->
-                </nav>
-            </div>
-        </header>
-        <!------------------------------------------------------------페이지 몸체 body 부분-------------------------------------------------------------------->
-        <!------------------------------------------------------------페이지 몸체 body 부분-------------------------------------------------------------------->
-        <!------------------------------------------------------------페이지 몸체 body 부분-------------------------------------------------------------------->
-        <span class="body">
-            <!------------------------------------------------------------페이지 몸체 body-a 파트-------------------------------------------------------------------->
-            <!------------------------------------------------------------페이지 몸체 body-a 내부 aside 파트---------------------------------------------------------->
+                    <!-- 2 -->
+                    <div class="header-page">
+                        <a class="header1" href="mypage.html" class="header-page">내 페이지</a>
+                    </div>
+                    <!-- 3 -->
+                </div>
+                <form class="header-last">
+                    <a href="join.html" class="membership">회원가입</a>
+                    <a href="login.html" class="log">로그인</a>
+                </form>
+                <!-- div 태그 제거함 -->
+            </nav>
+        </div>
+        <!-- </header> -->
+        <br />
+        <div class="body">
             <div class="body-a">
                 <aside class="aside">
                     <div class="accordion">
@@ -115,12 +109,6 @@
                 </aside>
                 <!-- aside 종료-->
             </div>
-            <!------------------------------------------------------------페이지 몸체 body-b 파트-------------------------------------------------------------------->
-            <!------------------------------------------------------------페이지 몸체 body-b 내부 input 파트---------------------------------------------------------->
-            <!------------------------------------------------------------페이지 몸체 body-b 내부 Map 파트---------------------------------------------------------->
-            <!-- 입력 창 지역명 클래스 district 종류 입력명 클래스 -->
-            <!-- row g-3 , col, map 클래스는 내가 만든 클래스X -->
-            <!-- 2개의 input 태그 id 속성값: district, food -> js 함수 호출을 위해 선언 -->
             <div class="body-b">
                 <div class="row g-3">
                     <div class="col row-a">
@@ -131,7 +119,7 @@
                             placeholder="구를 입력해주세요"
                             aria-label="First name"
                         />
-                        <button class="search_button district_button" style="background-color: rgb(231, 228, 228)">
+                        <button class="search_button district_button" style="background-color: gray; border: none">
                             검색
                         </button>
                     </div>
@@ -144,14 +132,14 @@
                             placeholder="종류를 입력해주세요"
                             aria-label="Last name"
                         />
-                        <button class="search_button food_button" style="background-color: rgb(231, 228, 228)">
+                        <button class="search_button food_button" style="background-color: gray; border: none">
                             검색
                         </button>
                     </div>
                 </div>
-                <div id="map" class="map"></div>
+                <div id="map"></div>
             </div>
-        </span>
+        </div>
         <!------------------------------------------------------------카카오 API.JS 연결-------------------------------------------------------------------->
         <!------------------------------------------------------------각 .JS 파일 연결---------------------------------------------------------->
         <script
@@ -164,22 +152,12 @@
         <script src="map.js"></script>
         <script src="search.js"></script>
     </body>
-
-    <!------------------------------------------------------------페이지 하단 footer 부분-------------------------------------------------------------------->
-    <!------------------------------------------------------------페이지 하단 footer 부분-------------------------------------------------------------------->
-    <!------------------------------------------------------------페이지 하단 footer 부분-------------------------------------------------------------------->
     <footer class="footer">
         <ul class="footer-cont">
-            <!-- <form class="footer-cont">
-            <a class="foot" href="main-mobile.html">main</a>
-            <a class="foot" href="map.html">map</a>
-            <a class="foot" href="blogex.html">blog</a>
-            <a class="foot" href="mypage.html">my page</a>
-        </form> -->
-            <li class="li"><a class="foot" href="main-mobile.html">main</a></li>
-            <li class="li"><a class="foot" href="map.html">map</a></li>
-            <li class="li"><a class="foot" href="blogex.html">blog</a></li>
-            <li class="li"><a class="foot" href="mypage.html">my page</a></li>
+            <li class="li"><a href="main-mobile.html" style="color: black">main</a></li>
+            <li class="li"><a href="map.html" style="color: black">map</a></li>
+            <li class="li"><a href="blogex.html" style="color: black">blog</a></li>
+            <li class="li"><a href="mypage.html" style="color: black">my page</a></li>
         </ul>
     </footer>
 </html>
