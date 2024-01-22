@@ -1,12 +1,8 @@
 body {
     padding-top: 160px;
 }
-* {
-    margin: 0;
-    padding: 0;
-}
 .header_box {
-    width: 100vw;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -42,7 +38,6 @@ body {
 }
 .header-last {
     text-align: center;
-    padding: 35px 30px 35px 0;
     font-size: 13px;
 }
 .membership {
@@ -94,6 +89,8 @@ body {
     text-align: center;
     padding: 35px 0;
 }
+
+/*아코디언*/
 .li1 {
     margin: 10px 0 5px 0;
     text-decoration: none;
@@ -107,22 +104,7 @@ body {
 .li3 {
     list-style-type: none;
 }
-.footer {
-    background-color: rgb(245, 243, 243);
-    height: 200px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-.footer-cont {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-}
-.li {
-    width: 100px;
-}
+/*body 시작*/
 .body-line {
     width: auto;
     height: 100px;
@@ -184,7 +166,28 @@ body {
     justify-content: space-evenly;
 }
 
-@media (max-width: 1450px) {
+/*footer 설정*/
+.footer {
+    background-color: rgb(245, 243, 243);
+    height: 200px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.footer-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.li {
+    width: 100px;
+}
+
+@media (min-width: 1101px) and (max-width: 1450px) {
+    body {
+        padding-top: 0px;
+    }
     .header {
         float: fixed;
         flex-direction: column;
@@ -220,7 +223,40 @@ body {
         padding-top: 200px;
     }
 }
-@media (max-width: 1100px) {
+
+@media (min-width: 801px) and (max-width: 1100px) {
+    /*header 부분*/
+    .header {
+        float: fixed;
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+    .header-last {
+        padding: 10px 0 10px 0;
+    }
+    .header-midle {
+        padding: 1px;
+    }
+    /*body부분*/
+    body {
+        padding-top: 0px;
+    }
+    .body-a {
+        padding-top: 0;
+        left: 0;
+        position: relative;
+    }
+    .aside {
+        height: 0;
+        width: 100vw;
+        border: 0;
+        text-align: start;
+        border-radius: 0;
+    }
+    .body1 {
+        padding-top: 200px;
+    }
     .body1,
     .body2 {
         display: flex;
@@ -228,9 +264,132 @@ body {
         justify-content: flex-start;
         align-items: center;
     }
+    .pic-cont {
+        width: 50vw;
+        height: auto;
+    }
+    .pic {
+        width: 50vw;
+        height: 50vw;
+    }
 }
-@media (max-width: 480px) {
+
+@media (min-width: 401px) and (max-width: 800px) {
+    /*header 부분*/
+    .header {
+        float: fixed;
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .header-midle {
+        padding: 1px;
+    }
+
     .header1 {
+        padding: 0;
+    }
+    .header-blg {
         padding: 0 20px;
+    }
+    .header-last {
+        padding: 0px;
+    }
+
+    /*body 부분*/
+    body {
+        padding-top: 0px;
+    }
+    .body-a {
+        padding-top: 0;
+        left: 0;
+        position: relative;
+    }
+    .aside {
+        height: 0;
+        width: 100vw;
+        border: 0;
+        text-align: start;
+        border-radius: 0;
+    }
+    .body1 {
+        padding-top: 200px;
+    }
+    .body1,
+    .body2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .pic-cont {
+        width: 50vw;
+        height: auto;
+    }
+    .pic {
+        width: 50vw;
+        height: 40vw;
+    }
+}
+
+@media (max-width: 400px) {
+    /*header 부분*/
+    .header {
+        float: fixed;
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .header-midle {
+        padding: 1px;
+    }
+
+    .header1 {
+        padding: 0;
+    }
+    .header-blg {
+        padding: 0 20px;
+    }
+    .header-last {
+        padding: 0px;
+    }
+
+    /*body 부분*/
+    body {
+        padding-top: 0px;
+    }
+    .body-a {
+        padding-top: 0;
+        left: 0;
+        position: relative;
+    }
+    .aside {
+        height: 0;
+        width: 100vw;
+        border: 0;
+        text-align: start;
+        border-radius: 0;
+    }
+    .body1 {
+        padding-top: 200px;
+    }
+    .body1,
+    .body2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .pic-cont {
+        width: 50vw;
+        height: auto;
+    }
+    .pic {
+        width: 50vw;
+        height: 40vw;
     }
 }
