@@ -62,18 +62,11 @@
 }
 
 /*캐러셀 이벤트 시작*/
-.d-block {
-    filter: brightness(1);
-    transition: 2s;
-}
-.d-block:hover {
-    filter: brightness(0.4);
-}
+
 figure {
-    transition: opacity 0.2s;
+    transition: opacity 10s;
     position: relative;
     margin: 0;
-    max-width: 20%;
 }
 
 figure img {
@@ -81,7 +74,7 @@ figure img {
 }
 
 figure figcaption {
-    color: #777;
+    color: rgb(255, 255, 255);
     bottom: 70px;
     opacity: 0;
     position: absolute;
@@ -94,10 +87,6 @@ figure .gallery-img {
     opacity: 1;
     transition: all 0.3s ease 0s;
     overflow: hidden;
-}
-
-figure:hover .gallery-img {
-    background-color: #000;
 }
 
 figure:hover img {
@@ -121,7 +110,7 @@ body {
 .carousel-inner {
     width: 100vw;
     display: flex;
-    height: 500px;
+    height: 80vw;
 }
 .carousel-item {
     width: 100%;
