@@ -115,14 +115,23 @@ body {
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin: 30px auto;
+    width: 50vw;
+    height: 50vw;
+}
+.article_background {
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .article_wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1000px;
+    width: 70vw;
     height: auto;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding: 57px 57px 57px 57px;
     background-color: white;
     border: 1px solid #dbdbdb;
@@ -133,6 +142,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 15px;
 }
 .save {
     width: 20px;
@@ -178,18 +188,16 @@ body {
 .blog-slider-wrapper {
     display: flex;
     justify-content: center;
-    width: 600px;
+    width: 100vw;
     margin-left: auto;
     margin-right: auto;
 }
 .box {
-    margin: 0;
+    margin: 0 4rem;
     cursor: pointer;
     background: var(--bg-element2);
     box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 4px 0px;
     width: 50%;
-    padding-left: 1rem;
-    padding-right: 1rem;
     height: 4rem;
     display: flex;
     /* flex-direction: column; */
@@ -217,23 +225,16 @@ body {
 #right:hover {
     transform: translateX(10px);
 }
-@media (max-width: 1200px) {
+@media (max-width: 1450px) {
     .header {
-        float: fixed;
         flex-direction: column;
         height: auto;
         align-items: center;
     }
-    .header-midle {
-        padding: 10px 0 0 0;
-    }
     .header-last {
-        padding: 10px 0 0 0;
-        font-size: 15px;
+        padding: 10px 0 10px 0;
     }
-    .article_wrapper {
-        width: 900px;
-    }
+
 }
 @media (max-width: 950px) {
     .article_wrapper {
