@@ -1,3 +1,60 @@
+let back_btn = document.querySelector('.back_btn');
+let next_btn = document.querySelector('.next_btn');
+
+let index = 0;
+let next = 3;
+let back = -3;
+back_btn.onclick = function () {
+    if (index === 0) {
+        index = 18;
+        $('.banner .banner_img1').attr('src', `${resturant[index - 3].src}`);
+        $('.banner .banner_img2').attr('src', `${resturant[index - 2].src}`);
+        $('.banner .banner_img3').attr('src', `${resturant[index - 1].src}`);
+        $('.banner_link1').text(`${resturant[index - 3].name}`);
+        $('.banner_link2').text(`${resturant[index - 2].name}`);
+        $('.banner_link3').text(`${resturant[index - 1].name}`);
+        index += back;
+    } else {
+        index += back;
+        if (index === 0) {
+            index = 18;
+            $('.banner .banner_img1').attr('src', `${resturant[index - 3].src}`);
+            $('.banner .banner_img2').attr('src', `${resturant[index - 2].src}`);
+            $('.banner .banner_img3').attr('src', `${resturant[index - 1].src}`);
+            $('.banner_link1').text(`${resturant[index - 3].name}`);
+            $('.banner_link2').text(`${resturant[index - 2].name}`);
+            $('.banner_link3').text(`${resturant[index - 1].name}`);
+        }
+        $('.banner .banner_img1').attr('src', `${resturant[index - 3].src}`);
+        $('.banner .banner_img2').attr('src', `${resturant[index - 2].src}`);
+        $('.banner .banner_img3').attr('src', `${resturant[index - 1].src}`);
+        $('.banner_link1').text(`${resturant[index - 3].name}`);
+        $('.banner_link2').text(`${resturant[index - 2].name}`);
+        $('.banner_link3').text(`${resturant[index - 1].name}`);
+    }
+    index = index;
+};
+
+next_btn.onclick = function () {
+    if (index >= 17) {
+        index = 0;
+        $('.banner .banner_img1').attr('src', `${resturant[index].src}`);
+        $('.banner .banner_img2').attr('src', `${resturant[index + 1].src}`);
+        $('.banner .banner_img3').attr('src', `${resturant[index + 2].src}`);
+        $('.banner_link1').text(`${resturant[index].name}`);
+        $('.banner_link2').text(`${resturant[index + 1].name}`);
+        $('.banner_link3').text(`${resturant[index + 2].name}`);
+    } else {
+        $('.banner .banner_img1').attr('src', `${resturant[index].src}`);
+        $('.banner .banner_img2').attr('src', `${resturant[index + 1].src}`);
+        $('.banner .banner_img3').attr('src', `${resturant[index + 2].src}`);
+        $('.banner_link1').text(`${resturant[index].name}`);
+        $('.banner_link2').text(`${resturant[index + 1].name}`);
+        $('.banner_link3').text(`${resturant[index + 2].name}`);
+    }
+    index += next;
+};
+
 // https://deveapp.com/map.php -> 지역 입력 시 위도 및 경도 반환해주는 사이트
 
 // onclick 이벤트: 강남구 서초구 성동구 요소 클릭 시 지도 중심 좌표(map.center) 강남구청 서초역 성동소방서 로 변경 및 지도 레벨 변경(map.level)
@@ -81,7 +138,7 @@ function search_snackBar() {
 function search_cafe() {
     view_Marker();
     delete_overlay();
-    let category = '디저트'; // this.value
+    let category = '카페'; // this.value
     for (let i = 0; i < positions.length; i++) {
         delete_overlay();
         if (category !== positions[i].category) {

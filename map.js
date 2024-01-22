@@ -1,10 +1,10 @@
-//  화면에 지도 생성
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     mapOption = {
         center: new kakao.maps.LatLng(37.514575, 127.0495556), // 지도의 중심좌표
         // 전역변수 : mapOption.level = 4; 이렇게 지도 레벨 변경 가능함
-        level: 10, // 지도의 확대 레벨
+        level: 7, // 지도의 확대 레벨
     };
+//  화면에 지도 생성
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
 /* =======================================================================================================================================================
@@ -47,7 +47,7 @@ positions.forEach(function (pos) {
     } else if (pos.category === '중식') {
         var imageSize = new kakao.maps.Size(24, 35);
         var markerImage = new kakao.maps.MarkerImage(imageSrc[2], imageSize);
-    } else if (pos.category === '디저트') {
+    } else if (pos.category === '카페') {
         var imageSize = new kakao.maps.Size(24, 35);
         var markerImage = new kakao.maps.MarkerImage(imageSrc[3], imageSize);
     } else if (pos.category === '일식') {
