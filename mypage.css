@@ -2,7 +2,7 @@
 body {
     padding-top: 120px;
     height: auto;
-    overflow: scroll;
+    /* overflow: scroll; */
     height: auto;
 }
 * {
@@ -111,13 +111,17 @@ body {
     width: 100px;
 }
 /* 내페이지 목록  */
+#listBackground {
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+}
 .list-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1000px;
+    width: 70vw;
     height: auto;
-    margin: 50px auto;
     padding: 57px 57px 57px 57px;
     background-color: white;
     border: 1px solid #dbdbdb;
@@ -133,7 +137,7 @@ body {
     font-weight: 400;
 }
 .list-box {
-    width: 800px;
+    width: 55vw;
     height: auto;
     display: flex;
     justify-content: space-around;
@@ -145,11 +149,15 @@ body {
     margin: 10px;
 }
 .text-box {
+    width: 35vw;
     color: gray;
     font-size: 14px;
     font-family: 'Noto Sans Korean';
     font-weight: 300;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 .list-title {
     color: #211e1e;
@@ -165,8 +173,8 @@ body {
 }
 
 .blog-image {
-    width: 160px;
-    height: 160px;
+    width: 13vw;
+    height: 13vw;
 }
 .blog-title {
     font-family: 'Noto Sans Korean';
@@ -184,33 +192,9 @@ body {
     font-weight: 500;
     color: rgb(70, 70, 70);
 }
-.reset-button {
-    width: 100%;
-    text-align: right;
-    margin-right: 84px;
-}
-#reset-button {
-    border: none;
-    padding: 15px 30px;
-    /* border-radius: 15px; */
-    /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); */
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.25s;
-    background-color: #f9f3f3d1;
-    color: grey;
-}
-#reset-button-outline {
-    border: 3px solid aliceblue;
-    color: grey;
-}
-#reset-button:hover {
-    box-shadow: 2px 2px 2px 2px rgb(236, 232, 232);
-}
 
 @media (max-width: 1450px) {
     .header {
-        float: fixed;
         flex-direction: column;
         height: auto;
         align-items: center;
@@ -227,5 +211,107 @@ body {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+    }
+}
+@media (max-width: 1300px) {
+    .blog-title {
+        font-size: 1.5rem;
+    }
+    .blog-restaurant-address,
+    .blog-restaurant-name {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 1100px) {
+    .header {
+        width: 100vw;
+        margin: 10px 0 0 0;
+    }
+    .list-wrapper {
+        padding-top: 30px;
+        margin: 0 auto;
+    }
+    .blog-title {
+        font-size: 1.3rem;
+    }
+    .blog-restaurant-address,
+    .blog-restaurant-name {
+        font-size: 0.87rem;
+    }
+}
+@media (max-width: 1000px) {
+    .blog-title {
+        font-size: 1.2rem;
+    }
+    .blog-restaurant-address,
+    .blog-restaurant-name {
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 900px) {
+    .blog-title {
+        font-size: 1.1rem;
+    }
+    .blog-restaurant-address,
+    .blog-restaurant-name {
+        font-size: 0.73rem;
+    }
+}
+@media (max-width: 800px) {
+    .blog-title {
+        font-size: 1rem;
+    }
+    .blog-restaurant-address,
+    .blog-restaurant-name {
+        font-size: 0.67rem;
+    }
+}
+@media (max-width: 700px) {
+    .blog-title {
+        font-size: 0.8rem;
+    }
+    .blog-restaurant-address,
+    .blog-restaurant-name {
+        font-size: 0.53rem;
+    }
+}
+@media (max-width: 600px) {
+    .blog-title {
+        font-size: 0.6rem;
+    }
+    .blog-restaurant-address,
+    .blog-restaurant-name {
+        font-size: 0.47rem;
+    }
+}
+@media (max-width: 450px) {
+    .blog-title {
+        font-size: 0.5rem;
+    }
+    .blog-restaurant-address,
+    .blog-restaurant-name {
+        font-size: 0.4rem;
+    }
+    .header1 {
+        font-size: 12px;
+        padding: 0;
+    }
+    .header-midle {
+        justify-content: space-around;
+    }
+    .membership,
+    .log {
+        font-size: 12px;
+    }
+    .header-map,
+    .header-blg,
+    .header-page {
+        width: 20vw;
+    }
+    .list-title {
+        font-size: 25px;
+    }
+    .num {
+        font-size: 15px;
     }
 }
