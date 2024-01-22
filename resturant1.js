@@ -154,4 +154,79 @@ let resturant = [
         closed_day: '일요일',
         href: 'blog_8.html',
     },
+
+    //흠...
+    {
+        // 완료됨
+        name: '일일시호일',
+        address: '서울 서초구 나루터로 79',
+        category: '일식',
+        district: '서초구',
+        coordinate: [37.51617, 127.0185],
+        src: 'https://www.foodinko.com/wp-content/uploads/2023/11/%EA%B9%80-1.jpeg',
+        opening_hours: '월~금 11:00-20:30',
+        closed_day: '토요일,일요일,공휴일 휴무',
+        href: 'https://www.foodinko.com/%ec%a7%80%ea%b8%88%ea%b9%8c%ec%a7%80-%eb%a8%b9%ec%97%88%eb%8d%98-%ea%b1%b4-%ea%b9%8c%eb%88%8c%eb%a0%88%ea%b0%80-%ec%95%84%eb%8b%88%eb%8b%a4/',
+    },
+    {
+        // 6
+        name: '멘야시노기',
+        address: '서울 서초구 주흥길 3',
+        category: '일식',
+        district: '서초구',
+        coordinate: [37.50401, 127.0208],
+        src: 'https://www.foodinko.com/wp-content/uploads/2023/11/%EB%9D%BC%EB%A9%98-1.jpeg',
+        opening_hours: '월~토 11:30-20:00',
+        closed_day: '일요일,공휴일 휴무',
+        href: 'https://www.foodinko.com/%ec%a7%80%ea%b8%88%ea%b9%8c%ec%a7%80-%eb%a8%b9%ec%97%88%eb%8d%98-%ea%b1%b4-%ea%b9%8c%eb%88%8c%eb%a0%88%ea%b0%80-%ec%95%84%eb%8b%88%eb%8b%a4/',
+    },
+    {
+        // 블로그글 참조
+        name: '미슌',
+        address: '서울 서초구 서초대로 53길 19',
+        category: '중식',
+        district: '서초구',
+        coordinate: [37.4961, 127.0145],
+        src: 'https://mblogthumb-phinf.pstatic.net/MjAyMTA0MDdfOTEg/MDAxNjE3Nzg3ODY0OTMy.165hsXEMTuxkIpPej07ebIPFaO12chl9EpNFB4kdWqMg.gJpb6XJdMMLPudWfT4iEa8eNHs2uiGBse00mD84dxDkg.JPEG.tjdahdo/IMG_1347.jpg?type=w800',
+        opening_hours: '월~일 11:00-21:30',
+        closed_day: '공휴일 휴무',
+        href: 'https://www.foodinko.com/%ec%a7%80%ea%b8%88%ea%b9%8c%ec%a7%80-%eb%a8%b9%ec%97%88%eb%8d%98-%ea%b1%b4-%ea%b9%8c%eb%88%8c%eb%a0%88%ea%b0%80-%ec%95%84%eb%8b%88%eb%8b%a4/',
+    },
+    {
+        // 10
+        name: '신숙',
+        address: '서울 서초구 법원로 3길 21',
+        category: '한식',
+        district: '서초구',
+        coordinate: [37.49324, 127.0083],
+        src: 'https://www.foodinko.com/wp-content/uploads/2023/11/%EA%B0%93%EA%B9%80%EC%B9%98.jpeg',
+        opening_hours: '월~토 11:30-20:00',
+        closed_day: '일요일,공휴일 휴무',
+        href: 'https://www.foodinko.com/%ec%a7%80%ea%b8%88%ea%b9%8c%ec%a7%80-%eb%a8%b9%ec%97%88%eb%8d%98-%ea%b1%b4-%ea%b9%8c%eb%88%8c%eb%a0%88%ea%b0%80-%ec%95%84%eb%8b%88%eb%8b%a4/',
+    },
+    {
+        //8 확인필요
+        name: '해남원조김밥',
+        address: '서울 서초구 방배중앙로 25길 15 ',
+        category: '한식',
+        district: '서초구',
+        coordinate: [37.49403, 126.9852],
+        src: 'https://www.foodinko.com/wp-content/uploads/2023/11/%EC%A0%9C%EB%AA%A9%EC%9D%84-%EC%9E%85%EB%A0%A5%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94__%EB%B3%B5%EC%82%AC%EB%B3%B8-001.jpg',
+        opening_hours: '월~토 07:00-19:30 (일 16시 마감)',
+        // 재료 소진시 조기마감
+        closed_day: '재료 소진시 조기마감, 공휴일 휴무',
+        href: 'https://www.foodinko.com/%ec%a7%80%ea%b8%88%ea%b9%8c%ec%a7%80-%eb%a8%b9%ec%97%88%eb%8d%98-%ea%b1%b4-%ea%b9%8c%eb%88%8c%eb%a0%88%ea%b0%80-%ec%95%84%eb%8b%88%eb%8b%a4/',
+    },
+    {
+        // 14
+        name: '피키니키 라자냐',
+        address: '서울 성동구 서울숲2길 14 ',
+        category: '양식',
+        district: '성동구',
+        coordinate: [37.5473, 127.0401],
+        src: 'https://www.foodinko.com/wp-content/uploads/2023/11/%EB%9D%BC%EC%9E%90%EB%83%90.jpeg',
+        opening_hours: '월~금 11:30-20:50, 토~일 12:00-21:00',
+        closed_day: '공휴일 휴무',
+        href: 'https://www.foodinko.com/%ec%a7%80%ea%b8%88%ea%b9%8c%ec%a7%80-%eb%a8%b9%ec%97%88%eb%8d%98-%ea%b1%b4-%ea%b9%8c%eb%88%8c%eb%a0%88%ea%b0%80-%ec%95%84%eb%8b%88%eb%8b%a4/',
+    },
 ];
