@@ -1,6 +1,7 @@
 body {
-    /* box-sizing: border-box; */
     padding-top: 160px;
+    overflow: scroll;
+    height: auto;
 }
 * {
     margin: 0;
@@ -23,13 +24,19 @@ body {
     align-items: center;
 }
 .header-midle {
-    display: flex;
-    padding: 35px 0;
-    text-align: center;
+    justify-content: space-between;
 }
-.foodinco {
-    width: 70px;
-    height: 70px;
+/* 지도 */
+.header-map {
+    width: 150px;
+}
+/* 블로그 */
+.header-blg {
+    width: 150px;
+}
+/* 내 페이지 */
+.header-map {
+    width: 150px;
 }
 .header1 {
     padding: 0 40px;
@@ -41,6 +48,11 @@ body {
     color: #01376a;
     font-weight: 700;
 }
+.foodinco {
+    width: 70px;
+    height: 70px;
+}
+
 .header-last {
     text-align: center;
     padding: 35px 30px 35px 0;
@@ -63,9 +75,13 @@ body {
     color: #01376a;
     font-weight: bold;
 }
-body {
-    overflow: scroll;
-    height: auto;
+.logout {
+    color: black;
+    text-decoration-line: none;
+}
+.logout:hover {
+    color: #01376a;
+    font-weight: bold;
 }
 .header1 {
     width: auto;
@@ -218,7 +234,34 @@ body {
     .header-last {
         padding: 10px 0 10px 0;
     }
-    .header-midle {
-        padding: 1px;
+
+}
+@media (max-width: 950px) {
+    .article_wrapper {
+        width: 500px;
+    }
+    .image {
+        max-width: 100%;
+        height: auto;
+    }
+    .save {
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 550px) {
+    .haeder_box {
+        /* width: 100vw; */
+    }
+    .article_wrapper {
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        float: fixed;
+        flex-direction: column;
+        height: auto;
+        align-items: center;
     }
 }

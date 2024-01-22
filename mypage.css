@@ -2,7 +2,9 @@
 body {
     padding-top: 120px;
     height: auto;
+
     /* overflow: scroll; */
+
     height: auto;
 }
 * {
@@ -111,6 +113,7 @@ body {
     width: 100px;
 }
 /* 내페이지 목록  */
+
 #listBackground {
     margin: 50px auto;
     display: flex;
@@ -122,10 +125,12 @@ body {
     align-items: center;
     width: 70vw;
     height: auto;
+
     padding: 57px 57px 57px 57px;
     background-color: white;
     border: 1px solid #dbdbdb;
     /* box-shadow: 5px 5px 5px rgb(199, 196, 196); */
+
 }
 .list {
     margin-bottom: 43px;
@@ -158,12 +163,14 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+
 }
 .list-title {
     color: #211e1e;
     font-family: 'Gowun Dodum', cursive;
     font-weight: 400;
     font-size: 37px;
+
 }
 .blog-url {
     text-decoration-line: none;
@@ -191,6 +198,7 @@ body {
     font-size: 17px;
     font-weight: 500;
     color: rgb(70, 70, 70);
+
 }
 
 @media (max-width: 1450px) {
@@ -212,6 +220,7 @@ body {
         justify-content: flex-start;
         align-items: center;
     }
+
 }
 @media (max-width: 1300px) {
     .blog-title {
@@ -314,4 +323,5 @@ body {
     .num {
         font-size: 15px;
     }
+
 }
