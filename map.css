@@ -5,6 +5,7 @@
 body {
     overflow: scroll;
     padding-top: 160px;
+    overflow-x: none;
 }
 
 .header_box {
@@ -63,6 +64,7 @@ body {
     color: #01376a;
     font-weight: bold;
 }
+
 .logout {
     color: black;
     text-decoration-line: none;
@@ -79,17 +81,18 @@ body {
     justify-content: space-between;
     padding-bottom: 13vw;
 }
+
 .body-a {
     padding-top: 80px;
     position: fixed;
-    left: 10px;
+    left: 5px;
 }
 .aside {
     cursor: pointer;
     width: 300px;
     height: 500px;
     border-radius: 10px;
-    margin-left: 20px;
+    margin-left: 10px;
     text-align: center;
 }
 .aside-header1 {
@@ -106,12 +109,27 @@ body {
     list-style-type: none;
 }
 
+/* body 시작 */
+.body {
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    position: relative;
+    padding-bottom: 100px;
+}
+
 .body-b {
+    width: 70%;
     display: flex;
     flex-direction: column;
     position: relative;
-    left: 28vw;
-    min-height: calc(100vh - 10rem);
+    left: 24.5vw;
+    min-height: calc(100vh - 15rem);
+    border: 1px solid #dbdbdb;
+    box-shadow: 5px 5px 5px rgb(199, 196, 196);
+    background-color: white;
+    padding: 10px;
 }
 .row {
     display: flex;
@@ -119,42 +137,73 @@ body {
     justify-content: center;
     align-items: center;
 }
-#map {
-    width: 50vw;
-    height: 30vw;
-    position: absolute;
-    top: 4vw;
-    /* z-index: 999; */
-}
+
 .col {
     display: flex;
     flex-direction: row;
+    position: relative;
+}
+.row-a {
+    left: 5vw;
+}
+.row-b {
+    left: 5vw;
 }
 .col .search_button {
     width: 100px;
     border-radius: 10%;
+    border: none;
+    background-color: rgb(231, 228, 228);
+}
+.search_button:hover {
+    background-color: gray;
+}
+.service {
+    justify-content: end;
+    width: 50%;
+    position: relative;
+}
+#map {
+    width: 95%;
+    height: 80%;
+    position: absolute;
+    top: 5vw;
+    margin-left: 1vw;
 }
 
 .body-c {
     /* border: 1px solid black; */
-    width: 15vw;
+    width: 15%;
+    height: 80%;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-right: 1vw;
-    position: relative;
-    top: 0vw;
-    right: 3vw;
+    margin-right: 2vw;
+    position: absolute;
+    top: -3vw;
+    right: 0vw;
 }
 
-.body-c .banner {
-}
 .banner img {
     width: 15vw;
     height: 10vw;
     border-radius: 20px;
+}
+.body-c .btn {
+    width: 70px;
+    height: 70px;
+    border: none;
+    background-color: white;
+}
+.btn img {
+    width: 70;
+    height: 30px;
+    /* margin-bottom: ; */
+}
+.next_btn {
+    /* margin-bottom: 100px; */
 }
 .body-c .link {
     text-align: center;
@@ -163,6 +212,7 @@ body {
     color: black;
     text-decoration-line: none;
 }
+/* footer 시작 */
 .footer {
     background-color: rgb(245, 243, 243);
     width: 100%;
@@ -191,11 +241,9 @@ body {
     color: #01376a;
     font-weight: bold;
 }
-
-@media (min-width: 651px) and (max-width: 1205px) {
-    .body-c {
-        display: none;
-    }
+/* 반응형 651 ~ 1250 */
+@media (min-width: 651px) and (max-width: 1305px) {
+    /* header */
     .header {
         flex-direction: column;
         height: auto;
@@ -220,34 +268,47 @@ body {
         border-radius: 0;
         margin-left: 0;
     }
-    .body-b {
+    .accordion {
+        --bs-accordion-btn-padding-y: 0.5rem;
+    }
+    /* body */
+    .body {
         width: 100%;
-        height: 10px;
+        height: 70%;
+        margin-top: 100px;
+        flex-direction: column;
+    }
+    .body-b {
+        width: 80%;
+        height: 50%;
         margin-left: 10vw;
         margin-right: 10vw;
-        margin-top: 20vw;
+        margin-top: 3vw;
+        padding: 15px 15px;
         right: 0;
         left: 0;
     }
     .row {
-        padding-top: 12vw;
-        flex-direction: column;
         align-items: center;
     }
     .col {
         width: 70%;
     }
     #map {
-        width: 100%;
-        height: 45vw;
-        margin-top: 25vw;
+        width: 93%;
+        height: 86%;
+        top: 10%;
+        margin: 0 10px;
     }
+
+    /* footer  */
     .footer {
-        margin-top: 25vw;
-        height: 150px;
+        margin-top: 0vw;
+        height: 200px;
     }
 }
 @media (min-width: 472px) and (max-width: 650px) {
+    /* header */
     .header-midle {
         padding: 0;
         font-size: 5px;
@@ -261,43 +322,73 @@ body {
         padding: 10px;
     }
     .body-a {
-        display: none;
+        padding-top: 0;
+        left: 0;
+        position: relative;
+    }
+    .aside {
+        height: 0;
+        width: 100vw;
+        border: 0;
+        text-align: start;
+        border-radius: 0;
+        margin-left: 0;
+    }
+    .accordion {
+        --bs-accordion-btn-padding-y: 0.5rem;
+    }
+    /* body */
+    .body {
+        width: 100%;
+        height: 70%;
+        margin-top: 100px;
+        flex-direction: column;
     }
     .body-b {
-        width: 100%;
+        width: 80%;
         height: auto;
         margin-left: 10vw;
         margin-right: 10vw;
-        margin-top: 3vw;
+        margin-top: 0vw;
         right: 0;
         left: 0;
     }
     .row {
-        padding-top: 3vw;
         flex-direction: column;
-        align-items: center;
+        padding-left: 20%;
+    }
+    .row-a {
+        left: 0;
+    }
+    .row-b {
+        left: 0;
+    }
+    .col {
+        width: 100%;
     }
     #map {
-        width: 100%;
-        height: 60vw;
-        margin: 20vw 0vw;
-    }
-    .footer {
-        height: 200px;
+        width: 90%;
+        height: 84%;
+        top: 12%;
+        margin: 20px 15px;
     }
     .body-c {
         display: none;
     }
+    /* footer */
+    .footer {
+        height: 200px;
+    }
 }
 
 @media (max-width: 472px) {
+    /* header */
     .header {
         background-color: white;
     }
     .header1 {
         padding: 10px;
     }
-
     .header-midle {
         padding: 0;
         font-size: 5px;
@@ -307,10 +398,10 @@ body {
         height: auto;
         margin: 0;
     }
-
     .body-a {
         display: none;
     }
+    /* body */
     .body-b {
         width: 100%;
         margin-left: 10vw;
@@ -325,10 +416,15 @@ body {
         align-items: center;
     }
     #map {
-        width: 100%;
-        height: 80vw;
-        margin-top: 30vw;
+        width: 90%;
+        height: 80%;
+        top: 17%;
+        margin: 0 10px;
     }
+    .body-c {
+        display: none;
+    }
+    /* footer */
     .footer {
         height: 300px;
     }
@@ -336,8 +432,5 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    .body-c {
-        display: none;
     }
 }
