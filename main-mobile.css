@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Crete Round', serif;
 }
 body {
     overflow-x: hidden;
@@ -160,8 +161,7 @@ body {
     background-color: rgba(0, 0, 0, 0.1);
     border: solid rgba(0, 0, 0, 0.15);
     border-width: 1px 0;
-    box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
-        inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
 }
 /*bottom 시작*/
 .p {
@@ -244,8 +244,7 @@ body {
     background-color: rgba(0, 0, 0, 0.1);
     border: solid rgba(0, 0, 0, 0.15);
     border-width: 1px 0;
-    box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
-        inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
 }
 .li2:hover {
     font-weight: bolder;
@@ -282,14 +281,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px 0;
 }
 .li {
     width: 100px;
     padding: 10px;
     list-style-type: none;
-}
-.footer-cont {
-    padding: 10px 0;
 }
 
 @media (min-width: 651px) and (max-width: 1205px) {
