@@ -131,7 +131,8 @@ body {
     align-items: center;
     width: 70vw;
     height: auto;
-    /* margin: 0 auto; */
+    /*margin auto 추가*/
+    margin: 0 auto;
     padding: 57px 57px 57px 57px;
     background-color: white;
     border: 1px solid #dbdbdb;
@@ -234,7 +235,6 @@ body {
     .header-last {
         padding: 10px 0 10px 0;
     }
-
 }
 @media (max-width: 950px) {
     .article_wrapper {
@@ -249,12 +249,12 @@ body {
     }
 }
 @media (max-width: 550px) {
-    .haeder_box {
-        /* width: 100vw; */
-    }
-    .article_wrapper {
+    /* .haeder_box {
+        width: 100vw;
+    } */
+    /* .article_wrapper {
         margin-left: 10%;
-    }
+    } */
 }
 
 @media (max-width: 500px) {

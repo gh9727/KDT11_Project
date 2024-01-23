@@ -4,6 +4,10 @@
     margin: 0;
     padding: 0;
 }
+body {
+    overflow-x: hidden;
+}
+
 .header_box {
     width: 100%;
     position: fixed;
@@ -107,10 +111,11 @@ body {
 .carousel-slide {
     background-color: #777;
 }
+
 .carousel-inner {
     width: 100vw;
     display: flex;
-    height: 80vw;
+    height: 20vw;
 }
 .carousel-item {
     width: 100%;
@@ -127,7 +132,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     display: flex;
-    padding: 100px 0;
+    padding: 100px 0 0 0;
 }
 .body-circle {
     border-radius: 20px;
@@ -204,11 +209,7 @@ body {
     height: 50%;
     width: 50%;
 }
-/* .bottom-box1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
+
 /* back 버튼 CSS 디자인 작업 0118 20:21 */
 .back_button {
     position: relative;
@@ -228,6 +229,17 @@ body {
 }
 
 /*buttom 끝*/
+/*accordion 시작*/
+.accordion {
+    display: flex;
+    justify-content: space-between;
+    width: 40vw;
+}
+.accordion-header {
+    font-size: 15px;
+    font-weight: bold;
+}
+
 .line2 {
     height: 3rem;
     background-color: rgba(0, 0, 0, 0.1);
@@ -235,43 +247,54 @@ body {
     border-width: 1px 0;
     box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
 }
-.li1 {
-    padding: 5px 0;
-    list-style-type: none;
+.li2:hover {
+    font-weight: bolder;
 }
 .li2 {
     padding-bottom: 5px;
     list-style-type: none;
 }
+.li3 {
+    font-weight: bold;
+    font-size: 20px;
+    list-style-type: none;
+}
+.ul1 {
+    padding-left: 1px;
+}
+.ul2 {
+    padding-left: 25px;
+}
+.accordion1 {
+    width: 130px;
+}
+
+/*footer 시작*/
 .footer {
+    display: flex;
     background-color: rgb(245, 243, 243);
-    height: 200px;
-    flex-direction: row;
+    height: 30vw;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 .footer-cont {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
 }
 .li {
     width: 100px;
     padding: 10px;
     list-style-type: none;
 }
+.footer-cont {
+    padding: 10px 0;
+}
 
 @media (min-width: 651px) and (max-width: 1205px) {
-    .body-pic {
-        display: flex;
-        justify-content: center;
-        background-color: rgb(167, 139, 119);
-        height: 54vw;
-        align-items: center;
-    }
-    .main-pic {
-        height: 40vw;
+    .carousel-inner {
+        height: 30vw;
     }
     .header {
         flex-direction: column;
@@ -291,6 +314,11 @@ body {
         flex-direction: column;
         padding: 50px 0;
         align-items: center;
+    }
+
+    .body-box {
+        height: 60%;
+        width: 60%;
     }
 
     .img-map,
@@ -344,6 +372,20 @@ body {
     .next_button img {
         content: url('image/down.png');
     }
+
+    /*footer*/
+    .footer {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .footer-cont {
+        margin-bottom: 5px;
+        padding-top: 5vw;
+    }
+    .accordion {
+        width: 70vw;
+    }
 }
 
 @media (min-width: 472px) and (max-width: 650px) {
@@ -358,15 +400,7 @@ body {
     .header1 {
         padding: 10px;
     }
-    .body-pic {
-        display: flex;
-        justify-content: center;
-        background-color: rgb(167, 139, 119);
-        height: 60vw;
-        align-items: center;
-    }
-
-    .main-pic {
+    .carousel-inner {
         height: 50vw;
     }
     .header {
@@ -376,8 +410,10 @@ body {
     }
 
     /*body 설정*/
+
     .body-box {
-        width: 100%;
+        height: 60%;
+        width: 60%;
     }
     .body-circle,
     .img-blog,
@@ -429,9 +465,26 @@ body {
     .next_button img {
         content: url('image/down.png');
     }
+    /*footer*/
+    .footer {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .footer-cont {
+        margin-bottom: 5vw;
+    }
+    .accordion {
+        width: 90vw;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .accordion1 {
+        width: 130px;
+    }
 }
 
-@media (max-width: 471px) {
+@media (max-width: 472px) {
     /*header 부분 */
 
     .header1 {
@@ -459,20 +512,13 @@ body {
         padding: 50px 0;
         align-items: center;
     }
-    .body-pic {
-        display: flex;
-        justify-content: center;
-        background-color: rgb(167, 139, 119);
-        height: 65vw;
-        align-content: center;
-    }
-    .main-pic {
+    .carousel-inner {
         height: 50vw;
     }
 
     .body-box {
         height: 60%;
-        width: 70%;
+        width: 60%;
     }
     .body-circle,
     .img-blog,
@@ -516,16 +562,6 @@ body {
         width: 70%;
     }
 
-    /*footer 설정*/
-
-    .footer {
-        height: 300px;
-    }
-    .footer-cont {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
     /*button*/
     .back_button {
         background: none;
@@ -542,5 +578,28 @@ body {
     }
     .next_button img {
         content: url('image/down.png');
+    }
+    /*footer*/
+    .footer {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .li {
+        padding: 0;
+        width: 20vw;
+    }
+    .accordion {
+        width: 80vw;
+        font-size: 10px;
+    }
+    .accordion1 {
+        width: 130px;
+    }
+    .li3 {
+        font-size: 14px;
+    }
+    .ul2 {
+        padding-left: 5%;
     }
 }
