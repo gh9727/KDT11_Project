@@ -88,9 +88,7 @@ window.onload = function () {
         break;
     }
 };
-
-function reset() {}
-
+//헤더의 로그인,회원가입 & 로그아웃 바꾸는 함수
 var state = window.sessionStorage.getItem('state');
 console.log(state);
 if (state === 'login') {
@@ -105,4 +103,9 @@ function logout() {
     $('.header-last').html(
         '<a href="join.html" class="membership">회원가입</a><a href="login.html" class="log">로그인</a>'
     );
+}
+
+//블로그 마지막 글에서 오른쪽 화살표 누르면 나오는 alert
+function lastPage() {
+    alert('마지막 글입니다.\n');
 }

@@ -64,6 +64,14 @@ body {
     color: #01376a;
     font-weight: bold;
 }
+.logout {
+    color: black;
+    text-decoration-line: none;
+}
+.logout:hover {
+    color: #01376a;
+    font-weight: bold;
+}
 
 /*캐러셀 이벤트 시작*/
 
@@ -162,7 +170,8 @@ body {
     background-color: rgba(0, 0, 0, 0.1);
     border: solid rgba(0, 0, 0, 0.15);
     border-width: 1px 0;
-    box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+        inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
 }
 /*bottom 시작*/
 .p {
@@ -245,7 +254,8 @@ body {
     background-color: rgba(0, 0, 0, 0.1);
     border: solid rgba(0, 0, 0, 0.15);
     border-width: 1px 0;
-    box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+        inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
 }
 .li2:hover {
     font-weight: bolder;

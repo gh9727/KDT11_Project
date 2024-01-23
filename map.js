@@ -19,7 +19,10 @@ for (let i = 0; i < resturant.length; i++) {
         address: resturant[i].address, // 음식점 주소명
         category: resturant[i].category, // 한식 중식 일식 양식 분식 디저트
         district: resturant[i].district, // 강남구 서초구 성동구
-        latlng: new kakao.maps.LatLng(resturant[i].coordinate[0], resturant[i].coordinate[1]), // 음식점 위치(위도,경도)
+        latlng: new kakao.maps.LatLng(
+            resturant[i].coordinate[0],
+            resturant[i].coordinate[1]
+        ), // 음식점 위치(위도,경도)
         src: resturant[i].src, // 식당 이미지 소스
         opening_hours: resturant[i].opening_hours, // 영업시간
         closed_day: resturant[i].closed_day, // 휴무일
@@ -30,7 +33,14 @@ for (let i = 0; i < resturant.length; i++) {
  * ============================================================마커, 커스텀 오버레이 생성을 위한 변수 선언============================================================================
  * ======================================================================================================================================================= */
 // 마커 이미지의 이미지 주소입니다
-var imageSrc = ['한식.png', '양식.png', '중식.png', '디저트.png', '일식.png', '분식.png'];
+var imageSrc = [
+    '한식.png',
+    '양식.png',
+    '중식.png',
+    '디저트.png',
+    '일식.png',
+    '분식.png',
+];
 let markers = []; // marker 정보를 담는 markers 전역변수(배열)로 선언 -> search_koreanFood() 메서드 작동이 안되서 변경함
 let overlays = []; // overlay 정보를 담는 overlays 전역변수(배열)로 선언 -> 위와 동일함
 
@@ -165,4 +175,21 @@ function delete_overlay() {
     for (let index = 0; index < positions.length; index++) {
         overlays[index].setMap(null);
     }
+}
+
+//헤더의 로그인,회원가입 & 로그아웃 바꾸는 함수
+var state = window.sessionStorage.getItem('state');
+console.log(state);
+if (state === 'login') {
+    $('.header-last').empty();
+    $('.header-last').html(
+        '<a href="#" class="logout" onclick="logout()">로그아웃</a>'
+    );
+    window.sessionStorage.setItem('state', 'login');
+}
+function logout() {
+    window.sessionStorage.setItem('state', 'logout');
+    $('.header-last').html(
+        '<a href="join.html" class="membership">회원가입</a><a href="login.html" class="log">로그인</a>'
+    );
 }
