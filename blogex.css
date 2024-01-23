@@ -57,6 +57,14 @@ body {
     color: #01376a;
     font-weight: bold;
 }
+.logout {
+    color: black;
+    text-decoration-line: none;
+}
+.logout:hover {
+    color: #01376a;
+    font-weight: bold;
+}
 
 body {
     overflow: scroll;
@@ -91,6 +99,9 @@ body {
 }
 
 /*아코디언*/
+ul {
+    list-style-type: none;
+}
 .li1 {
     margin: 10px 0 5px 0;
     text-decoration: none;
