@@ -127,3 +127,20 @@ function updateMenu(index) {
 }
 
 updateMenu(index);
+
+//헤더의 로그인,회원가입 & 로그아웃 바꾸는 함수
+var state = window.sessionStorage.getItem('state');
+console.log(state);
+if (state === 'login') {
+    $('.header-last').empty();
+    $('.header-last').html(
+        '<a href="#" class="logout" onclick="logout()">로그아웃</a>'
+    );
+    window.sessionStorage.setItem('state', 'login');
+}
+function logout() {
+    window.sessionStorage.setItem('state', 'logout');
+    $('.header-last').html(
+        '<a href="join.html" class="membership">회원가입</a><a href="login.html" class="log">로그인</a>'
+    );
+}

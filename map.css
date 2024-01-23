@@ -63,6 +63,14 @@ body {
     color: #01376a;
     font-weight: bold;
 }
+.logout {
+    color: black;
+    text-decoration-line: none;
+}
+.logout:hover {
+    color: #01376a;
+    font-weight: bold;
+}
 
 .body {
     margin-top: -2vw;

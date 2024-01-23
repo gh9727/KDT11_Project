@@ -1,6 +1,7 @@
 body {
     padding-top: 160px;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     height: auto;
 }
 * {
@@ -89,19 +90,14 @@ body {
 }
 .header {
     display: flex;
-    height: 120px;
+    height: 100px;
     justify-content: space-between;
     align-items: center;
 }
 .header-midle {
     display: flex;
-    padding: 35px 0;
+    padding: 10px 0;
     text-align: center;
-}
-.foodinco {
-    width: 100px;
-    height: 80px;
-    padding: 0 5px;
 }
 .header1 {
     padding: 0 40px;
@@ -115,8 +111,8 @@ body {
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin: 30px auto;
-    width: 50vw;
-    height: 50vw;
+    width: 30vw;
+    height: 30vw;
 }
 .article_background {
     margin: 50px auto;
@@ -129,10 +125,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70vw;
+    width: 60vw;
     height: auto;
     /* margin: 0 auto; */
-    padding: 57px 57px 57px 57px;
+    padding: 20px 57px 57px 57px;
     background-color: white;
     border: 1px solid #dbdbdb;
     box-shadow: 5px 5px 5px rgb(199, 196, 196);
@@ -141,7 +137,6 @@ body {
 .save_wrapper {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
     margin-bottom: 15px;
 }
 .save {
@@ -195,8 +190,6 @@ body {
 .box {
     margin: 0 4rem;
     cursor: pointer;
-    background: var(--bg-element2);
-    box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 4px 0px;
     width: 50%;
     height: 4rem;
     display: flex;
@@ -234,12 +227,8 @@ body {
     .header-last {
         padding: 10px 0 10px 0;
     }
-
 }
 @media (max-width: 950px) {
-    .article_wrapper {
-        width: 500px;
-    }
     .image {
         max-width: 100%;
         height: auto;
@@ -247,21 +236,35 @@ body {
     .save {
         margin-bottom: 30px;
     }
-}
-@media (max-width: 550px) {
-    .haeder_box {
-        /* width: 100vw; */
+    .entry-title {
+        text-align: center;
     }
+}
+@media (max-width: 700px) {
     .article_wrapper {
-        margin-left: 10%;
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 20px 5px 5px 5px;
+        box-shadow: none;
+        border: none;
+        /* overflow: auto; */
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 480px) {
     .header {
         float: fixed;
         flex-direction: column;
         height: auto;
         align-items: center;
+    }
+    .header1 {
+        padding: 0;
+    }
+    .entry-title {
+        font-size: 26px;
     }
 }
