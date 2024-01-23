@@ -23,7 +23,7 @@ for (let i = 0; i < resturant.length; i++) {
         src: resturant[i].src, // 식당 이미지 소스
         opening_hours: resturant[i].opening_hours, // 영업시간
         closed_day: resturant[i].closed_day, // 휴무일
-        href: resturant[i].href, // 이 부분은 아직 넣지 않았음.
+        href: resturant[i].href, // 블로그 사이트
     });
 }
 /* =======================================================================================================================================================
@@ -39,16 +39,16 @@ let overlays = []; // overlay 정보를 담는 overlays 전역변수(배열)로 
 positions.forEach(function (pos) {
     // var imageSize = new kakao.maps.Size(24, 35);
     if (pos.category === '한식') {
-        var imageSize = new kakao.maps.Size(24, 35);
+        var imageSize = new kakao.maps.Size(27, 35);
         var markerImage = new kakao.maps.MarkerImage(imageSrc[0], imageSize);
     } else if (pos.category === '양식') {
-        var imageSize = new kakao.maps.Size(24, 35);
+        var imageSize = new kakao.maps.Size(27, 35);
         var markerImage = new kakao.maps.MarkerImage(imageSrc[1], imageSize);
     } else if (pos.category === '중식') {
-        var imageSize = new kakao.maps.Size(24, 35);
+        var imageSize = new kakao.maps.Size(27, 35);
         var markerImage = new kakao.maps.MarkerImage(imageSrc[2], imageSize);
     } else if (pos.category === '카페') {
-        var imageSize = new kakao.maps.Size(24, 35);
+        var imageSize = new kakao.maps.Size(27, 35);
         var markerImage = new kakao.maps.MarkerImage(imageSrc[3], imageSize);
     } else if (pos.category === '일식') {
         var imageSize = new kakao.maps.Size(28, 37);
