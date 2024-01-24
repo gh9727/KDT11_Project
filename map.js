@@ -38,8 +38,8 @@ var imageSrc = [
     'image/일식.png',
     'image/분식.png',
 ];
-let markers = []; // marker 정보를 담는 markers 전역변수(배열)로 선언 -> search_koreanFood() 메서드 작동이 안되서 변경함
-let overlays = []; // overlay 정보를 담는 overlays 전역변수(배열)로 선언 -> 위와 동일함
+let markers = []; // marker 정보를 담는 markers 전역변수(배열)로 선언
+let overlays = []; // overlay 정보를 담는 overlays 전역변수(배열)로 선언
 
 // 마커 생성 + 마커 한식,중식,양식.. 별 맞는 이미지 넣기
 /* ==============================================================마커,오버레이 생성을 위한 forEach문 시작======================================================================= */
@@ -72,7 +72,7 @@ positions.forEach(function (pos) {
     });
     markers.push(marker); // 마커 정보를 markers 배열에 담기
 
-    // 커스텀 오버레이 생성 + 오버레이에 들어갈 내용 createElement로 요소 생성
+    // 커스텀 오버레이 요소 생성
     var content = document.createElement('div');
     content.className = 'wrap';
     var info = document.createElement('div');
@@ -96,7 +96,7 @@ positions.forEach(function (pos) {
     info.appendChild(body);
 
     var img_div = document.createElement('div');
-    img_div.className = 'img'; // 오류 수정
+    img_div.className = 'img';
     body.appendChild(img_div);
 
     var img = document.createElement('img');
@@ -109,14 +109,13 @@ positions.forEach(function (pos) {
     desc.className = 'desc';
     body.appendChild(desc);
 
-    // address . ellipsis -> 나중에 클래스명 address로 수정하기
     var address = document.createElement('div');
     address.className = 'ellipsis';
     address.appendChild(document.createTextNode(pos.address));
     desc.appendChild(address);
 
     var opening_hours = document.createElement('div');
-    opening_hours.className = 'ellipsis jibun'; // 클래스명 address opening_hours 로 변경하기
+    opening_hours.className = 'ellipsis jibun';
     opening_hours.appendChild(document.createTextNode(pos.opening_hours));
     desc.appendChild(opening_hours);
 
@@ -129,15 +128,15 @@ positions.forEach(function (pos) {
     desc.appendChild(href_div);
     var href = document.createElement('a');
 
-    // 하이퍼링크 일단 푸딘코 사이트 글로 채웠음(0115 12:30)
-    // href.href = 'https://www.kakaocorp.com/main'; -> 이 부분 블로그 사이트로 바꿔야함 아직 안함 0117 13:11 0117 13:11 0117 13:11 0117 13:11 0117 13:11
     href.href = `${pos.href}`;
     href.target = '_blank';
     href.className = 'link';
     href.appendChild(document.createTextNode('블로그'));
     href_div.appendChild(href);
+
     // 커스텀 오버레이 변수
     var overlay = new kakao.maps.CustomOverlay({
+        // 변수로 생성했던 content 요소를 카카오 api 함수를 활용하여 content 오브젝트에 넣음
         content: content,
         // map: map,
         position: marker.getPosition(),
