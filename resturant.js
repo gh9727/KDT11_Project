@@ -1,14 +1,14 @@
 let resturant = [
     {
-        name: '꼼다비뛰드',
-        address: '서울 강남구 강남대로 110길 62',
-        category: '양식',
-        district: '강남구',
-        coordinate: [37.50354, 127.0295],
-        src: 'https://www.foodinko.com/wp-content/uploads/2023/12/%EB%B9%B5%EC%A7%80%EC%88%9C%EB%A1%80.jpeg', // 이미지 파일
-        opening_hours: '목,금,토 11:00-17:00',
-        closed_day: '월요일,화요일,수요일,일요일,공휴일 휴무',
-        href: 'blog_1.html',
+        name: '꼼다비뛰드', // 음식점명
+        address: '서울 강남구 강남대로 110길 62', // 음식점 주소
+        category: '양식', // 음식점 카테고리
+        district: '강남구', // 음식점 지역
+        coordinate: [37.50354, 127.0295], // 음식점 위도 및 경도
+        src: 'https://www.foodinko.com/wp-content/uploads/2023/12/%EB%B9%B5%EC%A7%80%EC%88%9C%EB%A1%80.jpeg', // 음식점 이미지
+        opening_hours: '목,금,토 11:00-17:00', // 음식점 오픈 일 및 시간
+        closed_day: '월요일,화요일,수요일,일요일,공휴일 휴무', // 음식점 휴무일
+        href: 'blog_1.html', // 음식점 블로그
     },
     {
         // 2
@@ -123,7 +123,7 @@ let resturant = [
         href: 'blog_11.html',
     },
     {
-        name: '프릳츠 양재점',
+        name: '프린츠 양재점',
         address: '서울 서초구 강남대로 37길 24-11',
         category: '카페',
         district: '서초구',

@@ -1,6 +1,7 @@
 // https://deveapp.com/map.php -> 지역 입력 시 위도 및 경도 반환해주는 사이트
 
 // onclick 이벤트: 강남구 서초구 성동구 요소 클릭 시 지도 중심 좌표(map.center) 강남구청 서초역 성동소방서 로 변경 및 지도 레벨 변경(map.level)
+
 function search_Gangnam() {
     map.setLevel(6);
     let moveLatLng = new kakao.maps.LatLng(37.517331925853, 127.047377408384);
@@ -9,22 +10,24 @@ function search_Gangnam() {
 function search_Seocho() {
     map.setLevel(6);
     let moveLatLng = new kakao.maps.LatLng(37.49197968304073, 127.00759880987736);
-    map.setCenter(moveLatLng); // 서초구 요소 클릭 시 지도 중심 좌표를 서초구청으로 변경 -> 서초구청 이동 시 너무 떨어져있어 서초역 위도로 변경
+    map.setCenter(moveLatLng); // 서초구 요소 클릭 시 지도 중심 좌표를 서초구청으로 변경
 }
 function search_Seongdong() {
     map.setLevel(6);
     let moveLatLng = new kakao.maps.LatLng(37.55385421924312, 127.0393834897108);
-    map.setCenter(moveLatLng); // 성동구 요소 클릭 시 지도 중심 좌표를 성동구청으로 변경 -> 여기도 식당과 떨어져있어 성동소방서 위도로 변경
+    map.setCenter(moveLatLng); // 성동구 요소 클릭 시 지도 중심 좌표를 성동구청으로 변경
 }
 
 // 필터링 : 한식 중식 양식 일식 분식 카페
 // 한식 클릭 시 -> 지도 레벨 올리고 한식만 띄어주는 이벤트 발생 나머지 마커를 map.null 하면됨
 // 0116 12:16 종료 : 지도 레벨 이랑 위도경도는 아직 보류
 // marker 부분 markers 전역변수 배열 선언하고 marker 변수를 markers에 push 한 상태로 만듬
+
 // 한식 리스트 클릭 시
 function search_koreanFood() {
     view_Marker();
     delete_overlay();
+    map.setLevel(8);
     let category = '한식'; // this.value
     for (let i = 0; i < positions.length; i++) {
         if (category !== positions[i].category) {
@@ -36,6 +39,7 @@ function search_koreanFood() {
 function search_chineseFood() {
     view_Marker();
     delete_overlay();
+    map.setLevel(8);
     let category = '중식'; // this.value
     for (let i = 0; i < positions.length; i++) {
         if (category !== positions[i].category) {
@@ -47,6 +51,7 @@ function search_chineseFood() {
 function search_westernFood() {
     view_Marker();
     delete_overlay();
+    map.setLevel(8);
     let category = '양식'; // this.value
     for (let i = 0; i < positions.length; i++) {
         if (category !== positions[i].category) {
@@ -58,6 +63,7 @@ function search_westernFood() {
 function search_japaneseFood() {
     view_Marker();
     delete_overlay();
+    map.setLevel(8);
     let category = '일식'; // this.value
     for (let i = 0; i < positions.length; i++) {
         if (category !== positions[i].category) {
@@ -69,6 +75,7 @@ function search_japaneseFood() {
 function search_snackBar() {
     view_Marker();
     delete_overlay();
+    map.setLevel(8);
     let category = '분식'; // this.value
     for (let i = 0; i < positions.length; i++) {
         delete_overlay();
@@ -81,6 +88,7 @@ function search_snackBar() {
 function search_cafe() {
     view_Marker();
     delete_overlay();
+    map.setLevel(8);
     let category = '카페'; // this.value
     for (let i = 0; i < positions.length; i++) {
         delete_overlay();
@@ -96,7 +104,7 @@ function search_cafe() {
 // ex) 사용자가 "강남(구)" 입력 후 입력폼 창 내부의 버튼 클릭: 지도 중심좌표가 강남구로 이동
 let district_button = document.querySelector('.district_button');
 district_button.onclick = function () {
-    let district_input = document.querySelector('#district').value;
+    let district_input = document.querySelector('#district_input').value;
     if (district_input.includes('강남' || '강남구')) {
         map.setLevel(6);
         let moveLatLng = new kakao.maps.LatLng(37.517331925853, 127.047377408384);
@@ -113,10 +121,11 @@ district_button.onclick = function () {
 };
 
 // 종류(한식,중식 등..) 사용자 입력폼 창 내부 버튼에 클릭 이벤트 적용
-//  ex) 사용자가 "한식" 입력 후 버튼 클릭: 한식 마커만 지도상에 출력
-let food_button = document.querySelector('.food_button'); // 버튼클래스 요소를 받아옴
+
+//  사용자 입력 폼: ex) "한식" 입력 후 검색 버튼 클릭 -> 한식 마커만 지도상에 출력
+let food_button = document.querySelector('.food_button');
 food_button.onclick = function () {
-    let food_input = document.querySelector('#food').value;
+    let food_input = document.querySelector('#food_input').value;
     let category = ['한식', '중식', '양식', '일식', '분식', '디저트'];
     if (food_input.includes(category[0])) {
         view_Marker();
@@ -167,8 +176,7 @@ food_button.onclick = function () {
             }
         }
     }
-    // 한식,중식 입력외에 음식점 이름 입력 시 해당 음식점 마커만 남기고 전부
-    // 나머지 음식점 마커 전부 삭제 + 해당 음식점 오버레이 출력 0117 09:45 종료
+    // 음식점 이름 입력 시 해당 음식점 마커만 남기고 전부
     else {
         view_Marker();
         delete_overlay();
@@ -177,7 +185,7 @@ food_button.onclick = function () {
             if (food_input !== positions[i].name) {
                 markers[i].setMap(null);
             } else {
-                map.setCenter(new kakao.maps.LatLng(resturant[i].coordinate[0], resturant[i].coordinate[1])); //-> 이 부분 제대로 작동안함
+                map.setCenter(new kakao.maps.LatLng(resturant[i].coordinate[0], resturant[i].coordinate[1]));
                 overlays[i].setMap(map);
             }
         }
