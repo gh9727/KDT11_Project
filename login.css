@@ -18,7 +18,10 @@ body {
     border: 1px solid #dbdbdb;
     box-shadow: 5px 5px 5px rgb(199, 196, 196);
 }
-
+.logoImg {
+    width: 100px;
+    height: 100px;
+}
 .login_logo {
     margin: 30px 0 30px 0;
     color: #262626;
@@ -76,4 +79,13 @@ body {
 }
 .login_bottom:hover {
     font-weight: bold;
+}
+@media (max-width: 1100px) {
+    .logoImg {
+        width: 70px;
+        height: 70px;
+    }
+    .login_wrapper {
+        top: 45%;
+    }
 }

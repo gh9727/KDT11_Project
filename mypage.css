@@ -1,5 +1,11 @@
+/* header */
 body {
-    padding-top: 160px;
+    padding-top: 120px;
+    height: auto;
+
+    /* overflow: scroll; */
+
+    height: auto;
 }
 * {
     margin: 0;
@@ -62,10 +68,13 @@ body {
     color: #01376a;
     font-weight: bold;
 }
-
-body {
-    overflow: scroll;
-    height: auto;
+.logout {
+    color: black;
+    text-decoration-line: none;
+}
+.logout:hover {
+    color: #01376a;
+    font-weight: bold;
 }
 .header1 {
     width: auto;
@@ -94,20 +103,7 @@ body {
     text-align: center;
     padding: 35px 0;
 }
-.li1 {
-    margin: 10px 0 5px 0;
-    text-decoration: none;
-    list-style-type: none;
-}
-.li2 {
-    margin-bottom: 5px;
-    text-decoration: none;
-    list-style-type: none;
-}
-.li3 {
-    list-style-type: none;
-    margin: 10px 0;
-}
+/* footer */
 .footer {
     background-color: rgb(245, 243, 243);
     height: 200px;
@@ -123,72 +119,145 @@ body {
 }
 .li {
     width: 100px;
-    padding: 10px;
 }
-.body-line {
-    width: auto;
-    height: 100px;
-}
-.body1 {
-    padding-top: 50px;
+/* 내페이지 목록  */
+
+#listBackground {
+    margin: 50px auto;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.body-a {
-    padding-top: 80px;
-    position: fixed;
-    left: 50px;
-}
-.body-c {
-    width: 600px;
-}
-.aside {
-    width: 300px;
-    height: 500px;
-    border-radius: 10px;
-    text-align: center;
-}
-.aside-header1 {
-    margin-bottom: 50px;
-    margin-top: 10px;
-}
-.aside-cont {
-    display: flex;
-}
-.content {
-    width: 600px;
-}
-.nav {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-    margin: 100px 0;
 }
-.pic-cont {
-    width: 350px;
-    height: 450px;
+.list-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+    height: auto;
+
+    padding: 57px 57px 57px 57px;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    /* box-shadow: 5px 5px 5px rgb(199, 196, 196); */
 }
-.pic {
-    width: 350px;
-    height: 300px;
+.list {
+    margin-bottom: 43px;
 }
-.title {
+.num {
+    font-size: 22px;
+    color: #211e1e;
+    font-family: 'Gowun Dodum', cursive;
+    font-weight: 400;
+}
+.list-box {
+    width: 55vw;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #dbdbdb;
+    background-color: #f9f3f3d1;
+    box-shadow: 5px 5px 5px rgb(199, 196, 196);
+}
+.img-box {
+    margin: 10px;
+}
+.text-box {
+    width: 35vw;
+    color: gray;
+    font-size: 14px;
+    font-family: 'Noto Sans Korean';
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.list-title {
+    color: #211e1e;
+    font-family: 'Gowun Dodum', cursive;
+    font-weight: 400;
+    font-size: 37px;
+}
+.blog-url {
+    text-decoration-line: none;
+}
+.blog-url:hover {
+    color: #01376a;
+}
+
+.blog-image {
+    width: 13vw;
+    height: 13vw;
+}
+.blog-title {
+    font-family: 'Noto Sans Korean';
+    font-weight: 300;
+    font-size: 27px;
+    color: rgb(70, 70, 70);
+}
+.blog-restaurant-name {
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(70, 70, 70);
+}
+.blog-restaurant-address {
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(70, 70, 70);
+}
+.accordion1 {
+    display: flex;
+    justify-content: space-between;
+    width: 40vw;
+}
+
+.accordion2 {
+    display: flex;
+    justify-content: space-between;
+    width: 40vw;
+}
+.footer {
+    display: flex;
+    background-color: rgb(245, 243, 243);
+    height: 35vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.li {
+    width: 100px;
+    padding: 10px;
+    list-style-type: none;
+}
+
+.li5:hover {
+    font-weight: bolder;
+}
+.li5 {
+    padding-bottom: 5px;
+    list-style-type: none;
+}
+.li4 {
     font-weight: bold;
     font-size: 20px;
+    list-style-type: none;
 }
-.text {
-    font-size: 12px;
+.ul3 {
+    padding-left: 1px;
 }
-.body2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+.ul4 {
+    padding-left: 25px;
+}
+.accordion2 {
+    width: 130px;
 }
 
 @media (max-width: 1450px) {
     .header {
-        float: fixed;
         flex-direction: column;
         height: auto;
         align-items: center;
@@ -199,40 +268,213 @@ body {
     .header-midle {
         padding: 1px;
     }
-    .body1 .body2 {
+    .list-wrapper {
         padding-top: 50px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
     }
-    .body-a {
-        padding-top: 0;
-        left: 0;
-        position: relative;
+    .footer {
+        display: flex;
+        flex-direction: column;
+        height: auto;
     }
-    .aside {
-        height: 0;
-        width: 100vw;
-        border: 0;
-        text-align: start;
-        border-radius: 0;
+    .footer-cont {
+        margin-bottom: 5px;
+        padding-top: 5vw;
     }
-    .body1 {
-        padding-top: 200px;
+    .accordion1 {
+        width: 70vw;
+    }
+}
+@media (max-width: 1300px) {
+    .blog-title {
+        font-size: 1.5rem;
+    }
+    .blog-restaurant-address,
+    .blog-restaurant-name {
+        font-size: 1rem;
     }
 }
 @media (max-width: 1100px) {
-    .body1,
-    .body2 {
+    .header {
+        width: 100vw;
+        margin: 10px 0 0 0;
+    }
+    .list-wrapper {
+        padding-top: 30px;
+        margin: 0 auto;
+    }
+    .blog-title {
+        font-size: 1.3rem;
+    }
+    .blog-restaurant-address,
+    .blog-restaurant-name {
+        font-size: 0.87rem;
+    }
+    .footer {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
+        height: auto;
+    }
+    .footer-cont {
+        margin-bottom: 5px;
+        padding-top: 5vw;
+    }
+    .accordion1 {
+        width: 70vw;
     }
 }
-@media (max-width: 480px) {
+@media (max-width: 1000px) {
+    .blog-title {
+        font-size: 1.2rem;
+    }
+    .blog-restaurant-address,
+    .blog-restaurant-name {
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 900px) {
+    .blog-title {
+        font-size: 1.1rem;
+    }
+    .blog-restaurant-address,
+    .blog-restaurant-name {
+        font-size: 0.73rem;
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .footer-cont {
+        margin-bottom: 5px;
+        padding-top: 5vw;
+    }
+    .accordion1 {
+        width: 70vw;
+    }
+}
+
+@media (max-width: 800px) {
+    .blog-title {
+        font-size: 1rem;
+    }
+    .blog-restaurant-address,
+    .blog-restaurant-name {
+        font-size: 0.67rem;
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .footer-cont {
+        margin-bottom: 5px;
+        padding-top: 5vw;
+    }
+    .accordion1 {
+        width: 70vw;
+    }
+}
+@media (max-width: 700px) {
+    .blog-title {
+        font-size: 0.8rem;
+    }
+    .blog-restaurant-address,
+    .blog-restaurant-name {
+        font-size: 0.53rem;
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .footer-cont {
+        margin-bottom: 5px;
+        padding-top: 5vw;
+    }
+    .accordion1 {
+        width: 70vw;
+    }
+}
+@media (max-width: 600px) {
+    .blog-title {
+        font-size: 0.6rem;
+    }
+    .blog-restaurant-address,
+    .blog-restaurant-name {
+        font-size: 0.47rem;
+    }
+    .li {
+        padding: 0;
+        width: auto;
+    }
+    .limap,
+    .liblo {
+        margin: 0 5vw;
+    }
+    .ul3,
+    .ul2 {
+        font-size: 10px;
+    }
+    .li4 {
+        font-size: 10px;
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .footer-cont {
+        margin-bottom: 5px;
+        padding-top: 5vw;
+    }
+    .accordion1 {
+        width: 70vw;
+    }
+}
+@media (max-width: 450px) {
+    .blog-title {
+        font-size: 0.5rem;
+    }
+    .blog-restaurant-address,
+    .blog-restaurant-name {
+        font-size: 0.4rem;
+    }
     .header1 {
-        padding: 0 20px;
+        font-size: 12px;
+        padding: 0;
+    }
+    .header-midle {
+        justify-content: space-around;
+    }
+    .membership,
+    .log {
+        font-size: 12px;
+    }
+    .header-map,
+    .header-blg,
+    .header-page {
+        width: 20vw;
+    }
+    .list-title {
+        font-size: 25px;
+    }
+    .num {
+        font-size: 15px;
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .footer-cont {
+        margin-bottom: 5px;
+        padding-top: 5vw;
+    }
+    .accordion1 {
+        width: 70vw;
     }
 }

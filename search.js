@@ -81,7 +81,7 @@ function search_snackBar() {
 function search_cafe() {
     view_Marker();
     delete_overlay();
-    let category = '디저트'; // this.value
+    let category = '카페'; // this.value
     for (let i = 0; i < positions.length; i++) {
         delete_overlay();
         if (category !== positions[i].category) {
@@ -172,6 +172,7 @@ food_button.onclick = function () {
     else {
         view_Marker();
         delete_overlay();
+        map.setLevel(1);
         for (let i = 0; i < positions.length; i++) {
             if (food_input !== positions[i].name) {
                 markers[i].setMap(null);

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>오프트</title>
+        <link rel="icon" href="logo.png" />
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Gothic+A1&family=Gowun+Dodum&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="blog_article.css" />
+    </head>
+    <body>
+        <header>
+            <div class="header_box">
+                <nav class="header" style="margin-bottom: 0; margin-top: 10px">
+                    <div class="header-first">
+                        <a href="main-mobile.html"
+                            ><img src="logo.png" alt="푸딘코" class="foodinco"
+                        /></a>
+                    </div>
+                    <div class="header-midle">
+                        <div class="haeder-map">
+                            <a class="header1" href="map.html">지도</a>
+                        </div>
+                        <div class="header-blg">
+                            <a
+                                class="header1"
+                                href="blogex.html"
+                                class="header-blg"
+                                >블로그</a
+                            >
+                        </div>
+                        <div class="header-page">
+                            <a
+                                class="header1"
+                                href="mypage.html"
+                                class="header-page"
+                                >내 페이지</a
+                            >
+                        </div>
+                    </div>
+                    <form class="header-last">
+                        <a href="join.html" class="membership">회원가입</a>
+                        <a href="login.html" class="log">로그인</a>
+                    </form>
+                </nav>
+            </div>
+        </header>
+        <div class="article_background">
+            <div class="article_wrapper" style="margin-bottom: 80px">
+                <div class="save_wrapper">
+                    <img
+                        class="save"
+                        src="save.png"
+                        alt="save"
+                        onclick="saveMyPage()"
+                    />
+                </div>
+                <div class="title">
+                    <!-- 제목 -->
+                    <h1 class="entry-title" itemprop="headline">
+                        분식과 와인의 거부할 수 없는 조합
+                    </h1>
+                    <!--글의 주제, 글쓴이-->
+                    <div class="entry-meta">
+                        <span>
+                            <a href="" class="ast-terms-link"
+                                >FOODINKO in Seoul</a
+                            >
+                            <!-- 블로그 글 목록으로 연결 -->
+                        </span>
+                        / 글쓴이
+                        <span>
+                            <a href="index.html" class="posted-by-vcard author"
+                                >FOODINKO</a
+                            >
+                            <!-- 메인페이지로 연결 -->
+                        </span>
+                    </div>
+                </div>
+                <div class="article">
+                    <!-- 가게 사진 -->
+                    <img
+                        src="https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDAxMTJfOCAg%2FMDAxNzA1MDI0MTc0NzAx.i41UoR6Kl5XJsmXYD_0AW8l5KAD-ph0NxIfVA8cRZLUg.t4ze_yDzInmIDuetn7MYVM77cpZcpLwWSbQk6764p_wg.JPEG%2FB3A23A52-B2AD-43F8-9C84-D09E1CF108FC.jpeg"
+                        alt=""
+                        loading="lazy"
+                        width="600px"
+                        height="600px"
+                        class="image"
+                    />
+
+                    <!-- 가게 이름 -->
+                    <p
+                        class="restaurant-name"
+                        style="padding: 10px 20px; margin: 5px"
+                    >
+                        오프트
+                    </p>
+                    <!-- 가게 주소 -->
+                    <p style="padding: 0 20px; margin: 5px">
+                        📍&nbsp;<a
+                            href="https://goo.gl/maps/NMYXMVyRLyXfLH6K9"
+                            rel="noreferrer noopener"
+                            target="_blank"
+                            class="restaurant-address-link"
+                        >
+                            서울 성동구 왕십리로 10길 20
+                        </a>
+                    </p>
+                    <!-- 메뉴설명 -->
+                    <p style="padding: 0 20px; margin: 5px">
+                        📕 OFTT떡볶이 17,000원 &nbsp;
+                    </p>
+                    <p style="padding: 0 20px; margin: 5px">
+                        📕 OFTT뇨끼 18,000원 &nbsp;
+                    </p>
+                    <p style="padding: 0 20px; margin: 5px">
+                        📕 키토김밥 7,000원 &nbsp;
+                    </p>
+
+                    <!-- 영업일자 -->
+                    <p style="padding: 0 20px 20px 20px; margin: 5px">
+                        ⏰ 월-일 11:30-23:00 브레이크 타임 15:00-17:00 &nbsp;
+                    </p>
+                    <!-- 블로그 글 내용 단략별 나눠짐 -->
+                    <p style="padding: 0 20px 20px 20px"></p>
+                    <p style="padding: 0 20px 20px 20px">
+                        이곳의 시그니처 메뉴는 포크에 커다란 가래떡 튀김 3개를
+                        꽂은 OFTT 떡볶이다. One Fork Three Tteok-bokki 의
+                        앞글자를 따서 OFTT 라는 이름이 만들어졌다. 양넘은 토마토
+                        라구 소스를 베이스로 한다. 새콤한 소스 안에 떡튀가
+                        묘하게 고급지다. 푸짐하게 오른 양파채 튀김 토핑과 함께
+                        먹는 맛은 은근 중독성 있다.
+                    </p>
+                    <p style="padding: 0 20px 20px 20px">
+                        뚝썸역 7번 출구 도보로 3분 거리에 위치해 있다. 주택들
+                        사이에 1.5층 위 분식바라는 간판이 보인다. 분식에 와인은
+                        거부할 수 없는 공식이 되었다. 콜키지도 가능하니 원하는
+                        와인을 챙겨도 좋다. 이날은 차를 가져가서 술은 마시지
+                        않았지만, 짜리몽땅한 와인잔이 눈에 들어온다. 와인 마시는
+                        재미가 있겠다. 재치 있는 인테리어 소품들도 눈에
+                        들어온다. 사장님의 센스를 엿볼 수 있다.
+                    </p>
+                    <p style="padding: 0 20px 20px 20px">
+                        즉석 떡볶이도 있다. 옆 테이블에서 고추장 베이스에 바글
+                        바글 끓여지는 즉떡 비주얼에 잠시 후회했다. 그래도 키도
+                        김밥과 뇨끼가 있으니 괜찮다. 다이어트로 이만한 분식이
+                        없다. 분명 계란이 맛있는데 식감은 김밥이다. 계란으
+                        고소하고 담백한 맛이 일품이가. 풍부한 트러플 향의 화이트
+                        크림 뇨끼. 떡볶이와는 다른 뇨끼의 쫀득함이 살아 있다.
+                        자박한 국물에 키토 김밥을 찍어 먹어보자. 다이어트 걱정은
+                        내일부터다. 신상 떡볶이 맛집 오프트는 예약 없이 워크인은
+                        거의 불가능하다. 명심하자.
+                    </p>
+                    <p style="padding: 0 20px 20px 20px">
+                        ※ 메뉴/가격은 변경될 수 있습니다.
+                    </p>
+                </div>
+            </div>
+            <div class="blog-slider-wrapper">
+                <a href="blog_24.html" class="box left-box">
+                    <div class="left-arrow">
+                        <img id="left" src="left-arrow.png" alt="left arrow" />
+                    </div>
+                </a>
+                <a href="#" class="box right-box" onclick="lastPage()">
+                    <div class="right-arrow">
+                        <img
+                            id="right"
+                            src="right-arrow.png"
+                            alt="rigth arrow"
+                        />
+                    </div>
+                </a>
+            </div>
+        </div>
+        <footer style="height: 70px"></footer>
+    </body>
+    <script src="blog_article.js"></script>
+</html>
