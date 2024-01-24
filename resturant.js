@@ -1,8 +1,5 @@
 let resturant = [
     {
-        // 일단 모든 href : (핫) 스크렘 링크 띄어놨음(0115/ 13:19) -> 블로그글로 변경할 예정
-        // opening_hours : 스크렘 영업일 및 영업시간으로 띄어놨음(0115/ 13:26) -> 각 식당 별 영업일&시간으로 변경해야함
-        // 그외 특이사항 같은거 커스텀 오버레이에 적용시켜보기 휴무일만 따로 빼면 좋을듯
         name: '꼼다비뛰드',
         address: '서울 강남구 강남대로 110길 62',
         category: '양식',
@@ -26,13 +23,11 @@ let resturant = [
         href: 'blog_2.html',
     },
     {
-        // 17 + 확인필요(스크렘)
-        name: '스크렘', // 한스크렘 수정
+        name: '스크렘',
         address: '서울 강남구 봉은사로 4길 17',
         category: '카페',
         district: '강남구',
         coordinate: [37.50397, 127.0265],
-        // coordinate: [37.50397, 127.0265],
         src: 'https://www.foodinko.com/wp-content/uploads/2023/11/%EA%B9%8C%EB%88%8C%EB%A0%88.jpeg',
         opening_hours: '월~토 12:00-22:00 일 12:00-18:00',
         closed_day: '공휴일 휴무',
@@ -128,7 +123,6 @@ let resturant = [
         href: 'blog_11.html',
     },
     {
-        // 마지막
         name: '프릳츠 양재점',
         address: '서울 서초구 강남대로 37길 24-11',
         category: '카페',
@@ -140,7 +134,6 @@ let resturant = [
         href: 'blog_12.html',
     },
     {
-        // 완료됨
         name: '일일시호일',
         address: '서울 서초구 나루터로 79',
         category: '일식',
@@ -152,7 +145,6 @@ let resturant = [
         href: 'blog_13.html',
     },
     {
-        // 6
         name: '멘야시노기',
         address: '서울 서초구 주흥길 3',
         category: '일식',
@@ -164,7 +156,6 @@ let resturant = [
         href: 'blog_14.html',
     },
     {
-        // 블로그글 참조
         name: '미슌',
         address: '서울 서초구 서초대로 53길 19',
         category: '중식',
@@ -176,7 +167,6 @@ let resturant = [
         href: 'blog_15.html',
     },
     {
-        // 10
         name: '신숙',
         address: '서울 서초구 법원로 3길 21',
         category: '한식',
@@ -188,7 +178,6 @@ let resturant = [
         href: 'blog_16.html',
     },
     {
-        //8 확인필요
         name: '해남원조김밥',
         address: '서울 서초구 방배중앙로 25길 15 ',
         category: '한식',
@@ -196,12 +185,11 @@ let resturant = [
         coordinate: [37.49403, 126.9852],
         src: 'https://www.foodinko.com/wp-content/uploads/2023/11/%EC%A0%9C%EB%AA%A9%EC%9D%84-%EC%9E%85%EB%A0%A5%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94__%EB%B3%B5%EC%82%AC%EB%B3%B8-001.jpg',
         opening_hours: '월~토 07:00-19:30 일 07:00-16:00',
-        // 재료 소진시 조기마감
+
         closed_day: '화요일,공휴일 휴무',
         href: 'blog_17.html',
     },
     {
-        // 14
         name: '피키니키 라자냐',
         address: '서울 성동구 서울숲2길 14 ',
         category: '양식',
@@ -213,7 +201,6 @@ let resturant = [
         href: 'blog_18.html',
     },
     {
-        // 5
         name: '마리오네',
         address: '서울 성동구 성수이로12길 15',
         category: '양식',
@@ -237,7 +224,6 @@ let resturant = [
         href: 'blog_20.html',
     },
     {
-        // 16
         name: '멘야신',
         address: '서울 성동구 독서당로 51길 15',
         category: '일식',
@@ -249,7 +235,6 @@ let resturant = [
         href: 'blog_21.html',
     },
     {
-        // 블로그 참조
         name: '춘향미엔',
         address: '서울 성동구 왕십리로 21길 26',
         category: '중식',
@@ -261,7 +246,6 @@ let resturant = [
         href: 'blog_22.html',
     },
     {
-        // 3
         name: '명가떡볶이',
         address: '서울 성동구 장터길 25-2 ',
         category: '분식',
@@ -273,7 +257,6 @@ let resturant = [
         href: 'blog_23.html',
     },
     {
-        // 블로그 참조
         name: '만나떡볶이',
         address: '서울 성동구 왕십리로24길 27',
         category: '분식',
@@ -285,8 +268,7 @@ let resturant = [
         href: 'blog_24.html',
     },
     {
-        // 블로그 참조
-        name: '오프트', // 이름 수정 오포트
+        name: '오프트',
         address: '서울 성동구 왕십리로 10길 20',
         category: '분식',
         district: '성동구',
