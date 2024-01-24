@@ -324,7 +324,9 @@ body {
         height: 60%;
         width: 60%;
     }
-
+    .box {
+        padding: 10px 0 40px 0;
+    }
     .img-map,
     .img-blog,
     .img-mypage {
@@ -425,6 +427,9 @@ body {
     .body-box {
         height: 60%;
         width: 60%;
+    }
+    .box {
+        padding: 10px 0 40px 0;
     }
     .body-circle,
     .img-blog,
@@ -533,6 +538,9 @@ body {
     .body-box {
         height: 60%;
         width: 60%;
+    }
+    .box {
+        padding: 10px 0 40px 0;
     }
     /* .body-circle, */
     .img-blog,
