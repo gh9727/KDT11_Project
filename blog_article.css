@@ -1,4 +1,12 @@
+@font-face {
+    font-family: 'Cafe24Oneprettynight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff')
+        format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
+    background-color: #fff;
     padding-top: 160px;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -7,6 +15,7 @@ body {
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Cafe24Oneprettynight';
 }
 .header_box {
     width: 100vw;
@@ -127,13 +136,10 @@ body {
     align-items: center;
     width: 60vw;
     height: auto;
-
-    /* margin: 0 auto; */
     padding: 20px 57px 57px 57px;
-    background-color: white;
+    background-color: #fff;
     border: 1px solid #dbdbdb;
-    box-shadow: 5px 5px 5px rgb(199, 196, 196);
-    /* overflow: auto; */
+    box-shadow: 10px 10px 10px 10px rgb(225, 222, 222);
 }
 .save_wrapper {
     width: 100%;
@@ -144,22 +150,14 @@ body {
     width: 20px;
 }
 .save:hover {
-    box-shadow: 5px 5px 5px rgb(199, 196, 196);
+    box-shadow: 2px 2px 18px #444;
 }
 .title {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.entry-title {
-    font-family: 'Noto Sans Korean';
-    font-weight: 500;
-}
-.restaurant-name {
-    font-family: 'Noto Sans Korean';
-    font-weight: 500;
-    font-size: 20px;
-}
+
 .ast-terms-link {
     color: black;
     text-decoration-line: none;

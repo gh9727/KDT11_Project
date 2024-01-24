@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Cafe24Oneprettynight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff')
+        format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* header */
 body {
     padding-top: 120px;
@@ -8,6 +16,7 @@ body {
     height: auto;
 }
 * {
+    font-family: 'Cafe24Oneprettynight';
     margin: 0;
     padding: 0;
 }
@@ -91,11 +100,7 @@ body {
     padding: 35px 0;
     text-align: center;
 }
-.foodinco {
-    width: 100px;
-    height: 80px;
-    padding: 0 5px;
-}
+
 .header1 {
     padding: 0 40px;
 }
@@ -131,7 +136,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70vw;
+    width: 60vw;
     height: auto;
 
     padding: 57px 57px 57px 57px;
@@ -145,16 +150,16 @@ body {
 .num {
     font-size: 22px;
     color: #211e1e;
-    font-family: 'Gowun Dodum', cursive;
+    /* font-family: 'Gowun Dodum', cursive; */
     font-weight: 400;
 }
 .list-box {
-    width: 55vw;
+    width: 40vw;
     height: auto;
     display: flex;
     justify-content: space-around;
     border: 1px solid #dbdbdb;
-    background-color: #f9f3f3d1;
+    background-color: white;
     box-shadow: 5px 5px 5px rgb(199, 196, 196);
 }
 .img-box {
@@ -173,7 +178,7 @@ body {
 }
 .list-title {
     color: #211e1e;
-    font-family: 'Gowun Dodum', cursive;
+    /* font-family: 'Gowun Dodum', cursive; */
     font-weight: 400;
     font-size: 37px;
 }
@@ -185,8 +190,8 @@ body {
 }
 
 .blog-image {
-    width: 13vw;
-    height: 13vw;
+    width: 6vw;
+    height: 6vw;
 }
 .blog-title {
     font-family: 'Noto Sans Korean';
