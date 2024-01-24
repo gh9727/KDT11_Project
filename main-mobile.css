@@ -2,7 +2,8 @@
 
 @font-face {
     font-family: 'Cafe24Oneprettynight';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff')
+        format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -163,7 +164,7 @@ body {
     border-radius: 20px;
 }
 .img:hover {
-    filter: drop-shadow(0px 0px 3px rgb(241, 218, 176));
+    filter: drop-shadow(3px 3px 3px rgb(241, 218, 176));
 }
 
 /*body 끝*/
@@ -214,7 +215,7 @@ body {
 .icon_text {
     font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
     font-size: 35px;
-    color: #e9dfd1;
+    color: #c4b59d;
     font-weight: bold;
     letter-spacing: -4px;
     text-align: center;
