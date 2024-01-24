@@ -139,9 +139,9 @@ body {
 /*body 시작*/
 .body1 {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     display: flex;
-    padding: 64px 0 0 0;
+    padding: 30px 0;
 }
 .body-circle {
     border-radius: 20px;
@@ -150,18 +150,22 @@ body {
     display: block;
 }
 .img {
-    width: 10vw;
-    height: 10vw;
+    width: 8vw;
+    height: 8vw;
     border-radius: 20px;
+}
+.img:hover {
+    filter: drop-shadow(0px 0px 3px rgb(241, 218, 176));
 }
 
 /*body 끝*/
 .line {
-    height: 3rem;
-    background-color: rgba(0, 0, 0, 0.1);
-    border: solid rgba(0, 0, 0, 0.15);
+    height: 2rem;
+    background-color: #f3f3f3;
+    /* border: solid rgba(0, 0, 0, 0.15); */
     border-width: 1px 0;
-    box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+    /* box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), */
+    /* inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15); */
 }
 /*bottom 시작*/
 .p {
@@ -170,6 +174,8 @@ body {
     left: 5%;
     position: absolute;
     margin-bottom: 0;
+    color: #c4b59d;
+    letter-spacing: -2px;
 }
 .menu-choice {
     padding-left: 10px;
@@ -192,14 +198,36 @@ body {
     border-radius: 20px;
 }
 .body-box {
-    height: 400px;
+    /* height: 300px; */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.icon_text {
+    font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+    font-size: 35px;
+    color: #e9dfd1;
+    font-weight: bold;
+    letter-spacing: -4px;
+    text-align: center;
+
+    border-radius: 20px;
+}
+.icon:hover {
+    text-shadow: 0 3px 4px #c4b59d, 0px -2px 1px #fff;
+}
+.explain {
+    font-size: 15px;
+    color: #c4b59d;
+    letter-spacing: -2px;
+}
 .box {
     padding: 40px;
     text-align: center;
+    /* font-size: 17px; */
+    color: #c4b59d;
+    letter-spacing: -2px;
+    font-weight: bold;
 }
 .bottom-box {
     display: flex;
@@ -240,11 +268,12 @@ body {
 }
 
 .line2 {
-    height: 3rem;
-    background-color: rgba(0, 0, 0, 0.1);
-    border: solid rgba(0, 0, 0, 0.15);
+    height: 2rem;
+    background-color: #f3f3f3;
+    /* border: solid rgba(0, 0, 0, 0.15); */
     border-width: 1px 0;
-    box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+    /* box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), */
+    /* inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15); */
 }
 .li2:hover {
     font-weight: bolder;
