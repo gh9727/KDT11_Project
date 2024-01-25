@@ -78,10 +78,7 @@ window.onload = function () {
                     `📍Address : 
                     ${listRestaurantAddress}`
                 );
-                window.sessionStorage.setItem(
-                    `address${i}`,
-                    listRestaurantAddress
-                );
+                window.sessionStorage.setItem(`address${i}`, listRestaurantAddress);
             }
             // break;
         }
@@ -93,9 +90,7 @@ var state = window.sessionStorage.getItem('state');
 console.log(state);
 if (state === 'login') {
     $('.header-last').empty();
-    $('.header-last').html(
-        '<a href="#" class="logout" onclick="logout()">로그아웃</a>'
-    );
+    $('.header-last').html('<a href="#" class="logout" onclick="logout()">로그아웃</a>');
     window.sessionStorage.setItem('state', 'login');
 }
 function logout() {
