@@ -25,7 +25,7 @@ function search_All() {
 function search_koreanFood() {
     view_Marker();
     delete_overlay();
-    map.setLevel(8);
+
     let category = '한식';
     for (let i = 0; i < positions.length; i++) {
         if (category !== positions[i].category) {
@@ -37,7 +37,7 @@ function search_koreanFood() {
 function search_chineseFood() {
     view_Marker();
     delete_overlay();
-    map.setLevel(8);
+
     let category = '중식';
     for (let i = 0; i < positions.length; i++) {
         if (category !== positions[i].category) {
@@ -49,7 +49,7 @@ function search_chineseFood() {
 function search_westernFood() {
     view_Marker();
     delete_overlay();
-    map.setLevel(8);
+
     let category = '양식';
     for (let i = 0; i < positions.length; i++) {
         if (category !== positions[i].category) {
@@ -61,7 +61,7 @@ function search_westernFood() {
 function search_japaneseFood() {
     view_Marker();
     delete_overlay();
-    map.setLevel(8);
+
     let category = '일식';
     for (let i = 0; i < positions.length; i++) {
         if (category !== positions[i].category) {
@@ -73,7 +73,7 @@ function search_japaneseFood() {
 function search_snackBar() {
     view_Marker();
     delete_overlay();
-    map.setLevel(8);
+
     let category = '분식';
     for (let i = 0; i < positions.length; i++) {
         delete_overlay();
@@ -86,7 +86,6 @@ function search_snackBar() {
 function search_cafe() {
     view_Marker();
     delete_overlay();
-    map.setLevel(8);
     let category = '카페';
     for (let i = 0; i < positions.length; i++) {
         delete_overlay();

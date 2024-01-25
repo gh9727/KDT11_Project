@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'Cafe24Oneprettynight';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff')
+        format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -168,7 +169,6 @@ body {
     width: 35vw;
     color: gray;
     font-size: 14px;
-    font-family: 'Noto Sans Korean';
     font-weight: 300;
     display: flex;
     flex-direction: column;
@@ -177,7 +177,6 @@ body {
 }
 .list-title {
     color: #211e1e;
-    /* font-family: 'Gowun Dodum', cursive; */
     font-weight: 400;
     font-size: 37px;
 }
@@ -193,7 +192,6 @@ body {
     height: 6vw;
 }
 .blog-title {
-    font-family: 'Noto Sans Korean';
     font-weight: 300;
     font-size: 27px;
     color: rgb(70, 70, 70);

@@ -29,7 +29,7 @@ let resturant = [
     },
     {
         //3
-        name: '런던 베이글 뮤지엄', // 한스크렘 수정
+        name: '런던 베이글 뮤지엄',
         address: '서울 강남구 언주로168길 33',
         category: '카페',
         district: '강남구',

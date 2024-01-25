@@ -50,7 +50,7 @@ body {
     height: 40px;
     margin: 3px 0 8px 0;
     padding: 0 10px 0 10px;
-    background-color: #fafafa;
+    /* background-color: #fafafa; */
     border: 1px solid #dbdbdb;
     border-radius: 3px;
 }
@@ -62,6 +62,10 @@ body {
 }
 .login_text::value {
     color: #262626;
+}
+input[type='password'] {
+    font: small-caption;
+    font-size: 16px;
 }
 .login_btn {
     width: 100%;
