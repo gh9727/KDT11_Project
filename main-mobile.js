@@ -67,9 +67,6 @@
 //     index += next;
 // console.log(index);
 // };
-//  대략적인 틀만 구성함 21:05
-// {012 345 678 9111 111213 141516 171819 202122 2324 0}
-//           {{ 2324,0 123 456 }}
 
 let back_button = document.querySelector('.back_button');
 let next_button = document.querySelector('.next_button');
@@ -121,6 +118,9 @@ function updateMenu(index) {
     $('.box_btn1').text(`${resturant[index].name}`);
     $('.box_btn2').text(`${resturant[index + 1].name}`);
     $('.box_btn3').text(`${resturant[index + 2].name}`);
+    $('.ab').attr('href', `${resturant[index].href}`);
+    $('.ab2').attr('href', `${resturant[index + 1].href}`);
+    $('.ab3').attr('href', `${resturant[index + 2].href}`);
     console.log(index);
     console.log(index + 1);
     console.log(index + 2);
@@ -133,9 +133,7 @@ var state = window.sessionStorage.getItem('state');
 console.log(state);
 if (state === 'login') {
     $('.header-last').empty();
-    $('.header-last').html(
-        '<a href="#" class="logout" onclick="logout()">로그아웃</a>'
-    );
+    $('.header-last').html('<a href="#" class="logout" onclick="logout()">로그아웃</a>');
     window.sessionStorage.setItem('state', 'login');
 }
 function logout() {
