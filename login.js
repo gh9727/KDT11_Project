@@ -15,7 +15,7 @@ function logIn() {
     for (let i = 0; i <= memberNames.length; i++) {
         if (id === memberNames[i] && password === memberPasswords[i]) {
             alert('로그인');
-            location.replace('main-mobile.html'); //메인화면으로 이동
+            location.replace('index.html'); //메인화면으로 이동
             state = 'login';
             // 로그인 성공 시 기본값 로그아웃 -> 로그인 상태로 상태 업데이트
             window.sessionStorage.setItem('state', 'login');
@@ -35,9 +35,7 @@ function join() {
     var check_id = memberNames.includes(id); //있다면 true
     var check_pw = memberPasswords.includes(password);
     if (check_id === true || check_pw === true) {
-        alert(
-            '이미 존재하는 아이디 / 비밀번호 입니다.\n다른 아이디 / 비밀번호를 입력해주세요.'
-        );
+        alert('이미 존재하는 아이디 / 비밀번호 입니다.\n다른 아이디 / 비밀번호를 입력해주세요.');
         $('#id').val('');
         $('#password').val('');
         $('#passwordCheck').val('');
@@ -61,10 +59,7 @@ function password_check() {
         alert('비밀번호를 다시 입력하세요.');
         $('#floatingPassword').val('');
         $('#passwordCheck').val('');
-    } else if (
-        $('#floatingPassword').val() == '' ||
-        $('#passwordCheck').val() == ''
-    ) {
+    } else if ($('#floatingPassword').val() == '' || $('#passwordCheck').val() == '') {
         alert('비밀번호를 입력하세요.');
     } else if ($('#floatingPassword').val() === $('#passwordCheck').val()) {
         alert('비밀번호가 일치합니다.');
