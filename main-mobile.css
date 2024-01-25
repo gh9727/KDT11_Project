@@ -1,11 +1,16 @@
 /*header css*/
 
+@font-face {
+    font-family: 'Cafe24Oneprettynight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff')
+        format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Gowun Dodum';
-    font-weight: 400;
-    font-style: normal;
+    font-family: 'Cafe24Oneprettynight';
 }
 body {
     overflow-x: hidden;
@@ -89,7 +94,8 @@ figure img {
 }
 
 figure figcaption {
-    color: #607d8b;
+    color: #597e52;
+    font-weight: bolder;
     bottom: 70px;
     opacity: 0;
     position: absolute;
@@ -120,21 +126,22 @@ body {
     padding-top: 100px;
 }
 .carousel-slide {
-    background-color: #fffed0;
+    background-color: #f1e4c3;
+    height: 40vw;
 }
 
 .carousel-inner {
     width: 100vw;
     display: flex;
-    height: 20vw;
+    height: 40vw;
 }
 .carousel-item {
     width: 100%;
-    height: 100%;
+    height: 40vw;
 }
 .d-block {
-    max-width: 30vw;
-    max-height: 20vw;
+    max-width: 65vw;
+    max-height: 100%;
     margin: 0 auto;
 }
 
@@ -157,7 +164,7 @@ body {
     border-radius: 20px;
 }
 .img:hover {
-    filter: drop-shadow(0px 0px 3px rgb(241, 218, 176));
+    filter: drop-shadow(3px 3px 3px rgb(241, 218, 176));
 }
 
 /*body 끝*/
@@ -208,7 +215,7 @@ body {
 .icon_text {
     font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
     font-size: 35px;
-    color: #e9dfd1;
+    color: #c4b59d;
     font-weight: bold;
     letter-spacing: -4px;
     text-align: center;
@@ -285,7 +292,6 @@ body {
     list-style-type: none;
 }
 .li3 {
-    font-weight: bold;
     font-size: 20px;
     list-style-type: none;
 }
@@ -296,7 +302,7 @@ body {
     padding-left: 25px;
 }
 .accordion1 {
-    width: 130px;
+    width: 140px;
 }
 
 /*footer 시작*/
@@ -324,13 +330,6 @@ body {
     body {
         padding-top: 172px;
     }
-    .carousel-inner {
-        height: 30vh;
-    }
-    .d-block {
-        max-width: 30vw;
-        max-height: 30vh;
-    }
     .header {
         flex-direction: column;
         height: auto;
@@ -345,6 +344,19 @@ body {
     }
 
     /* .body1, */
+    .carousel-slide {
+        height: 40vw;
+    }
+    .carousel-inner {
+        height: 40vw;
+    }
+    .d-block {
+        max-width: 60vw;
+        max-height: 100%;
+    }
+    figure figcaption {
+        bottom: 2vw;
+    }
     .bottom {
         flex-direction: column;
         padding: 50px 0;
@@ -437,16 +449,6 @@ body {
     .header1 {
         padding: 10px;
     }
-    .carousel {
-        top: 47px;
-    }
-    .carousel-inner {
-        height: 30vh;
-    }
-    .d-block {
-        max-width: 30vw;
-        max-height: 30vh;
-    }
     .header {
         display: flex;
         flex-direction: column;
@@ -458,6 +460,26 @@ body {
     .body-box {
         height: 60%;
         width: 60%;
+    }
+    .carousel {
+        top: 47px;
+    }
+    .carousel-slide {
+        height: 40vw;
+    }
+    .carousel-inner {
+        height: 40vw;
+    }
+    .d-block {
+        max-width: 60vw;
+        max-height: 100%;
+    }
+
+    .carousel-item {
+        height: 100%;
+    }
+    figure figcaption {
+        bottom: 2vw;
     }
     .box {
         padding: 10px 0 40px 0;
@@ -553,6 +575,26 @@ body {
     }
 
     /*body*/
+    .carousel {
+        top: 47px;
+    }
+    .carousel-slide {
+        height: 40vw;
+    }
+    .carousel-inner {
+        height: 40vw;
+    }
+    .d-block {
+        max-width: 60vw;
+        max-height: 100%;
+    }
+
+    .carousel-item {
+        height: 100%;
+    }
+    figure figcaption {
+        bottom: 2vw;
+    }
     .body1,
     .bottom {
         flex-direction: column;

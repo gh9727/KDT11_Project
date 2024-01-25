@@ -1,50 +1,41 @@
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     mapOption = {
         center: new kakao.maps.LatLng(37.514575, 127.0495556), // 지도의 중심좌표
-        // 전역변수 : mapOption.level = 4; 이렇게 지도 레벨 변경 가능함
-        level: 8, // 지도의 확대 레벨
+        level: 9, // 지도의 확대 레벨
     };
-//  화면에 지도 생성
-var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+var map = new kakao.maps.Map(mapContainer, mapOption); // 화면에 지도 생성
 
-/* =======================================================================================================================================================
- * ============================================레스토랑.js에 있는 식당 정보 positions 배열로 불러오기===============================================================
- * ======================================================================================================================================================= */
-// MY : 위도 경도 입력을 위한 for문
 // MY : positions = [[음식점1, ...,위도1],[음식점2,..., 위도2],[음식점3,..., 위도3]]
-var positions = []; // MY : po
+var positions = [];
 for (let i = 0; i < resturant.length; i++) {
     positions.push({
-        name: resturant[i].name, // 음식점 이름
-        address: resturant[i].address, // 음식점 주소명
-        category: resturant[i].category, // 한식 중식 일식 양식 분식 디저트
-        district: resturant[i].district, // 강남구 서초구 성동구
-        latlng: new kakao.maps.LatLng(resturant[i].coordinate[0], resturant[i].coordinate[1]), // 음식점 위치(위도,경도)
-        src: resturant[i].src, // 식당 이미지 소스
-        opening_hours: resturant[i].opening_hours, // 영업시간
-        closed_day: resturant[i].closed_day, // 휴무일
-        href: resturant[i].href, // 블로그 사이트
+        name: resturant[i].name,
+        address: resturant[i].address,
+        category: resturant[i].category,
+        district: resturant[i].district,
+        latlng: new kakao.maps.LatLng(resturant[i].coordinate[0], resturant[i].coordinate[1]),
+        src: resturant[i].src,
+        opening_hours: resturant[i].opening_hours,
+        closed_day: resturant[i].closed_day,
+        href: resturant[i].href,
     });
 }
-/* =======================================================================================================================================================
- * ============================================================마커, 커스텀 오버레이 생성을 위한 변수 선언============================================================================
- * ======================================================================================================================================================= */
-// 마커 이미지의 이미지 주소입니다
-var imageSrc = [
-    'image/한식.png',
-    'image/양식.png',
-    'image/중식.png',
-    'image/디저트.png',
-    'image/일식.png',
-    'image/분식.png',
-];
-let markers = []; // marker 정보를 담는 markers 전역변수(배열)로 선언
-let overlays = []; // overlay 정보를 담는 overlays 전역변수(배열)로 선언
 
-// 마커 생성 + 마커 한식,중식,양식.. 별 맞는 이미지 넣기
-/* ==============================================================마커,오버레이 생성을 위한 forEach문 시작======================================================================= */
+// 마커 이미지의 이미지 주소입니다
+let markers = []; // marker 변수를 담는 markers
+let overlays = []; // overlay 변수를 담는 overlays
+
+// 마커, 오버레이 생성 + 오버레이 클릭 이벤트
 positions.forEach(function (pos) {
-    // var imageSize = new kakao.maps.Size(24, 35);
+    // 카테고리 별 마커 이미지 분류
+    var imageSrc = [
+        'image/한식.png',
+        'image/양식.png',
+        'image/중식.png',
+        'image/디저트.png',
+        'image/일식.png',
+        'image/분식.png',
+    ];
     if (pos.category === '한식') {
         var imageSize = new kakao.maps.Size(45, 35);
         var markerImage = new kakao.maps.MarkerImage(imageSrc[0], imageSize);
@@ -70,14 +61,17 @@ positions.forEach(function (pos) {
         position: pos.latlng, // 마커를 표시할 위치
         image: markerImage, // 마커 이미지
     });
-    markers.push(marker); // 마커 정보를 markers 배열에 담기
+
+    markers.push(marker);
 
     // 커스텀 오버레이 요소 생성
     var content = document.createElement('div');
     content.className = 'wrap';
+
     var info = document.createElement('div');
     info.className = 'info';
     content.appendChild(info);
+
     var title = document.createElement('div');
     title.className = 'title';
     title.appendChild(document.createTextNode(pos.name));
@@ -88,7 +82,6 @@ positions.forEach(function (pos) {
     closebtn.onclick = function () {
         overlay.setMap(null);
     };
-    closebtn.title = '닫기';
     title.appendChild(closebtn);
 
     var body = document.createElement('div');
@@ -136,37 +129,28 @@ positions.forEach(function (pos) {
 
     // 커스텀 오버레이 변수
     var overlay = new kakao.maps.CustomOverlay({
-        // 변수로 생성했던 content 요소를 카카오 api 함수를 활용하여 content 오브젝트에 넣음
+        // var content 요소를
         content: content,
         // map: map,
         position: marker.getPosition(),
     });
-    overlays.push(overlay); // overlays 배열에 overlay 정보 담기
+    overlays.push(overlay);
 
-    // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
+    // 마커 클릭 이벤트: 마커 클릭 시 해당 마커의 오버레이 생성
     kakao.maps.event.addListener(marker, 'click', function () {
         overlay.setMap(map);
     });
 });
 // forEach문 종료
-/* =======================================================================================================================================================
- * ====================================================================마커, 오버레이 자동 생성 메서드 ================================================================
- * ======================================================================================================================================================= */
 
-// 모든 마커를 생성해주는 함수 -> 필터링 기능을 위해 제작함 0116
+// 지도에 모든 마커를 생성
 function view_Marker() {
     for (let index = 0; index < positions.length; index++) {
         markers[index].setMap(map);
     }
 }
-// 커스텀 오버레이 생성 -> 아직 사용할 곳 없어서 주석 0117 09:45
-// function view_overlay() {
-//     for (let index = 0; index < positions.length; index++) {
-//         overlays[index].setMap(map);
-//     }
-// }
 
-// 지도상 커스텀 오버레이 삭제 0117 09:30
+// 지도에 모든 오버레이 삭제
 function delete_overlay() {
     for (let index = 0; index < positions.length; index++) {
         overlays[index].setMap(null);

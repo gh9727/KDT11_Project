@@ -17,7 +17,7 @@ let resturant = [
     },
     {
         // 2
-        name: '프릳츠 양재점',
+        name: '프린츠 양재점',
         address: '서울 서초구 강남대로 37길 42-11',
         category: '카페',
         district: '서초구',

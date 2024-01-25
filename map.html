@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>지도</title>
+        <link rel="icon" href="logo.png" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
         <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
         <title>Bootstrap Example</title>
@@ -89,6 +90,7 @@
                                 >
                                     <div class="accordion-body">
                                         <ul class="ul">
+                                            <li class="li2" onclick="search_All()">전체</li>
                                             <li class="li2" onclick="search_koreanFood()">한식</li>
                                             <li class="li2" onclick="search_chineseFood()">중식</li>
                                             <li class="li2" onclick="search_westernFood()">양식</li>
@@ -106,11 +108,10 @@
         </header>
         <div class="body">
             <div class="body-b">
-                <!-- <div id="map"></div> -->
                 <div class="row g-3">
                     <div class="col row-a">
                         <input
-                            id="district"
+                            id="district_input"
                             type="text"
                             class="service form-control"
                             placeholder="구를 입력해주세요"
@@ -122,7 +123,7 @@
 
                     <div class="col row-b">
                         <input
-                            id="food"
+                            id="food_input"
                             type="text"
                             class="service form-control"
                             placeholder="종류를 입력해주세요"
@@ -131,7 +132,6 @@
 
                         <button class="search_button food_button">검색</button>
                     </div>
-                    <!-- <div id="map"></div> -->
                 </div>
                 <div id="map"></div>
             </div>
@@ -190,7 +190,7 @@
                         </li>
                         <li class="li5"><a href="blog_11.html" style="text-decoration: none; color: black">몬탁</a></li>
                         <li class="li5">
-                            <a href="blog_12.html" style="text-decoration: none; color: black">프릳츠 양재점</a>
+                            <a href="blog_12.html" style="text-decoration: none; color: black">프린츠 양재점</a>
                         </li>
                         <li class="li5">
                             <a href="blog_13.html" style="text-decoration: none; color: black">일일시호일</a>
