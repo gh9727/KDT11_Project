@@ -5,14 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>지도</title>
         <link rel="icon" href="logo.png" />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-        />
-        <link
-            href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
-            rel="stylesheet"
-        />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
+        <title>Bootstrap Example</title>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
         <!-- <link rel="stylesheet" href="main-mobile.css" /> -->
         <link rel="stylesheet" href="map.css" />
@@ -25,29 +20,17 @@
             <div class="header_box">
                 <nav class="header" style="margin-bottom: 0; margin-top: 10px">
                     <div class="header-first">
-                        <a href="main-mobile.html"
-                            ><img src="logo.png" alt="푸딘코" class="foodinco"
-                        /></a>
+                        <a href="main-mobile.html"><img src="logo.png" alt="푸딘코" class="foodinco" /></a>
                     </div>
                     <div class="header-midle">
                         <div class="haeder-map">
                             <a class="header1" href="map.html">지도</a>
                         </div>
                         <div class="header-blg">
-                            <a
-                                class="header1"
-                                href="blogex.html"
-                                class="header-blg"
-                                >블로그</a
-                            >
+                            <a class="header1" href="blogex.html" class="header-blg">블로그</a>
                         </div>
                         <div class="header-page">
-                            <a
-                                class="header1"
-                                href="mypage.html"
-                                class="header-page"
-                                >내 페이지</a
-                            >
+                            <a class="header1" href="mypage.html" class="header-page">내 페이지</a>
                         </div>
                     </div>
                     <form class="header-last">
@@ -67,13 +50,7 @@
                                         data-bs-target="#collapseOne"
                                         aria-expanded="true"
                                         aria-controls="collapseOne"
-                                        style="
-                                            background-color: rgb(
-                                                231,
-                                                228,
-                                                228
-                                            );
-                                        "
+                                        style="background-color: rgb(231, 228, 228)"
                                     >
                                         지역
                                     </button>
@@ -85,24 +62,9 @@
                                 >
                                     <div class="accordion-body">
                                         <ul class="ul">
-                                            <li
-                                                class="search li3"
-                                                onclick="search_Gangnam()"
-                                            >
-                                                강남구
-                                            </li>
-                                            <li
-                                                class="search li3"
-                                                onclick="search_Seocho()"
-                                            >
-                                                서초구
-                                            </li>
-                                            <li
-                                                class="search li3"
-                                                onclick="search_Seongdong()"
-                                            >
-                                                성동구
-                                            </li>
+                                            <li class="search li3" onclick="search_Gangnam()">강남구</li>
+                                            <li class="search li3" onclick="search_Seocho()">서초구</li>
+                                            <li class="search li3" onclick="search_Seongdong()">성동구</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -116,13 +78,7 @@
                                         data-bs-target="#collapseTwo"
                                         aria-expanded="false"
                                         aria-controls="collapseTwo"
-                                        style="
-                                            background-color: rgb(
-                                                231,
-                                                228,
-                                                228
-                                            );
-                                        "
+                                        style="background-color: rgb(231, 228, 228)"
                                     >
                                         종류
                                     </button>
@@ -134,42 +90,13 @@
                                 >
                                     <div class="accordion-body">
                                         <ul class="ul">
-                                            <li
-                                                class="li2"
-                                                onclick="search_koreanFood()"
-                                            >
-                                                한식
-                                            </li>
-                                            <li
-                                                class="li2"
-                                                onclick="search_chineseFood()"
-                                            >
-                                                중식
-                                            </li>
-                                            <li
-                                                class="li2"
-                                                onclick="search_westernFood()"
-                                            >
-                                                양식
-                                            </li>
-                                            <li
-                                                class="li2"
-                                                onclick="search_japaneseFood()"
-                                            >
-                                                일식
-                                            </li>
-                                            <li
-                                                class="li2"
-                                                onclick="search_snackBar()"
-                                            >
-                                                분식
-                                            </li>
-                                            <li
-                                                class="li2"
-                                                onclick="search_cafe()"
-                                            >
-                                                카페
-                                            </li>
+                                            <li class="li2" onclick="search_All()">전체</li>
+                                            <li class="li2" onclick="search_koreanFood()">한식</li>
+                                            <li class="li2" onclick="search_chineseFood()">중식</li>
+                                            <li class="li2" onclick="search_westernFood()">양식</li>
+                                            <li class="li2" onclick="search_japaneseFood()">일식</li>
+                                            <li class="li2" onclick="search_snackBar()">분식</li>
+                                            <li class="li2" onclick="search_cafe()">카페</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -192,9 +119,7 @@
                             aria-label="First name"
                         />
 
-                        <button class="search_button district_button">
-                            검색
-                        </button>
+                        <button class="search_button district_button">검색</button>
                     </div>
 
                     <div class="col row-b">
@@ -220,9 +145,7 @@
                 <li class="li">
                     <a href="main-mobile.html" style="color: black">main</a>
                 </li>
-                <li class="li limap">
-                    <a href="map.html" style="color: black">map</a>
-                </li>
+                <li class="li limap"><a href="map.html" style="color: black">map</a></li>
                 <li class="li liblo">
                     <a href="blogex.html" style="color: black">blog</a>
                 </li>
@@ -233,206 +156,83 @@
             <nav class="accordion1">
                 <div class="accordion2">
                     <ul class="ul3">
-                        <li
-                            class="li4"
-                            style="text-decoration: none; color: black"
-                        >
-                            1. 강남구
+                        <li class="li4" style="text-decoration: none; color: black">1. 강남구</li>
+                        <li class="li5">
+                            <a href="blog_1.html" style="text-decoration: none; color: black">꼼다비뛰드</a>
                         </li>
                         <li class="li5">
-                            <a
-                                href="blog_1.html"
-                                style="text-decoration: none; color: black"
-                                >꼼다비뛰드</a
-                            >
+                            <a href="blog_2.html" style="text-decoration: none; color: black">브루클린더버거 조인트</a>
                         </li>
                         <li class="li5">
-                            <a
-                                href="blog_2.html"
-                                style="text-decoration: none; color: black"
-                                >브루클린더버거 조인트</a
-                            >
+                            <a href="blog_3.html" style="text-decoration: none; color: black">스크렘</a>
                         </li>
                         <li class="li5">
-                            <a
-                                href="blog_3.html"
-                                style="text-decoration: none; color: black"
-                                >스크렘</a
-                            >
+                            <a href="blog_4.html" style="text-decoration: none; color: black">런던 베이글 뮤지엄</a>
+                        </li>
+                        <li class="li5"><a href="blog_5.html" style="text-decoration: none; color: black">하랑</a></li>
+                        <li class="li5">
+                            <a href="blog_6.html" style="text-decoration: none; color: black">센자이료큐</a>
                         </li>
                         <li class="li5">
-                            <a
-                                href="blog_4.html"
-                                style="text-decoration: none; color: black"
-                                >런던 베이글 뮤지엄</a
-                            >
+                            <a href="blog_7.html" style="text-decoration: none; color: black">성하루</a>
                         </li>
                         <li class="li5">
-                            <a
-                                href="blog_5.html"
-                                style="text-decoration: none; color: black"
-                                >하랑</a
-                            >
+                            <a href="blog_8.html" style="text-decoration: none; color: black">신사시장 떡볶이</a>
                         </li>
                         <li class="li5">
-                            <a
-                                href="blog_6.html"
-                                style="text-decoration: none; color: black"
-                                >센자이료큐</a
-                            >
-                        </li>
-                        <li class="li5">
-                            <a
-                                href="blog_7.html"
-                                style="text-decoration: none; color: black"
-                                >성하루</a
-                            >
-                        </li>
-                        <li class="li5">
-                            <a
-                                href="blog_8.html"
-                                style="text-decoration: none; color: black"
-                                >신사시장 떡볶이</a
-                            >
-                        </li>
-                        <li class="li5">
-                            <a
-                                href="blog_9.html"
-                                style="text-decoration: none; color: black"
-                                >진미평양냉면</a
-                            >
+                            <a href="blog_9.html" style="text-decoration: none; color: black">진미평양냉면</a>
                         </li>
                     </ul>
                 </div>
                 <div class="accordion2">
                     <ul class="ul2">
-                        <li
-                            class="li4"
-                            style="text-decoration: none; color: black"
-                        >
-                            2. 서초구
+                        <li class="li4" style="text-decoration: none; color: black">2. 서초구</li>
+                        <li class="li5">
+                            <a href="blog_10.html" style="text-decoration: none; color: black">도우룸</a>
+                        </li>
+                        <li class="li5"><a href="blog_11.html" style="text-decoration: none; color: black">몬탁</a></li>
+                        <li class="li5">
+                            <a href="blog_12.html" style="text-decoration: none; color: black">프린츠 양재점</a>
                         </li>
                         <li class="li5">
-                            <a
-                                href="blog_10.html"
-                                style="text-decoration: none; color: black"
-                                >도우룸</a
-                            >
+                            <a href="blog_13.html" style="text-decoration: none; color: black">일일시호일</a>
                         </li>
                         <li class="li5">
-                            <a
-                                href="blog_11.html"
-                                style="text-decoration: none; color: black"
-                                >몬탁</a
-                            >
+                            <a href="blog_14.html" style="text-decoration: none; color: black">멘야시노기</a>
                         </li>
+                        <li class="li5"><a href="blog_15.html" style="text-decoration: none; color: black">미슌</a></li>
+                        <li class="li5"><a href="blog_16.html" style="text-decoration: none; color: black">신숙</a></li>
                         <li class="li5">
-                            <a
-                                href="blog_12.html"
-                                style="text-decoration: none; color: black"
-                                >프릳츠 양재점</a
-                            >
-                        </li>
-                        <li class="li5">
-                            <a
-                                href="blog_13.html"
-                                style="text-decoration: none; color: black"
-                                >일일시호일</a
-                            >
-                        </li>
-                        <li class="li5">
-                            <a
-                                href="blog_12.html"
-                                style="text-decoration: none; color: black"
-                                >프릳츠 양재점</a
-                            >
-                        </li>
-                        <li class="li5">
-                            <a
-                                href="blog_15.html"
-                                style="text-decoration: none; color: black"
-                                >미슌</a
-                            >
-                        </li>
-                        <li class="li5">
-                            <a
-                                href="blog_16.html"
-                                style="text-decoration: none; color: black"
-                                >신숙</a
-                            >
-                        </li>
-                        <li class="li5">
-                            <a
-                                href="blog_17.html"
-                                style="text-decoration: none; color: black"
-                                >해남원조김밥</a
-                            >
+                            <a href="blog_17.html" style="text-decoration: none; color: black">해남원조김밥</a>
                         </li>
                     </ul>
                 </div>
                 <div class="accordion2">
                     <ul class="ul2">
-                        <li
-                            class="li4"
-                            style="text-decoration: none; color: black"
-                        >
-                            3. 성동구
+                        <li class="li4" style="text-decoration: none; color: black">3. 성동구</li>
+                        <li class="li5">
+                            <a href="blog_18.html" style="text-decoration: none; color: black">피키니키 리자냐</a>
                         </li>
                         <li class="li5">
-                            <a
-                                href="blog_18.html"
-                                style="text-decoration: none; color: black"
-                                >피키니키 리자냐</a
-                            >
+                            <a href="blog_19.html" style="text-decoration: none; color: black">마리오네</a>
                         </li>
                         <li class="li5">
-                            <a
-                                href="blog_19.html"
-                                style="text-decoration: none; color: black"
-                                >마리오네</a
-                            >
+                            <a href="blog_20.html" style="text-decoration: none; color: black">마구로쇼큐도</a>
                         </li>
                         <li class="li5">
-                            <a
-                                href="blog_20.html"
-                                style="text-decoration: none; color: black"
-                                >마구로쇼큐도</a
-                            >
+                            <a href="blog_21.html" style="text-decoration: none; color: black">멘야신</a>
                         </li>
                         <li class="li5">
-                            <a
-                                href="blog_21.html"
-                                style="text-decoration: none; color: black"
-                                >멘야신</a
-                            >
+                            <a href="blog_22.html" style="text-decoration: none; color: black">춘향미엔</a>
                         </li>
                         <li class="li5">
-                            <a
-                                href="blog_22.html"
-                                style="text-decoration: none; color: black"
-                                >춘향미엔</a
-                            >
+                            <a href="blog_23.html" style="text-decoration: none; color: black">명가떡볶이</a>
                         </li>
                         <li class="li5">
-                            <a
-                                href="blog_23.html"
-                                style="text-decoration: none; color: black"
-                                >명가떡볶이</a
-                            >
+                            <a href="blog_24.html" style="text-decoration: none; color: black">만나떡볶이</a>
                         </li>
                         <li class="li5">
-                            <a
-                                href="blog_24.html"
-                                style="text-decoration: none; color: black"
-                                >만나떡볶이</a
-                            >
-                        </li>
-                        <li class="li5">
-                            <a
-                                href="blog_25.html"
-                                style="text-decoration: none; color: black"
-                                >오프트</a
-                            >
+                            <a href="blog_25.html" style="text-decoration: none; color: black">오프트</a>
                         </li>
                     </ul>
                 </div>
@@ -443,10 +243,7 @@
             src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ec794db2c9a4e5f04f8802330b1070b8"
         ></script>
         <!-- 0116 11:22 카카오맵 api 서비스 라이브러리 추가 -->
-        <script
-            type="text/javascript"
-            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services"
-        ></script>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services"></script>
         <script src="resturant.js"></script>
         <script src="map.js"></script>
         <script src="search.js"></script>

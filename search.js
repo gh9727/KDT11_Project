@@ -16,6 +16,11 @@ function search_Seongdong() {
     map.setCenter(moveLatLng); // 성동구 요소 클릭 시 지도 중심 좌표를 성동구청으로 변경
 }
 
+// 전체 클릭 시
+function search_All() {
+    view_Marker();
+    delete_overlay();
+}
 // 한식 리스트 클릭 시
 function search_koreanFood() {
     view_Marker();
