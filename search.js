@@ -26,7 +26,7 @@ function search_koreanFood() {
     view_Marker();
     delete_overlay();
     map.setLevel(8);
-    let category = '한식'; // this.value
+    let category = '한식';
     for (let i = 0; i < positions.length; i++) {
         if (category !== positions[i].category) {
             markers[i].setMap(null);
@@ -38,7 +38,7 @@ function search_chineseFood() {
     view_Marker();
     delete_overlay();
     map.setLevel(8);
-    let category = '중식'; // this.value
+    let category = '중식';
     for (let i = 0; i < positions.length; i++) {
         if (category !== positions[i].category) {
             markers[i].setMap(null);
@@ -50,7 +50,7 @@ function search_westernFood() {
     view_Marker();
     delete_overlay();
     map.setLevel(8);
-    let category = '양식'; // this.value
+    let category = '양식';
     for (let i = 0; i < positions.length; i++) {
         if (category !== positions[i].category) {
             markers[i].setMap(null);
@@ -62,7 +62,7 @@ function search_japaneseFood() {
     view_Marker();
     delete_overlay();
     map.setLevel(8);
-    let category = '일식'; // this.value
+    let category = '일식';
     for (let i = 0; i < positions.length; i++) {
         if (category !== positions[i].category) {
             markers[i].setMap(null);
@@ -74,7 +74,7 @@ function search_snackBar() {
     view_Marker();
     delete_overlay();
     map.setLevel(8);
-    let category = '분식'; // this.value
+    let category = '분식';
     for (let i = 0; i < positions.length; i++) {
         delete_overlay();
         if (category !== positions[i].category) {
@@ -87,7 +87,7 @@ function search_cafe() {
     view_Marker();
     delete_overlay();
     map.setLevel(8);
-    let category = '카페'; // this.value
+    let category = '카페';
     for (let i = 0; i < positions.length; i++) {
         delete_overlay();
         if (category !== positions[i].category) {
