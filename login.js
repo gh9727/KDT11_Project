@@ -15,7 +15,7 @@ function logIn() {
     for (let i = 0; i <= memberNames.length; i++) {
         if (id === memberNames[i] && password === memberPasswords[i]) {
             alert('로그인');
-            location.replace('main-mobile.html'); //메인화면으로 이동
+            location.replace('index.html'); //메인화면으로 이동
             state = 'login';
             // 로그인 성공 시 기본값 로그아웃 -> 로그인 상태로 상태 업데이트
             window.sessionStorage.setItem('state', 'login');
@@ -44,6 +44,8 @@ function join() {
     }
     //회원가입
     if (check_id === false && check_pw === false && finishCheckPw === 'yes') {
+        console.log(memberNames);
+        console.log(memberPasswords);
         memberNames.push(id);
         memberPasswords.push(password);
         console.log(memberNames);

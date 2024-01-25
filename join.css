@@ -66,6 +66,10 @@ body {
 .login_text::value {
     color: #262626;
 }
+input[type='password'] {
+    font: small-caption;
+    font-size: 16px;
+}
 .login_btn {
     width: 100px;
     height: 40px;
