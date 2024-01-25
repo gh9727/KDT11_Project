@@ -61,6 +61,7 @@ positions.forEach(function (pos) {
         position: pos.latlng, // 마커를 표시할 위치
         image: markerImage, // 마커 이미지
     });
+
     markers.push(marker);
 
     // 커스텀 오버레이 요소 생성
@@ -81,7 +82,6 @@ positions.forEach(function (pos) {
     closebtn.onclick = function () {
         overlay.setMap(null);
     };
-    closebtn.title = '닫기';
     title.appendChild(closebtn);
 
     var body = document.createElement('div');
@@ -129,6 +129,7 @@ positions.forEach(function (pos) {
 
     // 커스텀 오버레이 변수
     var overlay = new kakao.maps.CustomOverlay({
+        // var content 요소를
         content: content,
         // map: map,
         position: marker.getPosition(),
