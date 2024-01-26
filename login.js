@@ -35,13 +35,17 @@ function join() {
     var check_id = memberNames.includes(id); //있다면 true
     var check_pw = memberPasswords.includes(password);
     if (check_id === true || check_pw === true) {
-        alert('이미 존재하는 아이디 / 비밀번호 입니다.\n다른 아이디 / 비밀번호를 입력해주세요.');
+        alert(
+            '이미 존재하는 아이디 / 비밀번호 입니다.\n다른 아이디 / 비밀번호를 입력해주세요.'
+        );
         $('#id').val('');
         $('#password').val('');
         $('#passwordCheck').val('');
     }
     //회원가입
     if (check_id === false && check_pw === false && finishCheckPw === 'yes') {
+        console.log(memberNames);
+        console.log(memberPasswords);
         memberNames.push(id);
         memberPasswords.push(password);
         console.log(memberNames);
@@ -59,7 +63,10 @@ function password_check() {
         alert('비밀번호를 다시 입력하세요.');
         $('#floatingPassword').val('');
         $('#passwordCheck').val('');
-    } else if ($('#floatingPassword').val() == '' || $('#passwordCheck').val() == '') {
+    } else if (
+        $('#floatingPassword').val() == '' ||
+        $('#passwordCheck').val() == ''
+    ) {
         alert('비밀번호를 입력하세요.');
     } else if ($('#floatingPassword').val() === $('#passwordCheck').val()) {
         alert('비밀번호가 일치합니다.');
